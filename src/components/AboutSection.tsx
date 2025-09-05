@@ -147,10 +147,7 @@ const AboutSection = () => {
             <h3 className="text-3xl font-bold text-gray-900">The Need for PRIME</h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Climate change isn’t just an environmental crisis—<strong>it’s a mental health crisis</strong>. From devastating floods and bushfires to rising sea levels and hazardous air pollution, young people are growing up with climate threats that are constant and deeply personal. These impacts aren’t only physical—they are profoundly emotional.
-              </p>
-              <p>
-                For many, these feelings are worsened by a lack of agency. Young people—especially those who can’t yet vote—often feel excluded from climate decisions, leading to anger, helplessness and grief. Despite the growing emotional toll, few mental-health services address the climate crisis. Community-led initiatives show promise but lack the infrastructure to scale. And translating research into practice can take decades.
+                Climate change isn’t just an environmental crisis—<strong>it’s a mental health crisis</strong>. From devastating floods and bushfires to rising sea levels and hazardous air pollution, young people are growing up with climate threats that are constant and deeply personal. These impacts aren’t only physical—they are profoundly emotional. For many, these feelings are worsened by a lack of agency. Young people—especially those who can’t yet vote—often feel excluded from climate decisions, leading to anger, helplessness and grief. Despite the growing emotional toll, few mental-health services address the climate crisis. Community-led initiatives show promise but lack the infrastructure to scale. And translating research into practice can take decades.
               </p>
               <p>
                 <strong>PRIME is here to change that.</strong> We are building a faster, youth-driven, community-grounded platform that turns promising ideas into real-world programs, supports local innovation, and puts the mental health of young people at the centre of climate response.
