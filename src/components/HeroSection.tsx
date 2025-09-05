@@ -8,9 +8,9 @@ const HeroSection = () => {
         <img 
           src="/Landing-page.png" 
           alt="PRIME Background" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/50 to-transparent"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
