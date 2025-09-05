@@ -49,148 +49,147 @@ const Section = ({
 );
 
 const StudyTeam = () => {
-  // ---------- Project Team (ordered) ----------
+  // ---------- Project Team ----------
   const projectTeam: Member[] = [
     {
       name: 'Assoc Prof Caroline Gao',
-      role: 'Biostatistician & Environmental Epidemiologist',
+      role: 'Biostatistics, Environmental Epidemiology & Climate Disaster',
       bio:
-        'Head of EnvironMental Health and Co-Head, Data Science & Analytical Methods, Centre for Youth Mental Health (Orygen), University of Melbourne; with affiliation to Monash SPHPM. Focus on climate impacts, youth mental health outcomes and advanced data science.',
-      image: '',
+        'Head of EnvironMental Health and Co-Head, Data Science & Analytical Methods, Orygen/CYMH, University of Melbourne; Monash SPHPM. Focus on climate impacts, youth mental health outcomes and advanced data science.',
     },
     {
       name: 'Assoc Prof Rebecca Patrick',
-      role: 'Public Health & Climate Researcher',
+      role: 'Public Health & Climate Research',
       bio:
-        'Academic Convener, Climate CATCH Lab, and Associate Professor (Climate Change & Health), Melbourne School of Population & Global Health, University of Melbourne. Focus on climate change, youth mental health and participatory approaches.',
-      image: '',
+        'Academic Convener, Climate CATCH Lab; Associate Professor (Climate Change & Health), MSPGH, University of Melbourne. Focus on climate change, youth mental health and participatory research.',
     },
     {
       name: 'Dr Jana Menssink',
-      role: 'Health Psychologist & Program Manager',
+      role: 'Clinical Psychology & Youth Mental Health',
       bio:
-        'Research Fellow and Program Manager, Orygen/Centre for Youth Mental Health, University of Melbourne. Focus on climate-related mental health, social inclusion and service evaluation with a prevention/early-intervention lens.',
-      image: '',
+        'Research Fellow and Program Manager, Orygen/CYMH, University of Melbourne. Focus on climate-related mental health, social inclusion and service evaluation.',
     },
     {
       name: 'Dr Hasini Gunasiri',
       role: 'Climate Policy & Youth Mental Health',
       bio:
-        'Research Fellow, Centre for Youth Mental Health (Orygen), University of Melbourne. Focus on mixed-methods, co-design and systems approaches to climate policy and youth mental health.',
-      image: '',
+        'Research Fellow, Orygen/CYMH, University of Melbourne. Focus on mixed methods, co-design and systems approaches to climate policy and youth wellbeing.',
     },
     {
       name: 'Sunny Nguyen',
       role: 'Participatory Evaluation & Strategy',
       bio:
-        'Public health practitioner and academic working across government, NGOs and services. Focus on participatory evaluation and systems-level strategy for climate and youth health.',
-      image: '',
+        'Public health practitioner and academic. Focus on participatory evaluation and systems-level strategy across government, NGOs and services.',
     },
     {
       name: 'Samantha Eala',
       role: 'Development Practice & One Health',
       bio:
-        'Development practitioner (MPH, University of Melbourne; MBA, AIM). Focus on environmental health, gender equity and risk/public communication in disasters with community projects in the Philippines.',
-      image: '',
+        'Development practitioner (MPH, University of Melbourne; MBA, AIM). Focus on environmental health, gender equity and disaster communication with community projects in the Philippines.',
     },
   ];
 
-  // ---------- Project CI (Chief Investigators) ----------
+  // ---------- Project CI ----------
   const projectCI: Member[] = [
     {
-      name: 'Professor Lisa Gibbs',
+      name: 'Prof Lisa Gibbs',
       role: 'Disaster, Climate & Community Resilience',
       bio:
-        'Professor and Director, Disaster, Climate & Adversity Unit, Melbourne School of Population & Global Health, University of Melbourne. Focus on disaster recovery and community resilience.',
-      image: '',
+        'Professor and Director, Disaster, Climate & Adversity Unit, MSPGH, University of Melbourne. Focus on disaster recovery and community resilience.',
     },
     {
-      name: 'Professor Debra Rickwood',
+      name: 'Prof Debra Rickwood',
       role: 'Youth Mental Health & Outcome Measurement',
       bio:
-        'Chief Scientific Advisor, headspace National; Professor, University of Canberra. Focus on help-seeking, early intervention and measurement-informed care in youth mental health.',
-      image: '',
+        'Chief Scientific Advisor, headspace National; Professor, University of Canberra. Focus on help-seeking, early intervention and routine outcome measurement.',
     },
     {
       name: 'Assoc Prof Magenta Simmons',
       role: 'Youth Partnerships & Shared Decision-Making',
       bio:
-        'Principal Research Fellow and Head, Youth Involvement Research, Orygen/Centre for Youth Mental Health, University of Melbourne. Focus on youth partnership, shared decisions and peer workforce.',
-      image: '',
+        'Principal Research Fellow and Head, Youth Involvement Research, Orygen/CYMH, University of Melbourne. Focus on youth partnership and peer workforce development.',
     },
     {
       name: 'Prof Sue Cotton',
       role: 'Clinical Neuropsychology & Outcomes Research',
       bio:
-        'Head, Health Services & Outcomes Research, Orygen/Centre for Youth Mental Health, University of Melbourne. Focus on outcomes measurement and trials in youth mental health.',
-      image: '',
+        'Head, Health Services & Outcomes Research, Orygen/CYMH, University of Melbourne. Focus on outcomes measurement and clinical trials in youth mental health.',
     },
     {
       name: 'Assoc Prof Kate Filia',
       role: 'Social Inclusion & Youth Mental Health',
       bio:
-        'Senior Research Fellow, Orygen/Centre for Youth Mental Health, University of Melbourne. Focus on social determinants (relationships, work, housing, community participation) and service evaluation.',
-      image: '',
+        'Senior Research Fellow, Orygen/CYMH, University of Melbourne. Focus on social determinants of youth mental health including relationships, work, housing and community participation.',
+    },
+    {
+      name: 'Dr Katitza Marinkovic Chávez',
+      role: 'Participatory Methods & Youth-Centred Disaster Mental Health',
+      bio:
+        'Research Fellow, Disaster, Climate & Adversity Unit & Climate CATCH Lab, MSPGH, University of Melbourne. Focus on co-designing interventions with children and disaster-impacted communities.',
+    },
+    {
+      name: 'Dr Marlee Bower',
+      role: 'Built Environment & Social Determinants of Mental Health',
+      bio:
+        'Research Fellow, Matilda Centre, University of Sydney. Focus on loneliness, social connection and how built environments affect wellbeing in climate-impacted youth.',
     },
   ];
 
-  // ---------- Project AI (Associate Investigators) ----------
+  // ---------- Project AI ----------
   const projectAI: Member[] = [
     {
       name: 'Dr Isabel Zbukvic',
       role: 'Implementation Science & Knowledge Translation',
       bio:
-        'Senior Research Fellow and Academic Specialist (Knowledge Translation), Orygen/Centre for Youth Mental Health, University of Melbourne. Focus on behaviour change, equity and implementation across mental-health settings.',
-      image: '',
+        'Senior Research Fellow and Academic Specialist (Knowledge Translation), Orygen/CYMH, University of Melbourne. Focus on behaviour change, equity and implementation science.',
     },
     {
       name: 'Assoc Prof Lexine Stapinski',
       role: 'Intervention Evaluation & Clinical Psychology',
       bio:
-        'NHMRC Leadership Fellow and Lead, Intervention & Implementation, Matilda Centre, University of Sydney. Focus on school-based prevention, anxiety/substance use interventions and translation to policy/practice.',
-      image: '',
+        'NHMRC Leadership Fellow and Lead, Intervention & Implementation, Matilda Centre, University of Sydney. Focus on prevention, substance use, and translation to policy.',
     },
     {
       name: 'Dr Rebekah Anderson',
       role: 'Behaviour Change & Science Communication',
       bio:
-        'Early Career Researcher and Teaching Specialist (Behaviour Change), School of Psychological Sciences, University of Melbourne. Focus on pro-environmental behaviour change and effective science communication.',
-      image: '',
+        'Early Career Researcher and Teaching Specialist, School of Psychological Sciences, University of Melbourne. Focus on pro-environmental behaviour change and effective communication.',
     },
     {
       name: 'Phoebe Quinn',
       role: 'Disaster Recovery & Climate Health',
       bio:
-        'Research Fellow (Disaster Recovery), Melbourne School of Population & Global Health, University of Melbourne. Focus on resilience, climate justice and policy-oriented resources.',
-      image: '',
+        'Research Fellow (Disaster Recovery), MSPGH, University of Melbourne. Focus on resilience, climate justice and policy-oriented resources.',
     },
     {
       name: 'Dr Ellie Brown',
       role: 'Clinical Psychology & Program Design',
       bio:
-        'Research Fellow, Orygen/Centre for Youth Mental Health; Counselling Psychologist, Parkville Hub. Focus on early psychosis, physical health and embedding service evaluation.',
-      image: '',
+        'Research Fellow, Orygen/CYMH; Counselling Psychologist, Parkville Hub. Focus on early psychosis, physical health and embedding service evaluation.',
     },
     {
       name: 'Dr Shu Mei Teo',
       role: 'Biostatistics & Data Science',
       bio:
-        'Research Fellow/Biostatistician, Centre for Youth Mental Health, University of Melbourne. Focus on administrative/clinical datasets to inform youth mental-health policy and systems.',
-      image: '',
+        'Research Fellow/Biostatistician, Orygen/CYMH, University of Melbourne. Focus on administrative and clinical datasets for youth mental-health policy.',
     },
     {
       name: 'Prof Eóin Killackey',
       role: 'Functional Recovery & Knowledge Translation',
       bio:
-        'Chief of Research & Knowledge Translation and Head, Functional Recovery Program, Orygen/Centre for Youth Mental Health, University of Melbourne. Focus on evidence-based youth functional recovery and implementation.',
-      image: '',
+        'Chief of Research & Knowledge Translation and Head, Functional Recovery Program, Orygen/CYMH, University of Melbourne. Focus on evidence-based youth recovery and implementation.',
     },
     {
       name: 'Prof Tim Corney',
       role: 'Youth Work & Public Health',
       bio:
-        'Professorial Research Fellow and Discipline Lead (Youth & Community Programs), Institute for Sustainable Industries & Liveable Cities, Victoria University. Focus on prevention, harm minimisation and disaster-impacted youth.',
-      image: '',
+        'Professorial Research Fellow and Discipline Lead (Youth & Community Programs), Victoria University. Focus on youth work, prevention and disaster-impacted communities.',
+    },
+    {
+      name: 'Assoc Prof Fiona MacDonald',
+      role: 'Youth Lived Experience & Social Equity',
+      bio:
+        'Principal Research Fellow, Institute of Sustainable Industries & Liveable Cities, Victoria University. Focus on youth wellbeing, social equity, bullying, and disaster recovery.',
     },
   ];
 
@@ -200,8 +199,13 @@ const StudyTeam = () => {
       name: 'Yan Zhang',
       role: 'Built Environment & Wellbeing',
       bio:
-        'PhD Candidate, Dept. of Infrastructure Engineering, University of Melbourne; Lecturer in Project Management, Southern Cross University. Focus on indoor environmental quality and occupant wellbeing.',
-      image: '',
+        'PhD Candidate, Infrastructure Engineering, University of Melbourne; Lecturer, Southern Cross University. Focus on indoor environmental quality and occupant wellbeing.',
+    },
+    {
+      name: 'Myriam Ziou',
+      role: 'Biostatistics & Environmental Epidemiology',
+      bio:
+        'Research Fellow, University of Melbourne. Focus on interdisciplinary collaboration in climate and youth mental health.',
     },
   ];
 
