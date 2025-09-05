@@ -7,24 +7,12 @@ const avatarUrl = (name: string) =>
 
 type Member = {
   name: string;
-  position: string;    // pipe-separated chips, e.g. "Head ... | Co-Head ..."
-  institution: string; // dept/unit → organisation → university
-  bio: string;         // concise, research-focused
+  role: string;
+  bio: string;
+  institution?: string;
+  position?: string;
   image?: string;
 };
-
-const InfoBadge = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-block text-xs text-gray-700 bg-gray-100 border border-gray-200 rounded px-2 py-1 mr-2 mb-2">
-    {children}
-  </span>
-);
-
-const toChips = (val?: string): string[] =>
-  (val || '')
-    .split('|')
-    .map(s => s.trim())
-    .filter(Boolean)
-    .map(s => s.replace(/\)\s*\)/g, ')').replace(/\s{2,}/g, ' '));
 
 const Card = ({ member }: { member: Member }) => {
   const img =
@@ -37,23 +25,14 @@ const Card = ({ member }: { member: Member }) => {
       <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-6 border-4 border-white shadow-lg bg-white">
         <img src={img} alt={member.name} className="w-full h-full object-cover" />
       </div>
-
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{member.name}</h3>
-
-      {/* Institution */}
-      <div className="flex flex-wrap justify-center mb-2">
-        <InfoBadge>{member.institution || '—'}</InfoBadge>
-      </div>
-
-      {/* Position chips */}
-      {member.position && (
-        <div className="flex flex-wrap justify-center mb-4">
-          {toChips(member.position).map((chip, i) => (
-            <InfoBadge key={`${member.name}-pos-${i}`}>{chip}</InfoBadge>
-          ))}
-        </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+      <p className="text-[#2D6AA3] font-semibold mb-3">{member.role}</p>
+      {member.institution && (
+        <p className="text-xs text-gray-500 mb-2">{member.institution}</p>
       )}
-
+      {member.position && (
+        <p className="text-xs text-gray-500 mb-2">{member.position}</p>
+      )}
       <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
     </div>
   );
@@ -67,7 +46,9 @@ const Section = ({
   members: Member[];
 }) => (
   <div className="mb-16">
-    <h3 className="text-3xl font-bold text-gray-900 text-center mb-10">{title}</h3>
+    <h3 className="text-3xl font-bold text-gray-900 text-center mb-10">
+      {title}
+    </h3>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {members.map((m, i) => (
         <Card key={`${title}-${i}-${m.name}`} member={m} />
@@ -81,51 +62,46 @@ const StudyTeam = () => {
   const projectTeam: Member[] = [
     {
       name: 'Assoc Prof Caroline Gao',
-      position: 'Head of Envion-Mental Health| Co-Head, Data Science & Analytical Methods',
-      institution:
-        'Centre for Youth Mental Health (Orygen), University of Melbourne; School of Public Health & Preventive Medicine, Monash University',
+      role:
+        'Biostatistician & Epidemiologist',
+      institution: 'University of Melbourne (Orygen/CYMH)',
       bio:
-        'Biostatistician and environmental epidemiologist. Focus on climate impacts, youth mental health outcomes, and advanced data science methods.',
+        'Biostatistician and epidemiologist. Methods for air-pollution/climate impacts, outcome measures, and ML on linked admin data for evaluation and prediction.',
       image: '',
     },
     {
       name: 'Assoc Prof Rebecca Patrick',
-      position: 'Academic Convener (Climate CATCH Lab)| Associate Professor (Climate Change and Health)',
-      institution: 'Melbourne School of Population & Global Health, University of Melbourne',
+      role: 'Public Health & Climate; Participatory Action Research',
       bio:
-        'Public health researcher on climate change and youth mental health, with a focus on participatory and community-led approaches.',
+        'Public health academic focused on climate and youth mental health, participatory action research; prior practice roles across youth and community health services.',
       image: '',
     },
     {
       name: 'Dr Jana Menssink',
-      position: 'Research Fellow| Program Manager (Orygen)',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Health Psychologist; Program Manager (Orygen)',
       bio:
-        'Health psychologist researching climate-related mental health, social inclusion, and service evaluation with a prevention and early-intervention focus.',
+        'Clinical background in chronic pain/trauma; research across climate & mental health, social inclusion, sexual harassment, and service evaluation; prevention/early intervention focus.',
       image: '',
     },
     {
-      name: 'Dr Hasini Gunasiri',
-      position: 'Research Fellow',
-      institution: 'Centre for Youth Mental Health (Orygen), University of Melbourne',
+      name: 'Hasini Gunasiri',
+      role: 'Research Fellow (CYMH/Orygen); PRIME Platform',
       bio:
-        'Research on climate policy and youth mental health using mixed methods, co-design and systems thinking to inform practice and policy.',
+        'Research at the intersection of climate change and youth mental health. Mixed methods, co-design and systems thinking informing policy and community-led adaptation.',
       image: '',
     },
     {
       name: 'Sunny Nguyen',
-      position: 'Public Health Practitioner & Academic',
-      institution: '—',
+      role: 'Public Health Practitioner & Academic',
       bio:
-        'Works across systems on participatory evaluation and strategy for climate and youth health initiatives.',
+        'Participatory approaches, evaluation science and strategy across academia, government and NGOs; youth leadership in climate & health.',
       image: '',
     },
     {
       name: 'Samantha Eala',
-      position: 'Development Practitioner',
-      institution: 'University of Melbourne (MPH); Asian Institute of Management (MBA)',
+      role: 'Development Practitioner; MPH (UoM) & MBA (AIM)',
       bio:
-        'Environmental health, gender equity and One Health; risk and public communication in disasters; community projects in the Philippines.',
+        'Experience with USAID, WHO and Save the Children on environmental health, gender equality and One Health; comms on COVID-19, disasters and GBV; community work in the Philippines.',
       image: '',
     },
   ];
@@ -134,43 +110,37 @@ const StudyTeam = () => {
   const projectCI: Member[] = [
     {
       name: 'Professor Lisa Gibbs',
-      position: 'Professor| Director, Disaster, Climate & Adversity Unit',
-      institution:
-        'Disaster, Climate & Adversity Unit, Melbourne School of Population & Global Health, University of Melbourne',
+      role: 'Disaster, Climate & Adversity; Community Resilience',
       bio:
-        'Leads research on disaster recovery and community resilience across individual and population levels.',
+        'Professor of Public Health; Director, Disaster, Climate & Adversity Unit (MSPGH) and Academic Lead for Community Resilience & Public Safety; research on disaster recovery and resilience.',
       image: '',
     },
     {
       name: 'Professor Debra Rickwood',
-      position: 'Chief Scientific Advisor (headspace)| Professor',
-      institution: 'headspace National Youth Mental Health Foundation; University of Canberra',
+      role: 'Chief Scientific Advisor, headspace; Youth Mental Health',
       bio:
-        'Youth mental health, help-seeking and outcome measurement; translation of evidence into routine practice.',
+        'Leader in youth mental health, help-seeking and early intervention; shaped national policy and MyLifeTracker; >$30M in projects; measurement-informed care and digital innovation.',
       image: '',
     },
     {
       name: 'Assoc Prof Magenta Simmons',
-      position: 'Principal Research Fellow| Head, Youth Involvement Research',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Head of Youth Involvement Research, Orygen',
       bio:
-        'Youth partnerships in research, shared decision-making in care, and peer workforce development.',
+        'Focus on meaningful youth partnerships in research, shared decision-making in care, and peer workforce development.',
       image: '',
     },
     {
       name: 'Prof Sue Cotton',
-      position: 'Head, Health Services & Outcomes Research',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Clinical Neuropsychologist & Biostatistician',
       bio:
-        'Outcomes research and trials in youth mental health, including psychosis, bipolar disorder and service innovation.',
+        'Head, Health Services & Outcomes Research (Orygen/CYMH). 20+ years across trials/cohorts in psychosis, bipolar and service innovation.',
       image: '',
     },
     {
       name: 'Assoc Prof Kate Filia',
-      position: 'Senior Research Fellow',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Social Inclusion & Youth Mental Health',
       bio:
-        'Social inclusion and determinants of youth mental health (relationships, work, housing, community participation).',
+        'Senior Research Fellow (Orygen/CYMH). Leads social inclusion research (relationships, work, housing, community participation) and manages trials, data linkage and service evaluations.',
       image: '',
     },
   ];
@@ -179,82 +149,91 @@ const StudyTeam = () => {
   const projectAI: Member[] = [
     {
       name: 'Dr Isabel Zbukvic',
-      position: 'Senior Research Fellow| Academic Specialist (Knowledge Translation)',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Implementation specialist',
+      institution: 'University of Melbourne (Orygen/CYMH)',
+      position: 'Senior Research Fellow; Academic Specialist, Knowledge Translation',
       bio:
-        'Implementation science and knowledge translation in mental health with equity and co-design.',
+        'Leads implementation & KT research in mental health; behaviour change and implementation science; interdisciplinary projects incl. suicide prevention and e-health; strong equity and co-design focus; >$20.9M funding since 2017.',
       image: '',
     },
     {
       name: 'Assoc Prof Lexine Stapinski',
-      position: 'NHMRC Leadership Fellow| Lead, Intervention & Implementation',
-      institution:
-        'Matilda Centre for Research in Mental Health & Substance Use, University of Sydney',
+      role: 'Evaluation specialist & clinical psychologist',
+      institution: 'University of Sydney (Matilda Centre)',
+      position:
+        'NHMRC Leadership Fellow; Lead in Intervention & Implementation',
       bio:
-        'Intervention development and evaluation, including large school-based trials and translation to policy and practice.',
+        '15+ years developing/evaluating mental-health interventions; 8 RCTs (incl. large school-based trials); strong work with underserved groups incl. Aboriginal and Torres Strait Islander youth; major policy translation and dissemination at national scale.',
       image: '',
     },
     {
       name: 'Dr Rebekah Anderson',
-      position: 'Early Career Researcher| Teaching Specialist (Behaviour Change)',
-      institution: 'School of Psychological Sciences, University of Melbourne',
+      role: 'Program design & implementation',
+      institution: 'University of Melbourne',
+      position: 'Early Career Researcher; Teaching Specialist (Behaviour Change)',
       bio:
-        'Behaviour change and science communication for pro-environmental action and youth mental health.',
+        'Behaviour change and science communication; prior youth mental-health KT; consultation on theory, implementation and evaluation; produced 20+ evidence-translation resources.',
       image: '',
     },
     {
       name: 'Phoebe Quinn',
-      position: 'Research Fellow (Disaster Recovery)',
-      institution:
-        'Melbourne School of Population & Global Health, University of Melbourne',
+      role: 'Climate health program design specialist',
+      institution: 'University of Melbourne (MSPGH)',
+      position: 'Research Fellow in Disaster Recovery',
       bio:
-        'Disaster recovery, community resilience and climate justice with policy-oriented research.',
+        'Public-health researcher focused on justice, resilience and climate; policy-oriented projects incl. Recovery Capitals, Red Cross Bushfire Recovery evaluation, Indigenous healing and disaster recovery; PhD on democratic innovations for climate decisions.',
       image: '',
     },
     {
       name: 'Dr Ellie Brown',
-      position: 'Research Fellow| Counselling Psychologist (Parkville Hub)',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Clinical psychologist & program design specialist',
+      institution: 'University of Melbourne (Orygen/CYMH)',
+      position: 'Research Fellow; Counselling Psychologist (Parkville Hub)',
       bio:
-        'Early psychosis and physical health; embeds service evaluation into clinical program design.',
+        'Early psychosis and physical health; embedding service evaluation into clinical initiatives; supports headspace Early Psychosis teams to deliver evidence-based care.',
       image: '',
     },
     {
       name: 'Dr Shu Mei Teo',
+      role: 'Data Scientist',
+      institution: 'University of Melbourne (CYMH)',
       position: 'Research Fellow / Biostatistician',
-      institution: 'Centre for Youth Mental Health, University of Melbourne',
       bio:
-        'Biostatistics and data science using administrative and clinical datasets for youth mental-health policy.',
+        '10+ years applying statistics/data science to cohort/survey data; current focus on administrative/clinical datasets for youth mental-health policy and system advice.',
       image: '',
     },
     {
       name: 'Prof Eóin Killackey',
-      position: 'Chief of Research & Knowledge Translation| Head, Functional Recovery',
-      institution: 'Orygen; Centre for Youth Mental Health, University of Melbourne',
+      role: 'Youth mental health & knowledge translation specialist',
+      institution: 'University of Melbourne (Orygen/CYMH)',
+      position:
+        'Chief of Research & Knowledge Translation; Head, Functional Recovery Program',
       bio:
-        'Functional recovery interventions for young people; implementation and knowledge translation.',
+        'Clinical psychologist; evidence-based youth mental-health interventions; international leadership in vocational recovery; multiple national awards for impact.',
       image: '',
     },
     {
       name: 'Prof Tim Corney',
-      position: 'Professorial Research Fellow| Discipline Lead (Youth & Community Programs)',
-      institution:
-        'Institute for Sustainable Industries & Liveable Cities, Victoria University',
+      role: 'Youth lived experience specialist',
+      institution: 'Victoria University',
+      position:
+        'Professorial Research Fellow; Discipline Lead, Youth & Community Programs',
       bio:
-        'Youth work, prevention and harm minimisation; programs for disaster-impacted youth.',
+        'Public-health lens on preventative education/harm minimisation for youth; Co-Lead, Centre for Excellence — disasters & young people; >$20M research since 2017; national leadership in youth work standards and ethics.',
       image: '',
     },
+    // Hasini appears in Project Team; leaving out of AI to avoid duplication.
   ];
 
   // ---- Project Affiliate ----
   const projectAffiliate: Member[] = [
     {
       name: 'Yan Zhang',
-      position: 'PhD Candidate (UoM)| Lecturer in Project Management (SCU)',
-      institution:
-        'Dept. of Infrastructure Engineering, University of Melbourne; School of Business & Tourism, Southern Cross University',
+      role: 'Project affiliate',
+      institution: 'University of Melbourne; Southern Cross University',
+      position: 'PhD Candidate; Lecturer in Project Management',
       bio:
-        'Indoor environmental quality and occupant wellbeing using evidence-based, data-driven methods.',
+        'Focus on indoor environmental quality and occupant wellbeing using evidence-based, data-driven strategies.',
       image: '',
     },
   ];
@@ -268,7 +247,8 @@ const StudyTeam = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our multidisciplinary collaboration brings together youth mental health, public health, data science,
-            implementation science and community expertise to co-design and scale solutions for climate-related youth mental health.
+            implementation science and community expertise to co-design and scale solutions for climate-related
+            youth mental health.
           </p>
         </div>
 
@@ -276,6 +256,25 @@ const StudyTeam = () => {
         <Section title="Project CI" members={projectCI} />
         <Section title="Project AI (Associate Investigators)" members={projectAI} />
         <Section title="Project Affiliate" members={projectAffiliate} />
+
+        {/* Collaborators & Partners (optional keep) */}
+        {/* If you still want this section, leave it in; otherwise you can remove */}
+        {/* <div className="mt-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            Collaborators & Partners
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div
+                key={index}
+                className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-[#2D6AA3] hover:border-opacity-30 transition-colors"
+              >
+                <div className="h-12 bg-gray-200 rounded mb-2"></div>
+                <p className="text-xs text-gray-600">Partner {index + 1}</p>
+              </div>
+            ))}
+          </div>
+        </div> */}
       </div>
     </section>
   );
