@@ -20,12 +20,11 @@ const HeroSection = () => {
             {/* Left Column - Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                   PRIME: A Research Platform for{' '}
                   <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
                   <span className="text-[#3A9C62]">Climate Resilience</span>
                 </h1>
-                <p className="text-xl text-gray-700 leading-relaxed">
+                <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
                   Accelerating evidence-based interventions to mitigate climate distress in young people
                 </p>
               </div>
