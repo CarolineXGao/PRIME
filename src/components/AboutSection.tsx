@@ -150,9 +150,6 @@ const AboutSection = () => {
                 Climate change isn’t just an environmental crisis—<strong>it’s a mental health crisis</strong>. From devastating floods and bushfires to rising sea levels and hazardous air pollution, young people are growing up with climate threats that are constant and deeply personal. These impacts aren’t only physical—they are profoundly emotional.
               </p>
               <p>
-                Research shows that large numbers of young Australians are worried about climate change (Gao et&nbsp;al., 2024), two-thirds of those aged 16–25 feel anxious, afraid or sad about it (Hickman et&nbsp;al., 2021), and one in four children aged 10–14 fear the world might end before they grow up (Lucas et&nbsp;al., 2024).
-              </p>
-              <p>
                 For many, these feelings are worsened by a lack of agency. Young people—especially those who can’t yet vote—often feel excluded from climate decisions, leading to anger, helplessness and grief. Despite the growing emotional toll, few mental-health services address the climate crisis. Community-led initiatives show promise but lack the infrastructure to scale. And translating research into practice can take decades.
               </p>
               <p>
