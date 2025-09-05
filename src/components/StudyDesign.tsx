@@ -18,25 +18,25 @@ const StudyDesign = () => {
       icon: <UserPlus className="w-8 h-8" />,
       title: "Recruitment",
       description:
-        "Engage diverse young people (12–25) through schools, services and community partners, and inclusive digital outreach.",
+        "Engage diverse young people (12–25) through schools, services and community partners, and inclusive digital outreach."
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Co-Design",
       description:
-        "Partner with youth and communities to shape priorities, content, delivery and evaluation so programs are relevant and acceptable.",
+        "Partner with youth and communities to shape priorities, content, delivery and evaluation so programs are relevant and acceptable."
     },
     {
       icon: <FlaskConical className="w-8 h-8" />,
       title: "Trial Testing",
       description:
-        "Use an adaptive platform to evaluate multiple group-based interventions efficiently under a shared master protocol.",
+        "Use an adaptive platform to evaluate multiple group-based interventions efficiently under a shared master protocol."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Scaling",
       description:
-        "Translate effective interventions into routine practice across schools, communities and mental-health services.",
+        "Translate effective interventions into routine practice across schools, communities and mental-health services."
     },
   ];
 
@@ -45,42 +45,42 @@ const StudyDesign = () => {
       icon: <Layers className="w-6 h-6" />,
       title: "Adaptive Platform",
       body:
-        "Simultaneous, efficient testing of multiple interventions using a shared infrastructure—an approach informed by COVID-19 response platforms.",
+        "Simultaneous, efficient testing of multiple interventions using a shared infrastructure—an approach informed by COVID-19 response platforms."
     },
     {
       icon: <Workflow className="w-6 h-6" />,
       title: "Master Protocol",
       body:
-        "A common set of methods, outcomes and governance streamlines co-development, evaluation and implementation across projects.",
+        "A common set of methods, outcomes and governance streamlines co-development, evaluation and implementation across projects."
     },
     {
       icon: <ClipboardCheck className="w-6 h-6" />,
       title: "EnvironMental Health Measure",
       body:
-        "A strengths-based, co-developed outcome measure to inform climate–mental-health responses and track resilience and wellbeing.",
+        "A strengths-based, co-developed outcome measure to inform climate–mental-health responses and track resilience and wellbeing."
     },
     {
       icon: <HeartHandshake className="w-6 h-6" />,
       title: "Youth & Community Advisory",
       body:
-        "Advisory groups guide priorities, design, evaluation and policy engagement to centre youth leadership and lived experience.",
+        "Advisory groups guide priorities, design, evaluation and policy engagement to centre youth leadership and lived experience."
     },
     {
       icon: <Building2 className="w-6 h-6" />,
       title: "Cross-Sector Settings",
       body:
-        "Programs operate where young people are—schools, communities and services—supporting early intervention and equitable access.",
+        "Programs operate where young people are—schools, communities and services—supporting early intervention and equitable access."
     },
     {
       icon: <LineChart className="w-6 h-6" />,
       title: "Real-World Translation",
       body:
-        "Implementation science ensures effective programs are scalable, sustainable and embedded in existing systems.",
+        "Implementation science ensures effective programs are scalable, sustainable and embedded in existing systems."
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Intro */}
         <div className="text-center mb-16">
@@ -95,7 +95,7 @@ const StudyDesign = () => {
         </div>
 
         {/* Platform Overview / Context */}
-        <div className="bg-white rounded-xl p-8 border-2 border-gray-200 mb-16">
+        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200 mb-16">
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-4 text-gray-700 leading-relaxed">
               <p>
@@ -124,14 +124,14 @@ const StudyDesign = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <div className="p-5 rounded-lg border-2 border-[#2D6AA3]/20 bg-[#2D6AA3]/5">
+              <div className="p-6 rounded-xl border-2 border-[#2D6AA3] border-opacity-20 bg-[#2D6AA3] bg-opacity-5">
                 <h4 className="text-[#2D6AA3] font-semibold mb-2">Who it’s for</h4>
                 <p className="text-sm text-gray-700">
                   Young people aged <strong>12–25</strong>, with a focus on early intervention and populations experiencing climate-related
                   mental-health risks.
                 </p>
               </div>
-              <div className="p-5 rounded-lg border-2 border-[#3A9C62]/20 bg-[#3A9C62]/5">
+              <div className="p-6 rounded-xl border-2 border-[#3A9C62] border-opacity-20 bg-[#3A9C62] bg-opacity-5">
                 <h4 className="text-[#3A9C62] font-semibold mb-2">Where we work</h4>
                 <p className="text-sm text-gray-700">
                   <strong>Schools</strong>, <strong>communities</strong> and <strong>mental-health services</strong>, partnering with local networks for reach and equity.
@@ -154,9 +154,9 @@ const StudyDesign = () => {
                 </div>
               )}
 
-              <div className="relative z-10 bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-[#2D6AA3] hover:border-opacity-30 transition-all duration-300 text-center">
+              <div className="relative z-10 bg-gray-50 rounded-xl p-8 border-2 border-gray-200 hover:border-[#2D6AA3] hover:border-opacity-30 transition-all duration-300 text-center hover:shadow-lg group">
                 <div className="w-16 h-16 bg-[#2D6AA3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-[#2D6AA3]">{step.icon}</div>
+                  <div className="text-[#2D6AA3] group-hover:scale-110 transition-transform duration-200">{step.icon}</div>
                 </div>
 
                 <div className="mb-3">
@@ -173,7 +173,7 @@ const StudyDesign = () => {
         </div>
 
         {/* Key Capabilities */}
-        <div className="bg-white rounded-xl p-8 border-2 border-gray-200 mb-16">
+        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200 mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             What Makes PRIME Different
           </h3>
@@ -181,12 +181,12 @@ const StudyDesign = () => {
             {pillars.map((p, i) => (
               <div
                 key={i}
-                className="rounded-lg border-2 border-gray-200 p-5 hover:border-[#2D6AA3]/30 transition"
+                className="bg-white rounded-xl border-2 border-gray-200 p-6 hover:border-[#2D6AA3] hover:border-opacity-30 transition-all duration-300 hover:shadow-lg group"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F4B43D]/10 flex items-center justify-center mb-3 text-[#F4B43D]">
+                <div className="w-12 h-12 rounded-full bg-[#F4B43D] bg-opacity-10 flex items-center justify-center mb-4 text-[#F4B43D] group-hover:scale-110 transition-transform duration-200">
                   {p.icon}
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-1">{p.title}</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">{p.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{p.body}</p>
               </div>
             ))}
@@ -194,7 +194,7 @@ const StudyDesign = () => {
         </div>
 
         {/* Research Framework */}
-        <div className="bg-white rounded-xl p-8 border-2 border-gray-200">
+        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
             Research Framework
           </h3>
