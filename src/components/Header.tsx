@@ -21,9 +21,11 @@ const Header = ({ currentPage, setCurrentPage }: HeaderProps) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
-            <div className="bg-[#2D6AA3] text-white px-4 py-2 rounded font-bold text-xl">
-              PRIME
-            </div>
+            <img 
+              src="/Logo1.png" 
+              alt="PRIME Logo" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

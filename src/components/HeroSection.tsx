@@ -30,28 +30,12 @@ const HeroSection = () => {
           </div>
 
           {/* Right Illustration */}
-          <div className="relative bg-white rounded-2xl p-8 shadow-xl">
-            <div className="grid grid-cols-3 gap-6 items-center justify-items-center">
-              <div className="col-span-3 mb-4">
-                <div className="w-32 h-32 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center">
-                  <Users className="w-16 h-16 text-[#3A9C62] stroke-2" />
-                </div>
-              </div>
-              <div className="w-20 h-20 bg-[#2D6AA3] bg-opacity-10 rounded-full flex items-center justify-center">
-                <Leaf className="w-10 h-10 text-[#2D6AA3] stroke-2" />
-              </div>
-              <div className="w-24 h-24 bg-[#F4B43D] bg-opacity-10 rounded-full flex items-center justify-center">
-                <Sun className="w-12 h-12 text-[#F4B43D] stroke-2" />
-              </div>
-              <div className="w-20 h-20 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center">
-                <Leaf className="w-10 h-10 text-[#3A9C62] stroke-2" />
-              </div>
-            </div>
-            <div className="absolute inset-0 opacity-20">
-              <svg className="w-full h-full" viewBox="0 0 400 300">
-                <path d="M50,150 Q200,50 350,150 Q200,250 50,150" stroke="#3A9C62" strokeWidth="2" fill="none" strokeDasharray="5,5" />
-              </svg>
-            </div>
+          <div className="relative">
+            <img 
+              src="/Landing-page.png" 
+              alt="PRIME Landing Page Illustration" 
+              className="w-full h-auto rounded-2xl shadow-xl"
+            />
           </div>
         </div>
       </div>
