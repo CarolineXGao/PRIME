@@ -75,7 +75,7 @@ const Footer = () => {
               ))}
             </div>
             <div className="text-center md:text-right text-blue-100 text-sm">
-              <p>© 2024 PRIME Research Platform. All rights reserved.</p>
+              <p>© 2025 PRIME Research Platform. All rights reserved.</p>
               <p className="mt-1">Empowering youth through climate-informed mental health research.</p>
             </div>
           </div>
