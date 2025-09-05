@@ -52,41 +52,48 @@ const StudyTeam = () => {
   // ---------- Project Team ----------
   const projectTeam: Member[] = [
     {
-      name: 'Assoc Prof Caroline Gao',
+      name: 'Assoc Prof Caroline Gao (CI)',
       role: 'Biostatistics, Environmental Epidemiology & Climate Disaster',
       bio:
         'Head of EnvironMental Health and Co-Head, Data Science & Analytical Methods, Orygen/CYMH, University of Melbourne; Monash SPHPM. Focus on climate impacts, youth mental health outcomes and advanced data science.',
     },
     {
-      name: 'Assoc Prof Rebecca Patrick',
+      name: 'Assoc Prof Rebecca Patrick (CI)',
       role: 'Public Health & Climate Research',
       bio:
         'Academic Convener, Climate CATCH Lab; Associate Professor (Climate Change & Health), MSPGH, University of Melbourne. Focus on climate change, youth mental health and participatory research.',
     },
     {
-      name: 'Dr Jana Menssink',
+      name: 'Dr Jana Menssink (CI)',
       role: 'Clinical Psychology & Youth Mental Health',
       bio:
         'Research Fellow and Program Manager, Orygen/CYMH, University of Melbourne. Focus on climate-related mental health, social inclusion and service evaluation.',
     },
     {
-      name: 'Dr Hasini Gunasiri',
+      name: 'Dr Hasini Gunasiri (AI)',
       role: 'Climate Policy & Youth Mental Health',
       bio:
         'Research Fellow, Orygen/CYMH, University of Melbourne. Focus on mixed methods, co-design and systems approaches to climate policy and youth wellbeing.',
+    },
+      {
+      name: 'Samantha Eala',
+      role: 'Development Practice & One Health',
+      bio:
+        'Development practitioner (MSPGH, University of Melbourne| Orygen). Focus on environmental health, gender equity and disaster communication with community projects in the Philippines.',
     },
     {
       name: 'Sunny Nguyen',
       role: 'Participatory Evaluation & Strategy',
       bio:
-        'Public health practitioner and academic. Focus on participatory evaluation and systems-level strategy across government, NGOs and services.',
+        'Public health practitioner and academic (MSPGH, University of Melbourne). Focus on participatory evaluation and systems-level strategy across government, NGOs and services.',
     },
     {
-      name: 'Samantha Eala',
-      role: 'Development Practice & One Health',
+      name: 'Neerja Singh',
+      role: 'Youth Advocate & Peer Worker',
       bio:
-        'Development practitioner (MPH, University of Melbourne; MBA, AIM). Focus on environmental health, gender equity and disaster communication with community projects in the Philippines.',
+        'Lived Experience Researcher (Orygen). BSc (Neuroscience and Psychology & Environmental Science) University of Melbourne.',
     },
+
   ];
 
   // ---------- Project CI ----------
