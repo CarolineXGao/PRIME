@@ -31,14 +31,22 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                PRIME was launched in response to growing concerns about the mental health impacts of climate change on young people. 
-                As climate anxiety and eco-grief become increasingly prevalent among youth, there's an urgent need for evidence-based 
-                interventions that address these unique challenges.
+                In early 2025 we launched <strong>PRIME—Australia’s first dedicated
+                research and implementation platform addressing the mental health impacts of
+                climate change on young people</strong>, funded by the NHMRC ($1M). PRIME is
+                led by researchers from the <strong>Centre for Youth Mental Health (Orygen)</strong> and the
+                <strong> Melbourne School of Population and Global Health</strong> at the University of Melbourne,
+                working in partnership with young people, clinicians and community organisations.
               </p>
               <p>
-                Our platform brings together researchers, clinicians, young people, and communities to co-create solutions that are 
-                both scientifically rigorous and practically relevant. We believe that by combining climate science with mental health 
-                expertise, we can build resilience and hope for the next generation.
+                PRIME was established in response to rising climate anxiety, eco-grief and
+                related psychological impacts among youth, alongside a striking absence of
+                coordinated, evidence-based interventions. Our platform brings together
+                globally recognised researchers and young people as co-designers to fast-track
+                solutions that are both scientifically rigorous and practically relevant.
+                By combining climate science with mental-health expertise, we aim to build
+                resilience, hope and agency for the next generation—and help Australia lead
+                proactive mental-health responses to climate change.
               </p>
             </div>
           </div>
