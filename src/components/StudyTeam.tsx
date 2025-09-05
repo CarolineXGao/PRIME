@@ -98,14 +98,14 @@ const StudyTeam = () => {
   // ---------- Project CI (Chief Investigators) ----------
   const projectCI: Member[] = [
     {
-      name: 'Professor Lisa Gibbs',
+      name: 'Prof Lisa Gibbs',
       role: 'Disaster, Climate & Community Resilience',
       bio:
         'Professor and Director, Disaster, Climate & Adversity Unit, Melbourne School of Population & Global Health, University of Melbourne. Focus on disaster recovery and community resilience.',
       image: '',
     },
     {
-      name: 'Professor Debra Rickwood',
+      name: 'Prof Debra Rickwood',
       role: 'Youth Mental Health & Outcome Measurement',
       bio:
         'Chief Scientific Advisor, headspace National; Professor, University of Canberra. Focus on help-seeking, early intervention and measurement-informed care in youth mental health.',
