@@ -24,6 +24,8 @@ const HeroSection = () => {
                   PRIME: A Research Platform for{' '}
                   <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
                   <span className="text-[#3A9C62]">Climate Resilience</span>
+                  <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
+                  <span className="text-[#3A9C62]">Climate Resilience</span>
                 </h1>
                 <p className="text-xl text-gray-700 leading-relaxed">
                   Accelerating evidence-based interventions to mitigate climate distress in young people
