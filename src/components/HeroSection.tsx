@@ -1,5 +1,4 @@
 import React from 'react';
-import { Leaf, Sun, Users } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -9,24 +8,32 @@ const HeroSection = () => {
         <img 
           src="/Landing-page.png" 
           alt="PRIME Background" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/80 to-gray-100/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10">
-          {/* Centered Content */}
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight text-center">
-                PRIME: A Research Platform for{' '}
-                <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
-                <span className="text-[#3A9C62]">Climate Resilience</span>
-              </h1>
-              <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                Accelerating evidence-based interventions to mitigate climate distress in young people
-              </p>
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  PRIME: A Research Platform for{' '}
+                  <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
+                  <span className="text-[#3A9C62]">Climate Resilience</span>
+                </h1>
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Accelerating evidence-based interventions to mitigate climate distress in young people
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Space for image visibility */}
+            <div className="hidden lg:block">
+              {/* This space allows the background image to be more visible */}
             </div>
           </div>
         </div>
