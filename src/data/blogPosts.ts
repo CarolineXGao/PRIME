@@ -67,18 +67,8 @@ What this means for action:
   readTime: "3 min read"
   },
   {
-    id: 'intervention-effectiveness-results',
-    image: "/Image4.png",
-    category: "Research Insights",
-    title: "Intervention Effectiveness: Early Results",
-    excerpt: "Preliminary findings from our randomized controlled trials show promising results for cognitive-behavioral approaches to climate anxiety.",
-    fullContent: "Preliminary findings from our randomized controlled trials show promising results for cognitive-behavioral approaches to climate anxiety. Our early data suggests that targeted interventions can significantly reduce climate-related distress while building resilience and agency among young participants.",
-    date: "March 8, 2024",
-    readTime: "6 min read"
-  },
-  {
   id: 'climate-concerns-distress-outlook',
-  image: "https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=400",
+  image: "/Image3.png",
   category: "Research Insights",
   title: "Climate Concern, Distress, and Future Outlook in Young Australians",
   excerpt: "Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and remote youth.",
