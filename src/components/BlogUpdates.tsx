@@ -43,7 +43,7 @@ const BlogUpdates = () => {
           {updates.map((update, index) => (
             <article
               key={update.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group"
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group flex flex-col h-full"
             >
               <div className="relative h-48 bg-gray-200 overflow-hidden">
                 <img
@@ -65,27 +65,29 @@ const BlogUpdates = () => {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center text-sm text-gray-500 mb-3">
                   <Calendar className="w-4 h-4 mr-2" />
                   {update.date} • {update.readTime}
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#2D6AA3] transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#2D6AA3] transition-colors line-clamp-3 min-h-[4.5rem]">
                   {update.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3 flex-grow">
                   {update.excerpt}
                 </p>
 
-                <button 
-                  onClick={() => openModal(update)}
-                  className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold group"
-                >
-                  Read More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                <div className="mt-auto">
+                  <button 
+                    onClick={() => openModal(update)}
+                    className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold group"
+                  >
+                    Read More
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
               </div>
             </article>
           ))}
