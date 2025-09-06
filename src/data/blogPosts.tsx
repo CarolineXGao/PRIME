@@ -53,7 +53,7 @@ At PRIME, we are working to build this platform: a space where researchers, clin
     title:
       "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
     excerpt:
-      "A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges.",
+      "A new study of 19,501 Australian teens finds that exposure to extreme weather increases climate concerns and psychological distress.",
     fullContent: `A new open-access study of 19,501 Australian teens (15–19 years) shows that exposure to floods, fires, storms or droughts is linked to higher climate concern, greater psychological distress, and increased housing and financial challenges.
 
 The research analysed the 2023 Mission Australia Youth Survey to understand how extreme weather exposure affects young people’s mental health and social wellbeing.
@@ -85,7 +85,7 @@ What this means for action:
     category: "Research Insights",
     title: "Climate Concern, Distress, and Future Outlook in Young Australians",
     excerpt:
-      "Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and remote youth.",
+      "Study of 18,800 young Australians shows higher climate concern links to greater distress and negative outlook.",
     fullContent: `Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and young people living outside major cities.
 
 This study analysed the 2022 Mission Australia Youth Survey to examine how climate change concerns relate to psychological distress (K6) and future outlook after accounting for social determinants and pre-existing mental health conditions.
@@ -119,7 +119,7 @@ Why this matters:
     category: "Events & Webinars",
     title: "Recognising and Supporting Climate Emotions in the Classroom",
     excerpt:
-      "A practical, educator-focused webinar on building confidence to address climate-related topics and support student emotions in class.",
+      "A practical webinar for educators on building confidence to address climate topics and support student emotions.",
     fullContent: `A practical, educator-focused webinar designed to build teacher confidence in addressing climate-related topics and supporting student emotions in the classroom.
 
 About this event  
@@ -163,7 +163,7 @@ Speakers
     category: "Voices from the Field",
     title: "Youth Participant Stories: Finding Hope",
     excerpt:
-      "Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.",
+      "Hear directly from young people who participated in PRIME research about their experiences and insights.",
     fullContent: `Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.
 
 "Being part of PRIME has shown me that my climate anxiety isn't something I have to face alone. The group sessions helped me connect with other young people who understand what I'm going through." - Sarah, 19
