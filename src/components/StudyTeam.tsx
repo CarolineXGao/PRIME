@@ -9,19 +9,39 @@ type Member = {
   name: string;
   role: string; // blue-highlighted expertise line
   bio: string;  // positions + institutions + research focus (concise)
-  image?: string;
+  image?: string; // optional override
+};
+
+// helper: build local /public/Team/ path
+const localImageUrl = (name: string) => {
+  // Strip titles and parentheticals
+  const cleanName = name
+    .replace(/(Assoc Prof|Prof|Dr)\s*/gi, '')
+    .replace(/\(.*?\)/g, '')
+    .trim();
+
+  // Replace spaces with underscores
+  const fileName = cleanName.replace(/\s+/g, '_');
+
+  return `/Team/${fileName}.png`;
 };
 
 const Card = ({ member }: { member: Member }) => {
-  const img =
-    member.image && member.image.trim().length > 0
-      ? member.image
-      : avatarUrl(member.name);
+  const localImg = localImageUrl(member.name);
+  const fallbackImg = avatarUrl(member.name);
+  const img = member.image || localImg;
 
   return (
     <div className="bg-gray-50 border-2 border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:border-[#2D6AA3] hover:border-opacity-30">
       <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-6 border-4 border-white shadow-lg bg-white">
-        <img src={img} alt={member.name} className="w-full h-full object-cover" />
+        <img
+          src={img}
+          alt={member.name}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = fallbackImg;
+          }}
+        />
       </div>
 
       <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
@@ -75,7 +95,7 @@ const StudyTeam = () => {
       bio:
         'Research Fellow, Orygen/CYMH, University of Melbourne. Focus on mixed methods, co-design and systems approaches to climate policy and youth wellbeing.',
     },
-      {
+    {
       name: 'Samantha Eala',
       role: 'Development Practice & One Health',
       bio:
@@ -93,7 +113,6 @@ const StudyTeam = () => {
       bio:
         'Lived Experience Researcher (Orygen). BSc (Neuroscience and Psychology & Environmental Science) University of Melbourne.',
     },
-
   ];
 
   // ---------- Project CI ----------
