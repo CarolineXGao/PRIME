@@ -91,7 +91,6 @@ Key findings:
 
 Why this matters:
 
-- <strong class="font-semibold">Support must go beyond “one-size-fits-all”</strong>—targeted, culturally safe approaches are needed for groups at higher risk.  
 - <strong class="font-semibold">Integrate youth mental health into climate policy</strong>—education, communication, and services should address climate-related distress and foster hope.  
 - <strong class="font-semibold">Track outcomes over time</strong>—longitudinal monitoring can guide effective responses and prevention.
 
@@ -189,8 +188,13 @@ function normalizeContent(html: string): string {
   if (!html) return html;
   let out = html;
 
-  // Convert asterisk bullet points to proper formatting
-  out = out.replace(/^\* /gm, '• ');
+  // Convert asterisk bullet points to proper HTML list formatting
+  out = out.replace(/^\* (.+)$/gm, '<li class="mb-2">• $1</li>');
+  
+  // Wrap consecutive list items in ul tags
+  out = out.replace(/(<li class="mb-2">• .+<\/li>\s*)+/g, (match) => {
+    return `<ul class="list-none ml-4 mb-4 space-y-2">${match}</ul>`;
+  });
 
   // Remove blue-ish classes from strong tags if they exist in older content
   out = out.replaceAll(
