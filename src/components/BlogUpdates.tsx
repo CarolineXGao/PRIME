@@ -131,43 +131,16 @@ const BlogUpdates = () => {
               />
               <div className="prose max-w-none">
                 {selectedPost.fullContent.split('\n').map((paragraph, index) => {
-                  // Check if paragraph contains the DOI URL
-                  if (paragraph.includes('https://doi.org/10.1007/s43151-025-00174-1')) {
-                    return (
-                      <p key={index} className="mb-4 text-gray-700 leading-relaxed">
-                        👉 You can read the full open access article here:{' '}
-                        <a 
-                          href="https://doi.org/10.1007/s43151-025-00174-1"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium"
-                        >
-                          https://doi.org/10.1007/s43151-025-00174-1
-                        </a>
-                      </p>
-                    );
-                  }
-                  if (paragraph.includes('https://doi.org/')) {
-                    return (
-                      <p key={index} className="mb-4 text-gray-700 leading-relaxed">
-                        <a 
-                          href={`https://doi.org/${paragraph.split('https://doi.org/')[1]}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium"
-                        >
-                          https://doi.org/{paragraph.split('https://doi.org/')[1]}
-                        </a>
-                        {paragraph.split('https://doi.org/')[0]}
-                      </p>
-                    );
-                  }
-                  return (
-                    <p key={index} className="mb-4 text-gray-700 leading-relaxed">
-                      {paragraph}
-                    </p>
-                  );
-                })}
+                <div 
+                  className="text-gray-700 leading-relaxed space-y-4"
+                  dangerouslySetInnerHTML={{ 
+                    __html: selectedPost.fullContent
+                      .replace(/\n\n/g, '</p><p class="mb-4">')
+                      .replace(/^/, '<p class="mb-4">')
+                      .replace(/$/, '</p>')
+                      .replace(/https:\/\/doi\.org\/([^\s]+)/g, '<a href="https://doi.org/$1" target="_blank" rel="noopener noreferrer" class="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium">https://doi.org/$1</a>')
+                  }}
+                />
               </div>
             </div>
           </div>
