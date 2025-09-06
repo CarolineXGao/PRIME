@@ -11,8 +11,9 @@ const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) =
       icon: <UserCheck className="w-6 h-6" />,
       title: "Participation Information",
       description: "Everything you need to know about participating in PRIME research, including what to expect, your rights as a participant, data protection, and compensation information.",
-      buttonText: "View Information",
-      downloadLink: "https://www.orygen.org.au/Training/Resources/Participants/Participation-Information"
+      buttonText: "Under Development",
+      downloadLink: "#",
+      buttonDisabled: true
     }
   ];
 
@@ -87,15 +88,25 @@ const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) =
               </p>
 
               <div className="mt-auto">
-                <a
-                  href={resource.downloadLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  {resource.buttonText}
-                </a>
+                {resource.buttonDisabled ? (
+                  <button
+                    disabled
+                    className="w-full bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg cursor-not-allowed flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </button>
+                ) : (
+                  <a
+                    href={resource.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </a>
+                )}
               </div>
             </div>
           ))}
