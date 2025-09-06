@@ -179,6 +179,20 @@ export const categories: BlogPost["category"][] = [
 ];
 
 /* =========================
+   Export Functions
+   ========================= */
+
+export function getLatestPosts(count: number): BlogPost[] {
+  return blogPosts
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, count);
+}
+
+export function getPostsByCategory(category: BlogPost["category"]): BlogPost[] {
+  return blogPosts.filter(post => post.category === category);
+}
+
+/* =========================
    Helpers
    ========================= */
 
