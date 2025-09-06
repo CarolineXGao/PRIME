@@ -11,6 +11,16 @@ const Footer = () => {
   return (
     <footer className="bg-[#2D6AA3] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Acknowledgment Section */}
+        <div className="mb-8 space-y-4">
+          <p className="text-blue-100 text-sm leading-relaxed">
+            PRIME acknowledges the Traditional Owners of the lands we are on and pays respect to their Elders past and present. We recognise and respect their cultural heritage, beliefs and relationship to Country, which continue to be important to the First Nations people living today.
+          </p>
+          <p className="text-blue-100 text-sm leading-relaxed">
+            PRIME celebrates diversity and welcomes all people regardless of their ethnicity, faith, sexual orientation, gender identity and lived experience.
+          </p>
+        </div>
+
         {/* Legal & Copyright */}
         <div>
           <div className="flex flex-col md:flex-row justify-between items-center">
