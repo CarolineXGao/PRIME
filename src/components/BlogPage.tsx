@@ -38,7 +38,7 @@ At PRIME, we are working to build this platform: a space where researchers, clin
         image: "https://images.pexels.com/photos/7551640/pexels-photo-7551640.jpeg?auto=compress&cs=tinysrgb&w=400",
         title: "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
         excerpt: "A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges.",
-        fullContent: `TL;DR: A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges—with the biggest impacts when their household is directly affected.
+        fullContent: `TL;DR: A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges—with the biggest impacts when their household is directly affected.`,
         date: "March 12, 2024",
         readTime: "7 min read",
         category: "Research Insights"
@@ -78,7 +78,7 @@ At PRIME, we are working to build this platform: a space where researchers, clin
         image: "https://images.pexels.com/photos/6646913/pexels-photo-6646913.jpeg?auto=compress&cs=tinysrgb&w=400",
         title: "Youth Participant Stories: Finding Hope",
         excerpt: "Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.",
-        fullContent: `Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.
+        fullContent: \`Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.
 
 "Being part of PRIME has shown me that my climate anxiety isn't something I have to face alone. The group sessions helped me connect with other young people who understand what I'm going through." - Sarah, 19
 
@@ -135,7 +135,7 @@ These stories highlight the importance of youth-centered approaches and the powe
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-6 py-3 rounded-lg font-semibold text-sm md:text-base whitespace-nowrap transition-all duration-200 ${
+                  className={\`px-6 py-3 rounded-lg font-semibold text-sm md:text-base whitespace-nowrap transition-all duration-200 ${
                     activeTab === tab
                       ? 'bg-[#2D6AA3] text-white shadow-md'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
