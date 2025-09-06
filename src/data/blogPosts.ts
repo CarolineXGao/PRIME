@@ -73,19 +73,11 @@ In preparedness: Work with schools and local services to build coping skills, co
 
 In policy: Track youth outcomes after disasters and fund programs that target housing stability, financial supports, and equitable access to care.
 
-How this aligns with PRIME
 
-This evidence reinforces PRIME's focus on:
-
-Fast-tracking interventions that address both emotional and practical needs after climate events.
-
-Prioritising equity—designing with and for communities most at risk.
-
-Working with young people as co-designers so supports are relevant, effective, and scalable.
 
 👉 Read the full article (open access): https://doi.org/10.1016/j.envres.2025.121385`,
     date: "March 12, 2024",
-    readTime: "7 min read"
+    readTime: "3  min read"
   },
   {
     id: 'intervention-effectiveness-results',
