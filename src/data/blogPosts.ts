@@ -153,7 +153,7 @@ Speakers
   // Voices from the Field
   {
     id: 'youth-participant-stories',
-    image: "https://images.pexels.com/photos/6646913/pexels-photo-6646913.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/Image8.png",
     category: "Voices from the Field",
     title: "Youth Participant Stories: Finding Hope",
     excerpt: "Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.",
@@ -167,17 +167,7 @@ Speakers
 
 These stories highlight the importance of youth-centered approaches and the power of peer support in building climate resilience.`,
     date: "March 10, 2024",
-    readTime: "8 min read"
-  },
-  {
-    id: 'community-leader-perspectives',
-    image: "https://images.pexels.com/photos/7551658/pexels-photo-7551658.jpeg?auto=compress&cs=tinysrgb&w=400",
-    category: "Voices from the Field",
-    title: "Community Leader Perspectives",
-    excerpt: "Local community leaders share their observations about climate impacts on youth and the importance of culturally responsive interventions.",
-    fullContent: "Local community leaders share their observations about climate impacts on youth and the importance of culturally responsive interventions. These perspectives highlight the need for interventions that respect cultural values and leverage existing community strengths.",
-    date: "March 5, 2024",
-    readTime: "6 min read"
+    readTime: "3 min read"
   }
 ];
 
