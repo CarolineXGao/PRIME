@@ -20,6 +20,13 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       description: "Comprehensive educational resources and programs designed to engage students in climate action and sustainability through storytelling and practical solutions.",
       buttonText: "Explore STTOP Program",
       downloadLink: "https://sttop2030.com/"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Climate Superpower",
+      description: "Interactive platform and resources designed to empower young people with climate action skills and knowledge through engaging activities and community building.",
+      buttonText: "Visit Climate Superpower",
+      downloadLink: "https://climatesuperpower.com/"
     }
   ];
 
