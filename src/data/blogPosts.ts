@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
   // Research Insights
   {
     id: 'climate-change-youth-solutions',
-    image: "https://images.pexels.com/photos/8549835/pexels-photo-8549835.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/Image2.png",
     category: "Research Insights",
     title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",
     excerpt: "We know that climate change is more than an environmental crisis — it's also a mental health challenge. Our new commentary calls for urgent action to close the gap between what young people are experiencing and the slow pace of research and policy responses...",
