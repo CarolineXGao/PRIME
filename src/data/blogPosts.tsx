@@ -60,15 +60,20 @@ The research analysed the 2023 Mission Australia Youth Survey to understand how 
 
 We highlight that:
 
-• <strong class="font-semibold">Adolescents outside major cities, in lower-SES areas, and those who are Indigenous, gender diverse, living with disability, or from CALD communities are more likely to be exposed.</strong>
-• <strong class="font-semibold">Those exposed report higher climate concern and greater psychological distress (K6).</strong>
-• <strong class="font-semibold">Exposure increases the odds of financial hardship and housing challenges—especially when the household is directly affected.</strong>
-• <strong class="font-semibold">Recovery cannot be "one size fits all": supports must be age-appropriate, culturally safe, and targeted to vulnerable groups.</strong>
+<ul class="list-none space-y-1">
+  <li>• Adolescents <strong>outside major cities</strong>, in <strong>lower-SES areas</strong>, and those who are <strong>Indigenous</strong>, <strong>gender diverse</strong>, <strong>living with disability</strong>, or from <strong>CALD communities</strong> are more likely to be exposed.</li>
+  <li>• Those exposed report <strong>higher climate concern</strong> and <strong>greater psychological distress (K6)</strong>.</li>
+  <li>• Exposure increases the odds of <strong>financial hardship</strong> and <strong>housing challenges</strong> — especially when the household is directly affected.</li>
+  <li>• Recovery cannot be <strong>"one size fits all"</strong>: supports must be <strong>age-appropriate</strong>, <strong>culturally safe</strong>, and <strong>targeted</strong> to vulnerable groups.</li>
+</ul>
 
 What this means for action:  
-- In recovery: place youth mental health staff in disaster response and provide culturally safe, age-appropriate supports.  
-- In preparedness: work with schools and local services to build coping skills and readiness tailored to local hazards.  
-- In policy: track youth outcomes after disasters and fund programs that support housing stability, financial security, and equitable care access.
+<ul class="list-none space-y-1">
+  <li>- In <strong>recovery</strong>: place <strong>youth mental health staff</strong> in disaster response and provide <strong>culturally safe</strong>, <strong>age-appropriate supports</strong>.</li>
+  <li>- In <strong>preparedness</strong>: work with <strong>schools</strong> and <strong>local services</strong> to build <strong>coping skills</strong> and readiness tailored to <strong>local hazards</strong>.</li>
+  <li>- In <strong>policy</strong>: track <strong>youth outcomes</strong> after disasters and fund programs that support <strong>housing stability</strong>, <strong>financial security</strong>, and <strong>equitable care access</strong>.</li>
+</ul>
+
 
 👉 Read the full open access article here: https://doi.org/10.1016/j.envres.2025.121385`,
     date: "15 June 2025",
