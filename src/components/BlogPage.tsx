@@ -36,9 +36,9 @@ At PRIME, we are working to build this platform: a space where researchers, clin
       },
       {
         image: "https://images.pexels.com/photos/7551640/pexels-photo-7551640.jpeg?auto=compress&cs=tinysrgb&w=400",
-        title: "Measuring Climate-Related Mental Health Impact",
-        excerpt: "Exploring new methodologies for assessing the psychological impact of environmental changes on adolescent populations using validated measurement tools.",
-        fullContent: "Exploring new methodologies for assessing the psychological impact of environmental changes on adolescent populations using validated measurement tools. This research focuses on developing comprehensive assessment frameworks that can capture the nuanced ways climate change affects young people's mental health.",
+        title: "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
+        excerpt: "A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges.",
+        fullContent: `TL;DR: A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges—with the biggest impacts when their household is directly affected.
         date: "March 12, 2024",
         readTime: "7 min read",
         category: "Research Insights"
