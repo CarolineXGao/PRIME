@@ -78,7 +78,7 @@ At PRIME, we are working to build this platform: a space where researchers, clin
         image: "https://images.pexels.com/photos/6646913/pexels-photo-6646913.jpeg?auto=compress&cs=tinysrgb&w=400",
         title: "Youth Participant Stories: Finding Hope",
         excerpt: "Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.",
-        fullContent: \`Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.
+        fullContent: `Hear directly from young people who have participated in PRIME research about their experiences, insights, and the tools they've found most helpful.
 
 "Being part of PRIME has shown me that my climate anxiety isn't something I have to face alone. The group sessions helped me connect with other young people who understand what I'm going through." - Sarah, 19
 
