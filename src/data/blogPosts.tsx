@@ -31,12 +31,10 @@ Our new commentary, published in the Journal of Applied Youth Studies, calls for
 
 We highlight that:
 
-<ul>
-<li><strong class="font-semibold">Young people are disproportionately affected by climate-related disasters and exclusion from decision-making.</strong></li>
-<li><strong class="font-semibold">Youth-specific interventions are rare, and translating research into practice can take decades.</strong></li>
-<li><strong class="font-semibold">Innovative approaches, like adaptive platform trials, can help us test and scale solutions much faster.</strong></li>
-<li><strong class="font-semibold">Youth must be at the centre — not only as participants, but as co-designers and leaders in shaping mental health and climate responses.</strong></li>
-</ul>
+* <strong class="font-semibold">Young people are disproportionately affected by climate-related disasters and exclusion from decision-making.</strong>
+* <strong class="font-semibold">Youth-specific interventions are rare, and translating research into practice can take decades.</strong>
+* <strong class="font-semibold">Innovative approaches, like adaptive platform trials, can help us test and scale solutions much faster.</strong>
+* <strong class="font-semibold">Youth must be at the centre — not only as participants, but as co-designers and leaders in shaping mental health and climate responses.</strong>
 
 At PRIME, we are working to build this platform: a space where researchers, clinicians, communities, and young people can come together to design and test interventions that are fit for purpose, evidence-based, and led by youth voices.
 
@@ -58,12 +56,10 @@ The research analysed the 2023 Mission Australia Youth Survey to understand how 
 
 We highlight that:
 
-<ul>
-<li><strong class="font-semibold">Adolescents outside major cities, in lower-SES areas, and those who are Indigenous, gender diverse, living with disability, or from CALD communities are more likely to be exposed.</strong></li>
-<li><strong class="font-semibold">Those exposed report higher climate concern and greater psychological distress (K6).</strong></li>
-<li><strong class="font-semibold">Exposure increases the odds of financial hardship and housing challenges—especially when the household is directly affected.</strong></li>
-<li><strong class="font-semibold">Recovery cannot be “one size fits all”: supports must be age-appropriate, culturally safe, and targeted to vulnerable groups.</strong></li>
-</ul>
+* <strong class="font-semibold">Adolescents outside major cities, in lower-SES areas, and those who are Indigenous, gender diverse, living with disability, or from CALD communities are more likely to be exposed.</strong>
+* <strong class="font-semibold">Those exposed report higher climate concern and greater psychological distress (K6).</strong>
+* <strong class="font-semibold">Exposure increases the odds of financial hardship and housing challenges—especially when the household is directly affected.</strong>
+* <strong class="font-semibold">Recovery cannot be "one size fits all": supports must be age-appropriate, culturally safe, and targeted to vulnerable groups.</strong>
 
 What this means for action:  
 - In recovery: place youth mental health staff in disaster response and provide culturally safe, age-appropriate supports.  
@@ -87,13 +83,11 @@ This study analysed the 2022 Mission Australia Youth Survey to examine how clima
 
 Key findings:
 
-<ul>
-<li><strong class="font-semibold">One in four young people were very or extremely concerned about climate change.</strong></li>
-<li><strong class="font-semibold">Female and gender-diverse youth, and those with a self-reported mental health condition, reported higher climate concerns.</strong></li>
-<li><strong class="font-semibold">Very/extremely concerned youth had higher psychological distress (RRR = 1.81; 95% CI: 1.56–2.11).</strong></li>
-<li><strong class="font-semibold">They were also more likely to have a negative future outlook (RRR = 1.52; 95% CI: 1.27–1.81).</strong></li>
-<li><strong class="font-semibold">Associations were stronger among gender-diverse, Indigenous, and outer-regional/remote participants.</strong></li>
-</ul>
+* <strong class="font-semibold">One in four young people were very or extremely concerned about climate change.</strong>
+* <strong class="font-semibold">Female and gender-diverse youth, and those with a self-reported mental health condition, reported higher climate concerns.</strong>
+* <strong class="font-semibold">Very/extremely concerned youth had higher psychological distress (RRR = 1.81; 95% CI: 1.56–2.11).</strong>
+* <strong class="font-semibold">They were also more likely to have a negative future outlook (RRR = 1.52; 95% CI: 1.27–1.81).</strong>
+* <strong class="font-semibold">Associations were stronger among gender-diverse, Indigenous, and outer-regional/remote participants.</strong>
 
 Why this matters:
 
@@ -118,32 +112,26 @@ Why this matters:
 
 About this event  
 
-<ul>
-<li><strong class="font-semibold">Format:</strong> Online (Zoom)</li>
-<li><strong class="font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST</li>
-<li><strong class="font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)</li>
-</ul>
+* <strong class="font-semibold">Format:</strong> Online (Zoom)
+* <strong class="font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST
+* <strong class="font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)
 
 What you'll learn 
 
-<ul>
-<li>Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)</li>
-<li>Creating supportive learning environments when climate emotions arise</li>
-<li>Practical, empowering tools for discussing sustainability and environmental issues</li>
-<li>Panel discussion + audience Q&A with sector experts</li>
-</ul>
+* Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)
+* Creating supportive learning environments when climate emotions arise
+* Practical, empowering tools for discussing sustainability and environmental issues
+* Panel discussion + audience Q&A with sector experts
 
 Speakers  
 
-<ul>
-<li>Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)</li>
-<li>Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)</li>
-<li>Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)</li>
-<li>Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program</li>
-<li>Dr Bronwyn Gresham — Clinical Psychologist & CEO, Psychology for a Safe Climate</li>
-<li>Simon Dodd — Head of Workforce Planning & Development, National Clinical Advisor, headspace</li>
-<li>Canice Curtis — Senior Practice Lead, Wesley Mission QLD; “Young Minds in a Changing Climate” project</li>
-</ul>
+* Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)
+* Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)
+* Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)
+* Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program
+* Dr Bronwyn Gresham — Clinical Psychologist & CEO, Psychology for a Safe Climate
+* Simon Dodd — Head of Workforce Planning & Development, National Clinical Advisor, headspace
+* Canice Curtis — Senior Practice Lead, Wesley Mission QLD; "Young Minds in a Changing Climate" project
 
 👉 <a href="https://www.eventbrite.com.au/e/recognising-and-supporting-climate-emotions-in-the-classroom-tickets-1588497271099?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">Register on Eventbrite</a>`,
     date: "September 3, 2025",
@@ -201,17 +189,8 @@ function normalizeContent(html: string): string {
   if (!html) return html;
   let out = html;
 
-  // Replace any <ul> with a tight list (small vertical gap)
-  out = out.replaceAll(
-    /<ul>/gi,
-    '<ul class="list-disc list-inside space-y-2 ml-6 marker:text-gray-600">'
-  );
-
-  // Ensure <li> don’t add extra margins (optional; Tailwind resets help already)
-  out = out.replaceAll(
-    /<li>/gi,
-    '<li class="leading-relaxed pl-1">'
-  );
+  // Convert asterisk bullet points to proper formatting
+  out = out.replace(/^\* /gm, '• ');
 
   // Remove blue-ish classes from strong tags if they exist in older content
   out = out.replaceAll(
