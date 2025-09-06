@@ -70,27 +70,26 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
 
               <div className="mt-auto">
                 {resource.buttonDisabled ? (
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (resource.title === 'Measurement Tools') {
-                      setCurrentPage('measurement-tools');
-                    }
-                  }}
+                  <button
+                    disabled
+                    className="w-full bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg cursor-not-allowed flex items-center justify-center"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     {resource.buttonText}
                   </button>
                 ) : (
-                  <a
-                    href={resource.downloadLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (resource.title === 'Measurement Tools') {
+                        setCurrentPage('measurement-tools');
+                      }
+                    }}
                     className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     {resource.buttonText}
-                  </a>
+                  </button>
                 )}
               </div>
             </div>
