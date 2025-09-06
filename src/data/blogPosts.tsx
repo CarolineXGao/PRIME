@@ -95,8 +95,8 @@ Key findings:
 <ul class="list-none space-y-1">
   <li>- <strong>One in four</strong> young people were very or extremely concerned about <strong>climate change</strong>.</li>
   <li>- <strong>Female</strong> and <strong>gender-diverse youth</strong>, and those with a <strong>self-reported mental health condition</strong>, reported higher climate concerns.</li>
-  <li>- Very/extremely concerned youth had higher <strong>psychological distress</strong> (RRR = 1.81; 95% CI: 1.56–2.11).</li>
-  <li>- They were also more likely to have a <strong>negative future outlook</strong> (RRR = 1.52; 95% CI: 1.27–1.81).</li>
+  <li>- Very/extremely concerned youth had higher <strong>psychological distress</strong> .</li>
+  <li>- They were also more likely to have a <strong>negative future outlook</strong> .</li>
   <li>- Associations were stronger among <strong>gender-diverse</strong>, <strong>Indigenous</strong>, and <strong>outer-regional/remote</strong> participants.</li>
 </ul>
 
@@ -130,20 +130,26 @@ About this event
 
 What you'll learn 
 
-• Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)
-• Creating supportive learning environments when climate emotions arise
-• Practical, empowering tools for discussing sustainability and environmental issues
-• Panel discussion + audience Q&A with sector experts
+<ul class="list-none space-y-1">
+  <li>- <strong>Introducing</strong> the <strong>Teacher Support Resource</strong> (Orygen, headspace, Psychology for a Safe Climate & advisors)</li>
+  <li>- <strong>Creating supportive learning environments</strong> when <strong>climate emotions</strong> arise</li>
+  <li>- <strong>Practical, empowering tools</strong> for discussing <strong>sustainability</strong> and <strong>environmental issues</strong></li>
+  <li>- <strong>Panel discussion + audience Q&A</strong> with sector experts</li>
+</ul>
 
 Speakers  
 
-• Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)
-• Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)
-• Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)
-• Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program
-* Dr Bronwyn Gresham — Clinical Psychologist & CEO, Psychology for a Safe Climate
-* Simon Dodd — Head of Workforce Planning & Development, National Clinical Advisor, headspace
-* Canice Curtis — Senior Practice Lead, Wesley Mission QLD; "Young Minds in a Changing Climate" project
+<ul class="list-none space-y-1">
+  <li>- <strong>Caroline Gao</strong> — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)</li>
+  <li>- <strong>Samantha Eala</strong> — Development practitioner/researcher (University of Melbourne; Ateneo)</li>
+  <li>- <strong>Jackie Turnure</strong> — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)</li>
+  <li>- <strong>Lizzy Nash</strong> — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program</li>
+  <li>- <strong>Dr Bronwyn Gresham</strong> — Clinical Psychologist & CEO, Psychology for a Safe Climate</li>
+  <li>- <strong>Simon Dodd</strong> — Head of Workforce Planning & Development, National Clinical Advisor, headspace</li>
+  <li>- <strong>Canice Curtis</strong> — Senior Practice Lead, Wesley Mission QLD; "Young Minds in a Changing Climate" project</li>
+</ul>
+
+
 
 👉 <a href="https://www.eventbrite.com.au/e/recognising-and-supporting-climate-emotions-in-the-classroom-tickets-1588497271099?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">Register on Eventbrite</a>`,
     date: "September 3, 2025",
