@@ -3,7 +3,7 @@ export interface MeasurementTool {
   name: string;
   description: string;
   targetPopulation: string;
-  domains: string[];
+  domains: string[]; 
   administrationTime: string;
   format: string;
   availability: string;
