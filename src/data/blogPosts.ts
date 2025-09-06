@@ -68,7 +68,7 @@ What this means for action:
   },
   {
   id: 'climate-concerns-distress-outlook',
-  image: "/Image3.png",
+  image: "/Image6.png",
   category: "Research Insights",
   title: "Climate Concern, Distress, and Future Outlook in Young Australians",
   excerpt: "Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and remote youth.",
