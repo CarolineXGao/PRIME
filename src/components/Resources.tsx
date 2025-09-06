@@ -93,53 +93,6 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
           ))}
         </div>
 
-        {/* Additional Resources Section */}
-        <div className="bg-gray-50 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            Additional Resources
-          </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#2D6AA3] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-[#2D6AA3] rounded"></div>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Research Database</h4>
-              <p className="text-gray-600 mb-4">
-                Access our comprehensive database of climate and mental health research publications.
-              </p>
-              <button className="text-[#2D6AA3] hover:text-[#1e4d73] font-semibold">
-                Browse Database →
-              </button>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-[#3A9C62] rounded"></div>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Training Portal</h4>
-              <p className="text-gray-600 mb-4">
-                Online training modules for professionals working with climate-affected youth.
-              </p>
-              <button className="text-[#3A9C62] hover:text-[#2d7a4f] font-semibold">
-                Start Training →
-              </button>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#F4B43D] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-[#F4B43D] rounded"></div>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Support Network</h4>
-              <p className="text-gray-600 mb-4">
-                Connect with other professionals and organizations in the field.
-              </p>
-              <button className="text-[#F4B43D] hover:text-[#e5a334] font-semibold">
-                Join Network →
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
