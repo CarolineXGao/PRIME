@@ -135,7 +135,7 @@ These stories highlight the importance of youth-centered approaches and the powe
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={\`px-6 py-3 rounded-lg font-semibold text-sm md:text-base whitespace-nowrap transition-all duration-200 ${
+                  className={`px-6 py-3 rounded-lg font-semibold text-sm md:text-base whitespace-nowrap transition-all duration-200 ${
                     activeTab === tab
                       ? 'bg-[#2D6AA3] text-white shadow-md'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
