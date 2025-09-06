@@ -161,24 +161,8 @@ const Contact = () => {
                 Stay Connected
               </h3>
               
-              {/* Newsletter Signup */}
-              <div className="mb-6">
-                <p className="text-gray-600 mb-4">Subscribe to our newsletter for updates:</p>
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-l-lg focus:border-[#2D6AA3] focus:outline-none"
-                  />
-                  <button className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-4 py-2 rounded-r-lg transition-colors">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-
-              {/* Social Media */}
+              <p className="text-gray-600 mb-4">Follow us on social media:</p>
               <div>
-                <p className="text-gray-600 mb-4">Follow us on social media:</p>
                 <div className="flex space-x-4">
                   <button className="w-10 h-10 bg-[#2D6AA3] bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-opacity-20 transition-colors">
                     <Facebook className="w-5 h-5 text-[#2D6AA3]" />
