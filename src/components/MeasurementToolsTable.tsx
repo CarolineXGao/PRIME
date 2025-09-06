@@ -1,95 +1,137 @@
-// measurementTools.ts
+import React from 'react';
+import { ArrowLeft, ExternalLink, Clock, Users, FileText } from 'lucide-react';
+import { measurementTools } from '../data/measurementTools';
 
-export interface MeasurementTool {
-  id: string;
-  name: string;
-  description: string;
-  targetPopulation: string;
-  domains: string[];
-  administrationTime: string;
-  format: string;
-  availability: "Open access" | "Permission required";
-  reference: string;
-  link?: string;
+interface MeasurementToolsTableProps {
+  setCurrentPage: (page: string) => void;
 }
 
-export const measurementTools: MeasurementTool[] = [
-  {
-    id: "ccas",
-    name: "Climate Change Anxiety Scale (CCAS)",
-    description:
-      "A 22-item scale assessing climate-related anxiety, including cognitive and functional impairment.",
-    targetPopulation: "Adolescents and adults",
-    domains: ["Anxiety", "Cognitive impairment", "Functional impairment"],
-    administrationTime: "10 min",
-    format: "Self-report (Likert scale)",
-    availability: "Open access",
-    reference: "Clayton, S., & Karazsia, B. T. (2020). Development and validation of a measure of climate change anxiety. J. Environ. Psychol., 69, 101434.",
-    link: "https://doi.org/10.1016/j.jenvp.2020.101434",
-  },
-  {
-    id: "heas",
-    name: "Hogg Eco-Anxiety Scale (HEAS)",
-    description:
-      "A 13-item validated scale capturing four dimensions of eco-anxiety: affective symptoms, rumination, behavioural symptoms, and anxiety about personal impact.",
-    targetPopulation: "Adults and young adults",
-    domains: ["Affective symptoms", "Rumination", "Behavioural symptoms", "Personal impact"],
-    administrationTime: "5–10 min",
-    format: "Self-report (Likert scale)",
-    availability: "Open access",
-    reference: "Hogg, T. L., Stanley, S. K., O’Brien, L. V., Wilson, M. S., & Watsford, C. (2021). The Hogg Eco-Anxiety Scale: Development and validation of a multidimensional measure. Global Environmental Change, 71, 102391.",
-    link: "https://doi.org/10.1016/j.gloenvcha.2021.102391",
-  },
-  {
-    id: "ice",
-    name: "Inventory of Climate Emotions (ICE)",
-    description:
-      "A 21-item measure assessing a broad spectrum of climate-related emotions, including anxiety, guilt, anger, and hope.",
-    targetPopulation: "Adults and adolescents",
-    domains: ["Emotions", "Anxiety", "Guilt", "Anger", "Hope"],
-    administrationTime: "10 min",
-    format: "Self-report (Likert scale)",
-    availability: "Open access",
-    reference: "Hickman, C., Marks, E., Pihkala, P., Clayton, S., Lewandowski, R. E., Mayall, E. E., Wray, B., Mellor, C., & van Susteren, L. (2021). Climate anxiety in children and young people: A global survey and scale validation. The Lancet Planetary Health, 5(12), e863–e873.",
-    link: "https://doi.org/10.1016/S2542-5196(21)00278-3",
-  },
-  {
-    id: "ccws",
-    name: "Climate Change Worry Scale (CCWS)",
-    description:
-      "A 10-item measure focusing on worry and rumination about climate change.",
-    targetPopulation: "Adolescents and adults",
-    domains: ["Worry", "Rumination"],
-    administrationTime: "5 min",
-    format: "Self-report (Likert scale)",
-    availability: "Open access",
-    reference: "Stewart, A. E., Hauser, D. J., Krumrei-Mancuso, E. J., & Hogg, T. L. (2022). The Climate Change Worry Scale: Development and validation. Journal of Anxiety Disorders, 88, 102566.",
-    link: "https://doi.org/10.1016/j.janxdis.2022.102566",
-  },
-  {
-    id: "ecas",
-    name: "Eco-Anxiety Scale (EAS)",
-    description:
-      "A 22-item measure developed to assess eco-anxiety, with subscales for affective symptoms, behavioural symptoms, and rumination.",
-    targetPopulation: "Adolescents and adults",
-    domains: ["Eco-anxiety", "Affective symptoms", "Behavioural symptoms", "Rumination"],
-    administrationTime: "10 min",
-    format: "Self-report (Likert scale)",
-    availability: "Open access",
-    reference: "Stanley, S. K., Hogg, T. L., Leviston, Z., & Walker, I. (2021). From anger to action: Differential impacts of eco-anxiety, eco-anger, and eco-depression on climate action and wellbeing. Journal of Climate Change and Health, 1, 100003.",
-    link: "https://doi.org/10.1016/j.joclim.2021.100003",
-  },
-  {
-    id: "ecas-y",
-    name: "Eco-Concern Scale – Youth (ECAS-Y)",
-    description:
-      "A 16-item youth-focused adaptation of the Eco-Concern Scale measuring climate-related worry, rumination, and functional impairment.",
-    targetPopulation: "Adolescents (12–18)",
-    domains: ["Worry", "Rumination", "Functional impairment"],
-    administrationTime: "5–10 min",
-    format: "Self-report (Likert scale)",
-    availability: "Open access",
-    reference: "Ojala, M., & Bengtsson, H. (2019). Young people’s coping with climate change: Validation of the Eco-Concern Scale – Youth version. Environment and Behavior, 51(2), 160–185.",
-    link: "https://doi.org/10.1177/0013916517708323",
-  },
-];
+const MeasurementToolsTable: React.FC<MeasurementToolsTableProps> = ({ setCurrentPage }) => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back Navigation */}
+        <button
+          onClick={() => setCurrentPage('resources')}
+          className="flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5 mr-2" />
+          Back to Resources
+        </button>
+
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Measurement Tools
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Validated instruments for assessing climate-related mental health outcomes
+          </p>
+        </div>
+
+        {/* Tools Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {measurementTools.map((tool) => (
+            <div key={tool.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 leading-tight">
+                  {tool.name}
+                </h3>
+                {tool.link && (
+                  <a
+                    href={tool.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 ml-2 flex-shrink-0"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                )}
+              </div>
+
+              <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                {tool.description}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center text-sm text-gray-700">
+                  <Users className="w-4 h-4 mr-2 text-blue-600" />
+                  <span className="font-medium">Target:</span>
+                  <span className="ml-1">{tool.targetPopulation}</span>
+                </div>
+
+                <div className="flex items-center text-sm text-gray-700">
+                  <Clock className="w-4 h-4 mr-2 text-green-600" />
+                  <span className="font-medium">Time:</span>
+                  <span className="ml-1">{tool.administrationTime}</span>
+                </div>
+
+                <div className="flex items-start text-sm text-gray-700">
+                  <FileText className="w-4 h-4 mr-2 mt-0.5 text-purple-600" />
+                  <div>
+                    <span className="font-medium">Format:</span>
+                    <span className="ml-1">{tool.format}</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-1 mt-3">
+                  {tool.domains.map((domain, index) => (
+                    <span
+                      key={index}
+                      className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                    >
+                      {domain}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="pt-3 border-t border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <span className={`text-xs px-2 py-1 rounded-full ${
+                      tool.availability === 'Open access' 
+                        ? 'bg-green-100 text-green-800' 
+                        : 'bg-yellow-100 text-yellow-800'
+                    }`}>
+                      {tool.availability}
+                    </span>
+                  </div>
+                  
+                  {tool.reference && (
+                    <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                      {tool.reference}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Information */}
+        <div className="mt-16 bg-blue-50 rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Using These Tools
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+            <div>
+              <h3 className="font-semibold mb-2">For Researchers</h3>
+              <p className="text-sm">
+                These validated instruments can be used in research studies to assess climate-related mental health outcomes. 
+                Please cite the original references when using these tools.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">For Clinicians</h3>
+              <p className="text-sm">
+                These tools can help screen and assess climate-related anxiety and distress in clinical settings. 
+                Consider training and supervision when implementing new assessment tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MeasurementToolsTable;
