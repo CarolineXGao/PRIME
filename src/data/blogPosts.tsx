@@ -31,10 +31,12 @@ Our new commentary, published in the Journal of Applied Youth Studies, calls for
 
 We highlight that:
 
-•  <strong class="font-semibold">Young people are disproportionately affected by climate-related disasters and exclusion from decision-making.</strong>
-•  <strong class="font-semibold">Youth-specific interventions are rare, and translating research into practice can take decades.</strong>
-•  <strong class="font-semibold">Innovative approaches, like adaptive platform trials, can help us test and scale solutions much faster.</strong>
-•  <strong class="font-semibold">Youth must be at the centre — not only as participants, but as co-designers and leaders in shaping mental health and climate responses.</strong>
+<ul class="list-none ml-4 space-y-1">
+  <li>• <strong class="font-semibold">Young people are disproportionately affected by climate-related disasters and exclusion from decision-making.</strong></li>
+  <li>• <strong class="font-semibold">Youth-specific interventions are rare, and translating research into practice can take decades.</strong></li>
+  <li>• <strong class="font-semibold">Innovative approaches, like adaptive platform trials, can help us test and scale solutions much faster.</strong></li>
+  <li>• <strong class="font-semibold">Youth must be at the centre — not only as participants, but as co-designers and leaders in shaping mental health and climate responses.</strong></li>
+</ul>
 
 At PRIME, we are working to build this platform: a space where researchers, clinicians, communities, and young people can come together to design and test interventions that are fit for purpose, evidence-based, and led by youth voices.
 
