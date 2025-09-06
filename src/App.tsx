@@ -9,6 +9,7 @@ import StudyDesign from './components/StudyDesign';
 import StudyTeam from './components/StudyTeam';
 import BlogPage from './components/BlogPage';
 import Resources from './components/Resources';
+import MeasurementToolsTable from './components/MeasurementToolsTable';
 import ResourcesResearchers from './components/ResourcesResearchers';
 import ResourcesClinicians from './components/ResourcesClinicians';
 import ResourcesSchools from './components/ResourcesSchools';
@@ -31,6 +32,8 @@ function App() {
         return <BlogPage />;
       case 'resources':
         return <Resources setCurrentPage={setCurrentPage} />;
+      case 'measurement-tools':
+        return <MeasurementToolsTable setCurrentPage={setCurrentPage} />;
       case 'resources-researchers':
         return <ResourcesResearchers setCurrentPage={setCurrentPage} />;
       case 'resources-clinicians':

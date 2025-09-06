@@ -68,9 +68,15 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
 
               <div className="mt-auto">
                 <a
-                  href={resource.downloadLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={resource.title === 'Measurement Tools' ? '#' : resource.downloadLink}
+                  onClick={(e) => {
+                    if (resource.title === 'Measurement Tools') {
+                      e.preventDefault();
+                      setCurrentPage('measurement-tools');
+                    }
+                  }}
+                  target={resource.title === 'Measurement Tools' ? undefined : "_blank"}
+                  rel={resource.title === 'Measurement Tools' ? undefined : "noopener noreferrer"}
                   className="w-full bg-[#3A9C62] hover:bg-[#2d7a4f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
                 >
                   <Download className="w-4 h-4 mr-2" />

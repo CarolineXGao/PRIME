@@ -70,9 +70,13 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
 
               <div className="mt-auto">
                 {resource.buttonDisabled ? (
-                  <button 
-                    className="w-full bg-gray-400 text-white cursor-not-allowed font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
-                    disabled
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (resource.title === 'Measurement Tools') {
+                      setCurrentPage('measurement-tools');
+                    }
+                  }}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     {resource.buttonText}
