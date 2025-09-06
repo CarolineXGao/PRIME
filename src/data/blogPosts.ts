@@ -102,13 +102,14 @@ Why this matters:
   // Events & Webinars
   {
     id: 'recognising-supporting-climate-emotions-classroom',
-  image: "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=400",
+  image:  "/Image7.png",
   category: "Events & Webinars",
   title: "Recognising and Supporting Climate Emotions in the Classroom",
   excerpt: "A practical, educator-focused webinar on building confidence to address climate-related topics and support student emotions in class.",
   fullContent: `A practical, educator-focused webinar designed to build teacher confidence in addressing climate-related topics and supporting student emotions in the classroom.
 
 About this event  
+
 • <strong class="text-[#2D6AA3] font-semibold">Format:</strong> Online (Zoom)  
 
 • <strong class="text-[#2D6AA3] font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST
@@ -127,6 +128,7 @@ What you'll learn
 • Panel discussion + audience Q&A with sector experts
 
 Speakers  
+
 - Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)
 
 - Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)  
@@ -146,16 +148,6 @@ Speakers
   date: "September 3, 2025",
   readTime: "Webinar"
   
-  },
-  {
-    id: 'youth-research-workshop-series',
-    image: "/Image7.png0",
-    category: "Events & Webinars",
-    title: "Youth Research Workshop Series",
-    excerpt: "Monthly workshops designed to build research capacity among young people interested in climate and mental health advocacy.",
-    fullContent: "Monthly workshops designed to build research capacity among young people interested in climate and mental health advocacy. These sessions cover research methods, data interpretation, and how to translate findings into actionable advocacy strategies.",
-    date: "Ongoing",
-    readTime: "Workshop Series"
   },
 
   // Voices from the Field
