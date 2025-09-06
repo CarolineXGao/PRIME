@@ -141,6 +141,7 @@ const BlogUpdates = () => {
                   dangerouslySetInnerHTML={{ 
                     __html: selectedPost.fullContent
                       .replace(/https:\/\/doi\.org\/([^\s]+)/g, '<a href="https://doi.org/$1" target="_blank" rel="noopener noreferrer" class="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium">https://doi.org/$1</a>')
+                     .replace(/^\* (.+)$/gm, '<p class="mb-2 ml-4">• $1</p>')
                       .replace(/\n\n/g, '</p><p class="mb-4">')
                       .replace(/^/, '<p class="mb-4">')
                       .replace(/$/, '</p>')
