@@ -51,11 +51,11 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
         </div>
 
         {/* Resource Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16 items-stretch">
           {resources.map((resource, index) => (
             <div
               key={index}
-              className="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:border-[#2D6AA3] hover:border-opacity-30"
+              className="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:border-[#2D6AA3] hover:border-opacity-30 flex flex-col h-full"
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-[#2D6AA3] bg-opacity-10 rounded-lg flex items-center justify-center mr-4 text-[#2D6AA3]">
@@ -64,11 +64,34 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
                 <h3 className="text-xl font-bold text-gray-900">{resource.title}</h3>
               </div>
 
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                 {resource.description}
               </p>
 
-              <button 
+              <div className="mt-auto">
+                {resource.buttonDisabled ? (
+                  <button 
+                    className="w-full bg-gray-400 text-white cursor-not-allowed font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                    disabled
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </button>
+                ) : (
+                  <a
+                    href={resource.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
                 className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center ${
                   resource.buttonDisabled 
                     ? 'bg-gray-400 text-white cursor-not-allowed' 

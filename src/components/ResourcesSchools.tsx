@@ -12,7 +12,7 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       title: "School Toolkit",
       description: "Comprehensive toolkit for schools and communities to implement climate mental health programs, including implementation guides, educational materials, and workshop resources.",
       buttonText: "Access Toolkit",
-      downloadLink: "#school-toolkit"
+      downloadLink: "https://www.orygen.org.au/Training/Resources/Schools/Toolkits/Climate-emotions-in-the-classroom"
     }
   ];
 
@@ -42,11 +42,11 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
         </div>
 
         {/* Resource Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16 items-stretch">
           {resources.map((resource, index) => (
             <div
               key={index}
-              className="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:border-[#F4B43D] hover:border-opacity-30"
+              className="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:border-[#F4B43D] hover:border-opacity-30 flex flex-col h-full"
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-[#F4B43D] bg-opacity-10 rounded-lg flex items-center justify-center mr-4 text-[#F4B43D]">
@@ -55,14 +55,21 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
                 <h3 className="text-xl font-bold text-gray-900">{resource.title}</h3>
               </div>
 
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                 {resource.description}
               </p>
 
-              <button className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
-                <Download className="w-4 h-4 mr-2" />
-                {resource.buttonText}
-              </button>
+              <div className="mt-auto">
+                <a
+                  href={resource.downloadLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  {resource.buttonText}
+                </a>
+              </div>
             </div>
           ))}
         </div>
