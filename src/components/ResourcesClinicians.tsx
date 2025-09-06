@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stethoscope, Download, BookOpen, Video, FileText, ArrowLeft } from 'lucide-react';
+import { Stethoscope, Download, BookOpen, Video, FileText, ArrowLeft, Database } from 'lucide-react';
 
 interface ResourcesCliniciansProps {
   setCurrentPage: (page: string) => void;
