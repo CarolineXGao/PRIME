@@ -21,9 +21,17 @@ const localImageUrl = (name: string) => {
     .trim();
 
   // Replace spaces with underscores
-  const fileName = cleanName.replace(/\s+/g, '_').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u');
+  const fileName = cleanName
+    .replace(/\s+/g, '_')
+    .replace(/á/g, 'a')
+    .replace(/é/g, 'e')
+    .replace(/í/g, 'i')
+    .replace(/ó/g, 'o')
+    .replace(/ú/g, 'u')
+    .replace(/ñ/g, 'n')
+    .replace(/ç/g, 'c');
 
-  return `./Team/${fileName}.png`;
+  return `/Team/${fileName}.png`;
 };
 
 const Card = ({ member }: { member: Member }) => {
