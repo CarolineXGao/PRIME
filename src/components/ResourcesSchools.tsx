@@ -26,7 +26,7 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       title: "Climate Superpower",
       description: "Interactive platform and resources designed to empower young people with climate action skills and knowledge through engaging activities and community building.",
       buttonText: "Visit Climate Superpower",
-      downloadLink: "https://climatesuperpower.com/"
+      downloadLink: "https://climatesuperpowers.org/"
     }
   ];
 
