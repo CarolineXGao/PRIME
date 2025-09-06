@@ -57,7 +57,7 @@ export const measurementTools: MeasurementTool[] = [
    administrationTime: '5-10 minutes',
    format: 'Self-report questionnaire (23 items)',
    availability: 'Open access',
-   reference: 'Stanley, S. K., Hogg, T. L., Leviston, Z., & Walker, I. (2021). From anger to action: Differential impacts of eco-emotions on climate change policy support and pro-environmental behavior. Journal of Environmental Psychology, 76, 101649.',
+   reference: 'Stanley, S. K., Hogg, T. L., Leviston, Z., & Walker, I. (2021). From anger to action: Differential impacts of eco-emotions on climate change policy support and pro-environmental behaviour. Journal of Environmental Psychology, 76, 101649.',
   link: 'https://doi.org/10.1016/j.jenvp.2021.101649'
   },
   {
