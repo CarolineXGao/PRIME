@@ -110,29 +110,37 @@ Why this matters:
 
 About this event  
 • <strong class="text-[#2D6AA3] font-semibold">Format:</strong> Online (Zoom)  
-• <strong class="text-[#2D6AA3] font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST  
-• <strong class="text-[#2D6AA3] font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)  
-• <strong class="text-[#2D6AA3] font-semibold">Register:</strong> <a href="https://www.eventbrite.com.au/e/recognising-and-supporting-climate-emotions-in-the-classroom-tickets-1588497271099?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="underline">Eventbrite registration</a>
 
-What you'll learn  
+• <strong class="text-[#2D6AA3] font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST
+
+• <strong class="text-[#2D6AA3] font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)  
+
+
+What you'll learn 
+
 • Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)  
+
 • Creating supportive learning environments when climate emotions arise  
+
 • Practical, empowering tools for discussing sustainability and environmental issues  
+
 • Panel discussion + audience Q&A with sector experts
 
 Speakers  
-- Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)  
+- Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)
+
 - Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)  
-- Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)  
+
+- Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.) 
+
 - Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program  
+
 - Dr Bronwyn Gresham — Clinical Psychologist & CEO, Psychology for a Safe Climate  
+
 - Simon Dodd — Head of Workforce Planning & Development, National Clinical Advisor, headspace  
+
 - Canice Curtis — Senior Practice Lead, Wesley Mission QLD; “Young Minds in a Changing Climate” project
 
-Good to know  
-• Online via Zoom (join link provided to registrants)  
-• Duration: 60 minutes  
-• Includes panel Q&A and follow-up resources
 
 👉 <a href="https://www.eventbrite.com.au/e/recognising-and-supporting-climate-emotions-in-the-classroom-tickets-1588497271099?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="text-[#2D6AA3] font-semibold underline">Register on Eventbrite</a>`,
   date: "September 3, 2025",
@@ -141,7 +149,7 @@ Good to know
   },
   {
     id: 'youth-research-workshop-series',
-    image: "https://images.pexels.com/photos/7551658/pexels-photo-7551658.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/Image7.png0",
     category: "Events & Webinars",
     title: "Youth Research Workshop Series",
     excerpt: "Monthly workshops designed to build research capacity among young people interested in climate and mental health advocacy.",
