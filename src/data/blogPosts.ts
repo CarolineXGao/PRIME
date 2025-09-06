@@ -38,46 +38,36 @@ At PRIME, we are working to build this platform: a space where researchers, clin
     readTime: "3 min read"
   },
   {
-    id: 'vulnerability-psychosocial-impacts',
-    image: "https://images.pexels.com/photos/7551640/pexels-photo-7551640.jpeg?auto=compress&cs=tinysrgb&w=400",
-    category: "Research Insights",
-    title: "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
-    excerpt: "A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges.",
-    fullContent: `TL;DR: A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges—with the biggest impacts when their household is directly affected.
+    {
+  id: 'vulnerability-psychosocial-impacts',
+  image: "https://images.pexels.com/photos/7551640/pexels-photo-7551640.jpeg?auto=compress&cs=tinysrgb&w=400",
+  category: "Research Insights",
+  title: "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
+  excerpt: "A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges.",
+  fullContent: `A new open-access study of 19,501 Australian teens (15–19 years) shows that exposure to floods, fires, storms or droughts is linked to higher climate concern, greater psychological distress, and increased housing and financial challenges.
 
-What the study did
+The research analysed the 2023 Mission Australia Youth Survey to understand how extreme weather exposure affects young people’s mental health and social wellbeing.
 
-Researchers analysed the 2023 Mission Australia Youth Survey to see how exposure to extreme weather relates to mental health and social outcomes for young people across Australia.
+We highlight that:
 
-Paper: Environmental Research (Open Access)
+• <strong class="text-[#2D6AA3] font-semibold">Adolescents outside major cities, in lower-SES areas, and those who are Indigenous, gender diverse, living with disability, or from CALD communities are more likely to be exposed.</strong>
 
-Title: Vulnerability and psychosocial impacts of extreme weather events among young people in Australia
+• <strong class="text-[#2D6AA3] font-semibold">Those exposed report higher climate concern and greater psychological distress (K6).</strong>
 
-DOI: https://doi.org/10.1016/j.envres.2025.121385
+• <strong class="text-[#2D6AA3] font-semibold">Exposure increases the odds of financial hardship and housing challenges—especially when the household is directly affected.</strong>
 
-Key findings (in plain language)
+• <strong class="text-[#2D6AA3] font-semibold">Recovery cannot be “one size fits all”: supports must be age-appropriate, culturally safe, and targeted to vulnerable groups.</strong>
 
-Who's more likely to be exposed: Young people outside major cities, in lower-SES areas, who are Indigenous, gender diverse, living with disability, or from CALD communities.
+What this means for action:  
+- In recovery: place youth mental health staff in disaster response and provide culturally safe, age-appropriate supports.  
+- In preparedness: work with schools and local services to build coping skills and readiness tailored to local hazards.  
+- In policy: track youth outcomes after disasters and fund programs that support housing stability, financial security, and equitable care access.
 
-Mental health impacts: Those exposed show higher climate concern and higher psychological distress (K6).
+👉 Read the full open access article here: https://doi.org/10.1016/j.envres.2025.121385`,
+  date: "March 12, 2024",
+  readTime: "3 min read"
+}
 
-Practical impacts: Higher odds of financial hardship and housing challenges—especially when impacts hit the household, not just the community.
-
-Why this matters: Recovery can't be "one size fits all." Age-appropriate supports need to include mental health services, housing, and financial assistance, with extra attention to historically disadvantaged groups.
-
-What this means for action
-
-In recovery: Put youth mental health staff into disaster response and ensure culturally safe, age-appropriate supports.
-
-In preparedness: Work with schools and local services to build coping skills, connection, and readiness tailored to local hazards.
-
-In policy: Track youth outcomes after disasters and fund programs that target housing stability, financial supports, and equitable access to care.
-
-
-
-👉 Read the full article (open access): https://doi.org/10.1016/j.envres.2025.121385`,
-    date: "March 12, 2024",
-    readTime: "3  min read"
   },
   {
     id: 'intervention-effectiveness-results',
