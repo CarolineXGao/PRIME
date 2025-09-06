@@ -23,7 +23,7 @@ const localImageUrl = (name: string) => {
   // Replace spaces with underscores
   const fileName = cleanName.replace(/\s+/g, '_');
 
-  return `/Team/${fileName}.png`;
+  return `./Team/${fileName}.png`;
 };
 
 const Card = ({ member }: { member: Member }) => {
