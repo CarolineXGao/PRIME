@@ -49,16 +49,16 @@ export const measurementTools: MeasurementTool[] = [
     link: 'https://doi.org/10.1016/j.jenvp.2022.101866'
   },
   {
-    id: 'environmental-distress-scale',
-    name: 'Environmental Distress Scale (EDS)',
-    description: 'Comprehensive assessment of environmental-related psychological distress.',
-    targetPopulation: 'Ages 16+',
-    domains: ['Environmental Distress', 'Helplessness', 'Grief'],
-    administrationTime: '10-15 minutes',
-    format: 'Self-report questionnaire (28 items)',
-    availability: 'Contact authors',
-    reference: 'Cunsolo Willox et al. (2020)',
-    link: 'https://doi.org/10.1016/j.gloenvcha.2020.102222'
+   id: 'eco-emotion-scale',
+   name: 'Eco-Emotion Scale (EES)',
+   description: 'A multidimensional self-report scale assessing the range of emotions (e.g., worry, anger, hope, guilt) that people experience in relation to climate change and ecological crises.',
+   targetPopulation: 'Adolescents and adults',
+   domains: ['Worry', 'Anger', 'Hope', 'Guilt', 'Despair'],
+   administrationTime: '5-10 minutes',
+   format: 'Self-report questionnaire (23 items)',
+   availability: 'Open access',
+   reference: 'Stanley, S. K., Hogg, T. L., Leviston, Z., & Walker, I. (2021). From anger to action: Differential impacts of eco-emotions on climate change policy support and pro-environmental behavior. Journal of Environmental Psychology, 76, 101649.',
+  link: 'https://doi.org/10.1016/j.jenvp.2021.101649'
   },
   {
     id: 'climate-change-worry-scale',
