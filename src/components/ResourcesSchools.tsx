@@ -9,9 +9,9 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
   const resources = [
     {
       icon: <School className="w-6 h-6" />,
-      title: "Climate Emotions: Teacher Guide",
+      title: "Orygen's Climate Emotions: Teacher Guide",
       description: "Practical classroom tips to recognise, validate and support students’ climate emotions while building resilience and agency.",
-      buttonText: "Access Toolkit",
+      buttonText: "Access Orygen's Toolkit",
       downloadLink: "https://www.orygen.org.au/Training/Resources/Schools/Toolkits/Climate-emotions-in-the-classroom"
     }
   ];
