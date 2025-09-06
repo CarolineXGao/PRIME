@@ -56,10 +56,10 @@ The research analysed the 2023 Mission Australia Youth Survey to understand how 
 
 We highlight that:
 
-* <strong class="font-semibold">Adolescents outside major cities, in lower-SES areas, and those who are Indigenous, gender diverse, living with disability, or from CALD communities are more likely to be exposed.</strong>
-* <strong class="font-semibold">Those exposed report higher climate concern and greater psychological distress (K6).</strong>
-* <strong class="font-semibold">Exposure increases the odds of financial hardship and housing challenges—especially when the household is directly affected.</strong>
-* <strong class="font-semibold">Recovery cannot be "one size fits all": supports must be age-appropriate, culturally safe, and targeted to vulnerable groups.</strong>
+• <strong class="font-semibold">Adolescents outside major cities, in lower-SES areas, and those who are Indigenous, gender diverse, living with disability, or from CALD communities are more likely to be exposed.</strong>
+• <strong class="font-semibold">Those exposed report higher climate concern and greater psychological distress (K6).</strong>
+• <strong class="font-semibold">Exposure increases the odds of financial hardship and housing challenges—especially when the household is directly affected.</strong>
+• <strong class="font-semibold">Recovery cannot be "one size fits all": supports must be age-appropriate, culturally safe, and targeted to vulnerable groups.</strong>
 
 What this means for action:  
 - In recovery: place youth mental health staff in disaster response and provide culturally safe, age-appropriate supports.  
@@ -83,11 +83,11 @@ This study analysed the 2022 Mission Australia Youth Survey to examine how clima
 
 Key findings:
 
-* <strong class="font-semibold">One in four young people were very or extremely concerned about climate change.</strong>
-* <strong class="font-semibold">Female and gender-diverse youth, and those with a self-reported mental health condition, reported higher climate concerns.</strong>
-* <strong class="font-semibold">Very/extremely concerned youth had higher psychological distress (RRR = 1.81; 95% CI: 1.56–2.11).</strong>
-* <strong class="font-semibold">They were also more likely to have a negative future outlook (RRR = 1.52; 95% CI: 1.27–1.81).</strong>
-* <strong class="font-semibold">Associations were stronger among gender-diverse, Indigenous, and outer-regional/remote participants.</strong>
+• <strong class="font-semibold">One in four young people were very or extremely concerned about climate change.</strong>
+• <strong class="font-semibold">Female and gender-diverse youth, and those with a self-reported mental health condition, reported higher climate concerns.</strong>
+• <strong class="font-semibold">Very/extremely concerned youth had higher psychological distress (RRR = 1.81; 95% CI: 1.56–2.11).</strong>
+• <strong class="font-semibold">They were also more likely to have a negative future outlook (RRR = 1.52; 95% CI: 1.27–1.81).</strong>
+• <strong class="font-semibold">Associations were stronger among gender-diverse, Indigenous, and outer-regional/remote participants.</strong>
 
 Why this matters:
 
@@ -111,23 +111,23 @@ Why this matters:
 
 About this event  
 
-* <strong class="font-semibold">Format:</strong> Online (Zoom)
-* <strong class="font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST
-* <strong class="font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)
+• <strong class="font-semibold">Format:</strong> Online (Zoom)
+• <strong class="font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST
+• <strong class="font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)
 
 What you'll learn 
 
-* Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)
-* Creating supportive learning environments when climate emotions arise
-* Practical, empowering tools for discussing sustainability and environmental issues
-* Panel discussion + audience Q&A with sector experts
+• Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)
+• Creating supportive learning environments when climate emotions arise
+• Practical, empowering tools for discussing sustainability and environmental issues
+• Panel discussion + audience Q&A with sector experts
 
 Speakers  
 
-* Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)
-* Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)
-* Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)
-* Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program
+• Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)
+• Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)
+• Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)
+• Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program
 * Dr Bronwyn Gresham — Clinical Psychologist & CEO, Psychology for a Safe Climate
 * Simon Dodd — Head of Workforce Planning & Development, National Clinical Advisor, headspace
 * Canice Curtis — Senior Practice Lead, Wesley Mission QLD; "Young Minds in a Changing Climate" project
