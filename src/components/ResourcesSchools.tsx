@@ -9,8 +9,8 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
   const resources = [
     {
       icon: <School className="w-6 h-6" />,
-      title: "School Toolkit",
-      description: "Comprehensive toolkit for schools and communities to implement climate mental health programs, including implementation guides, educational materials, and workshop resources.",
+      title: "Climate Emotions: Teacher Guide",
+      description: "Practical classroom tips to recognise, validate and support students’ climate emotions while building resilience and agency.",
       buttonText: "Access Toolkit",
       downloadLink: "https://www.orygen.org.au/Training/Resources/Schools/Toolkits/Climate-emotions-in-the-classroom"
     }
