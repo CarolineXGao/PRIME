@@ -101,25 +101,43 @@ Why this matters:
 
   // Events & Webinars
   {
-    id: 'building-climate-resilience-webinar',
-    image: "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=400",
-    category: "Events & Webinars",
-    title: "Upcoming Webinar: Building Climate Resilience",
-    excerpt: "Join our expert panel discussion on evidence-based strategies for supporting youth mental health in the climate crisis...",
-    fullContent: `Join our expert panel discussion on evidence-based strategies for supporting youth mental health in the climate crisis.
+    id: 'recognising-supporting-climate-emotions-classroom',
+  image: "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=400",
+  category: "Events & Webinars",
+  title: "Recognising and Supporting Climate Emotions in the Classroom",
+  excerpt: "A practical, educator-focused webinar on building confidence to address climate-related topics and support student emotions in class.",
+  fullContent: `A practical, educator-focused webinar designed to build teacher confidence in addressing climate-related topics and supporting student emotions in the classroom.
 
-This webinar will feature leading researchers, clinicians, and young advocates discussing:
+About this event  
+• <strong class="text-[#2D6AA3] font-semibold">Format:</strong> Online (Zoom)  
+• <strong class="text-[#2D6AA3] font-semibold">When:</strong> Wednesday, September 3 · 4–5 pm AEST  
+• <strong class="text-[#2D6AA3] font-semibold">Audience:</strong> Teachers and school wellbeing staff (Family & Education • Education)  
+• <strong class="text-[#2D6AA3] font-semibold">Register:</strong> <a href="https://www.eventbrite.com.au/e/recognising-and-supporting-climate-emotions-in-the-classroom-tickets-1588497271099?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="underline">Eventbrite registration</a>
 
-• Current evidence on climate impacts on youth mental health
-• Practical intervention strategies that work
-• How to build resilience in climate-affected communities
-• Youth leadership in climate mental health responses
+What you'll learn  
+• Introducing the Teacher Support Resource (Orygen, headspace, Psychology for a Safe Climate & advisors)  
+• Creating supportive learning environments when climate emotions arise  
+• Practical, empowering tools for discussing sustainability and environmental issues  
+• Panel discussion + audience Q&A with sector experts
 
-Our panel includes experts from Orygen, University of Melbourne, and youth advocates with lived experience.
+Speakers  
+- Caroline Gao — Associate Professor, environmental epidemiologist & biostatistician (Orygen; CYMH, University of Melbourne; Monash)  
+- Samantha Eala — Development practitioner/researcher (University of Melbourne; Ateneo)  
+- Jackie Turnure — Triple Emmy-winning Impact Producer (STTOP, The Leadership, The Giants, etc.)  
+- Lizzy Nash — Co-owner, The Feds; Creator/EP of STTOP2030 and national education program  
+- Dr Bronwyn Gresham — Clinical Psychologist & CEO, Psychology for a Safe Climate  
+- Simon Dodd — Head of Workforce Planning & Development, National Clinical Advisor, headspace  
+- Canice Curtis — Senior Practice Lead, Wesley Mission QLD; “Young Minds in a Changing Climate” project
 
-Registration is free and includes access to resources and follow-up materials.`,
-    date: "March 20, 2024",
-    readTime: "Webinar"
+Good to know  
+• Online via Zoom (join link provided to registrants)  
+• Duration: 60 minutes  
+• Includes panel Q&A and follow-up resources
+
+👉 <a href="https://www.eventbrite.com.au/e/recognising-and-supporting-climate-emotions-in-the-classroom-tickets-1588497271099?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="text-[#2D6AA3] font-semibold underline">Register on Eventbrite</a>`,
+  date: "September 3, 2025",
+  readTime: "Webinar"
+  
   },
   {
     id: 'youth-research-workshop-series',
