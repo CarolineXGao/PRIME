@@ -189,11 +189,11 @@ function normalizeContent(html: string): string {
   let out = html;
 
   // Convert asterisk bullet points to proper HTML list formatting
-  out = out.replace(/^\* (.+)$/gm, '<li class="mb-2">• $1</li>');
+  out = out.replace(/^\* (.+)$/gm, '<li class="mb-1">• $1</li>');
   
   // Wrap consecutive list items in ul tags
-  out = out.replace(/(<li class="mb-2">• .+<\/li>\s*)+/g, (match) => {
-    return `<ul class="list-none ml-4 mb-4 space-y-2">${match}</ul>`;
+  out = out.replace(/(<li class="mb-1">• .+<\/li>\s*)+/g, (match) => {
+    return `<ul class="list-none ml-4 mb-4 space-y-1">${match}</ul>`;
   });
 
   // Remove blue-ish classes from strong tags if they exist in older content
