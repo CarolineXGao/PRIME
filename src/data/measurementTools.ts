@@ -18,7 +18,7 @@ export const measurementTools: MeasurementTool[] = [
     description: 'A 22-item validated scale assessing climate-related anxiety, including cognitive and functional impairment.',
     targetPopulation: 'Adolescents and adults',
     domains: ['Climate Anxiety', 'Cognitive Impairment', 'Functional Impairment'],
-    administrationTime: '10 minutes',
+    administrationTime: '~10 minutes',
     format: 'Self-report questionnaire (22 items, Likert scale)',
     availability: 'Open access',
     reference: 'Clayton, S., & Karazsia, B. T. (2020). Development and validation of a measure of climate change anxiety. Journal of Environmental Psychology, 69, 101434.',
