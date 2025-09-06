@@ -92,19 +92,23 @@ This study analysed the 2022 Mission Australia Youth Survey to examine how clima
 
 Key findings:
 
-• <strong class="font-semibold">One in four young people were very or extremely concerned about climate change.</strong>
-• <strong class="font-semibold">Female and gender-diverse youth, and those with a self-reported mental health condition, reported higher climate concerns.</strong>
-• <strong class="font-semibold">Very/extremely concerned youth had higher psychological distress (RRR = 1.81; 95% CI: 1.56–2.11).</strong>
-• <strong class="font-semibold">They were also more likely to have a negative future outlook (RRR = 1.52; 95% CI: 1.27–1.81).</strong>
-• <strong class="font-semibold">Associations were stronger among gender-diverse, Indigenous, and outer-regional/remote participants.</strong>
+<ul class="list-none space-y-1">
+  <li>- <strong>One in four</strong> young people were very or extremely concerned about <strong>climate change</strong>.</li>
+  <li>- <strong>Female</strong> and <strong>gender-diverse youth</strong>, and those with a <strong>self-reported mental health condition</strong>, reported higher climate concerns.</li>
+  <li>- Very/extremely concerned youth had higher <strong>psychological distress</strong> (RRR = 1.81; 95% CI: 1.56–2.11).</li>
+  <li>- They were also more likely to have a <strong>negative future outlook</strong> (RRR = 1.52; 95% CI: 1.27–1.81).</li>
+  <li>- Associations were stronger among <strong>gender-diverse</strong>, <strong>Indigenous</strong>, and <strong>outer-regional/remote</strong> participants.</li>
+</ul>
 
 Why this matters:
 
-- <strong class="font-semibold">Integrate youth mental health into climate policy</strong>—education, communication, and services should address climate-related distress and foster hope.  
-- <strong class="font-semibold">Track outcomes over time</strong>—longitudinal monitoring can guide effective responses and prevention.
+<ul class="list-none space-y-1">
+  <li>- <strong>Integrate youth mental health</strong> into <strong>climate policy</strong> — education, communication, and services should address <strong>climate-related distress</strong> and foster hope.</li>
+  <li>- <strong>Track outcomes over time</strong> — <strong>longitudinal monitoring</strong> can guide effective responses and prevention.</li>
+</ul>
 
 👉 Read the full open-access article: https://doi.org/10.1016/j.jenvp.2023.102209`,
-    date: "December 12, 2023",
+    date: "February 12, 2024",
     readTime: "4 min read",
   },
 
