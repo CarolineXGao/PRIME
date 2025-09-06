@@ -19,6 +19,25 @@ const Footer = () => {
           <p className="text-blue-100 text-sm leading-relaxed">
             PRIME celebrates diversity and welcomes all people regardless of their ethnicity, faith, sexual orientation, gender identity and lived experience.
           </p>
+          
+          {/* Flags */}
+          <div className="flex justify-center space-x-6 mt-6">
+            <img 
+              src="/Ind.avif" 
+              alt="Indigenous flag" 
+              className="h-12 w-auto rounded shadow-sm"
+            />
+            <img 
+              src="/Tor.avif" 
+              alt="Torres Strait Islander flag" 
+              className="h-12 w-auto rounded shadow-sm"
+            />
+            <img 
+              src="/Gen.avif" 
+              alt="Gender diversity flag" 
+              className="h-12 w-auto rounded shadow-sm"
+            />
+          </div>
         </div>
 
         {/* Legal & Copyright */}
