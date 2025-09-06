@@ -63,7 +63,7 @@ What this means for action:
 - In policy: track youth outcomes after disasters and fund programs that support housing stability, financial security, and equitable care access.
 
 👉 Read the full open access article here: https://doi.org/10.1016/j.envres.2025.121385`,
-  date: "March 12, 2024",
+  date: "15 June 2025",
   readTime: "3 min read"
   },
   {
