@@ -13,6 +13,13 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       description: "Practical classroom tips to recognise, validate and support students’ climate emotions while building resilience and agency.",
       buttonText: "Access Orygen's Toolkit",
       downloadLink: "https://www.orygen.org.au/Training/Resources/Schools/Toolkits/Climate-emotions-in-the-classroom"
+    },
+    {
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "STTOP Education Program",
+      description: "Comprehensive educational resources and programs designed to engage students in climate action and sustainability through storytelling and practical solutions.",
+      buttonText: "Explore STTOP Program",
+      downloadLink: "https://sttop2030.com/"
     }
   ];
 
