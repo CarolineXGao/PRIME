@@ -204,13 +204,13 @@ function normalizeContent(html: string): string {
   // Replace any <ul> with a tight list (small vertical gap)
   out = out.replaceAll(
     /<ul>/gi,
-    '<ul class="list-disc list-inside space-y-1 ml-4">'
+    '<ul class="list-disc list-inside space-y-2 ml-6 marker:text-gray-600">'
   );
 
   // Ensure <li> don’t add extra margins (optional; Tailwind resets help already)
   out = out.replaceAll(
     /<li>/gi,
-    '<li class="leading-relaxed">'
+    '<li class="leading-relaxed pl-1">'
   );
 
   // Remove blue-ish classes from strong tags if they exist in older content
