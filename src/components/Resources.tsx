@@ -80,22 +80,6 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
                 {audience.description}
               </p>
 
-              {/* Resource List */}
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Available Resources:</h4>
-                <ul className="space-y-2">
-                  {audience.resources.map((resource, resourceIndex) => (
-                    <li key={resourceIndex} className="flex items-center text-gray-600">
-                      <div 
-                        className="w-2 h-2 rounded-full mr-3"
-                        style={{ backgroundColor: audience.color }}
-                      ></div>
-                      {resource}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               {/* CTA Button */}
               <button 
                 onClick={() => setCurrentPage(audience.page)}

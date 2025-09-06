@@ -119,42 +119,6 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
             </div>
           ))}
         </div>
-
-        {/* Implementation Framework */}
-        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Implementation Framework
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#F4B43D] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-[#F4B43D]" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Preparation</h4>
-              <p className="text-gray-600">
-                Assess readiness, engage stakeholders, and build support systems within your organization.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Presentation className="w-8 h-8 text-[#3A9C62]" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Implementation</h4>
-              <p className="text-gray-600">
-                Launch programs with proper training, ongoing support, and regular monitoring.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#2D6AA3] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="w-8 h-8 text-[#2D6AA3]" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Sustainability</h4>
-              <p className="text-gray-600">
-                Evaluate outcomes, refine approaches, and embed practices into organizational culture.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

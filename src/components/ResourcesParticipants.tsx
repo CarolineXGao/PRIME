@@ -170,42 +170,6 @@ const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) =
             ))}
           </div>
         </div>
-
-        {/* Participation Process */}
-        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            How to Get Involved
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#2D6AA3] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#2D6AA3]">1</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Learn More</h4>
-              <p className="text-gray-600">
-                Read about our research and what participation involves.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#3A9C62]">2</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Express Interest</h4>
-              <p className="text-gray-600">
-                Contact us to express your interest and ask any questions.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#F4B43D] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#F4B43D]">3</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Participate</h4>
-              <p className="text-gray-600">
-                Join our research and help shape the future of climate mental health.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

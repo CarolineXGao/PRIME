@@ -119,51 +119,6 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
             </div>
           ))}
         </div>
-
-        {/* Professional Development */}
-        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Professional Development Pathway
-          </h3>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#3A9C62]">1</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Foundation</h4>
-              <p className="text-gray-600 text-sm">
-                Learn climate psychology basics and assessment techniques.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#3A9C62]">2</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Intervention</h4>
-              <p className="text-gray-600 text-sm">
-                Master evidence-based treatment approaches and protocols.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#3A9C62]">3</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Specialization</h4>
-              <p className="text-gray-600 text-sm">
-                Develop expertise in specific populations or approaches.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#3A9C62]">4</span>
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">Leadership</h4>
-              <p className="text-gray-600 text-sm">
-                Train others and contribute to field advancement.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
