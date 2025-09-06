@@ -21,7 +21,7 @@ const localImageUrl = (name: string) => {
     .trim();
 
   // Replace spaces with underscores
-  const fileName = cleanName.replace(/\s+/g, '_');
+  const fileName = cleanName.replace(/\s+/g, '_').replace(/á/g, 'a').replace(/é/g, 'e').replace(/í/g, 'i').replace(/ó/g, 'o').replace(/ú/g, 'u');
 
   return `./Team/${fileName}.png`;
 };
