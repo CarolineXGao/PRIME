@@ -92,19 +92,6 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
             </div>
           ))}
         </div>
-                className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center ${
-                  resource.buttonDisabled 
-                    ? 'bg-gray-400 text-white cursor-not-allowed' 
-                    : 'bg-[#2D6AA3] hover:bg-[#1e4d73] text-white'
-                }`}
-                disabled={resource.buttonDisabled}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                {resource.buttonText}
-              </button>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
