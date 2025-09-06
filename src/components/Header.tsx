@@ -22,7 +22,7 @@ const Header = ({ currentPage, setCurrentPage }: HeaderProps) => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
             <img 
-              src="/Logo1.png" 
+              src="/Logo3.jpg" 
               alt="PRIME Logo" 
               className="h-12 w-auto"
             />
