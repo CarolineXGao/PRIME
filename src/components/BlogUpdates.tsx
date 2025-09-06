@@ -26,7 +26,7 @@ We highlight that:
 
 At PRIME, we are working to build this platform: a space where researchers, clinicians, communities, and young people can come together to design and test interventions that are fit for purpose, evidence-based, and led by youth voices.
 
-👉 You can read the full open access article here: Climate Change and Youth: Fast-Tracking Mental Health Solutions`,
+👉 You can read the full open access article here: <a href="https://doi.org/10.1007/s43151-025-00174-1" target="_blank" rel="noopener noreferrer" style="color: #2D6AA3; text-decoration: underline;">Climate Change and Youth: Fast-Tracking Mental Health Solutions</a>`,
       date: "March 18, 2024",
       readTime: "5 min read"
     },
