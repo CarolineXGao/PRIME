@@ -21,21 +21,21 @@ const Footer = () => {
           </p>
           
           {/* Flags */}
-          <div className="flex justify-center space-x-6 mt-6">
+          <div className="flex justify-start space-x-4 mt-4">
             <img 
               src="/Ind.avif" 
               alt="Indigenous flag" 
-              className="h-12 w-auto rounded shadow-sm"
+              className="h-8 w-auto rounded shadow-sm"
             />
             <img 
               src="/Tor.avif" 
               alt="Torres Strait Islander flag" 
-              className="h-12 w-auto rounded shadow-sm"
+              className="h-8 w-auto rounded shadow-sm"
             />
             <img 
               src="/Gen.avif" 
               alt="Gender diversity flag" 
-              className="h-12 w-auto rounded shadow-sm"
+              className="h-8 w-auto rounded shadow-sm"
             />
           </div>
         </div>
