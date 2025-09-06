@@ -129,17 +129,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <p className="text-gray-600">contact@prime-research.org</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-[#3A9C62] bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="w-5 h-5 text-[#3A9C62]" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Phone</p>
-                    <p className="text-gray-600">+61 (0) 123 456 789</p>
+                    <p className="text-gray-600">PRIME@orygen.org.au</p>
                   </div>
                 </div>
 
@@ -149,7 +139,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Address</p>
-                    <p className="text-gray-600">University Research Centre<br/>Melbourne, Australia</p>
+                    <p className="text-gray-600">35 Poplar Rd<br/>Parkville VIC 3052</p>
                   </div>
                 </div>
               </div>
