@@ -1,19 +1,38 @@
-import React from 'react';
-import { ArrowLeft, ExternalLink, Clock, Users, FileText } from 'lucide-react';
-import { measurementTools } from '../data/measurementTools';
+import React, { useState } from 'react';
+import { ArrowLeft, ExternalLink, Search, Filter } from 'lucide-react';
+import { measurementTools, MeasurementTool } from '../data/measurementTools';
 
 interface MeasurementToolsTableProps {
   setCurrentPage: (page: string) => void;
 }
 
-const MeasurementToolsTable: React.FC<MeasurementToolsTableProps> = ({ setCurrentPage }) => {
+const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedDomain, setSelectedDomain] = useState('');
+
+  // Get all unique domains for filter
+  const allDomains = Array.from(
+    new Set(measurementTools.flatMap(tool => tool.domains))
+  ).sort();
+
+  // Filter tools based on search and domain
+  const filteredTools = measurementTools.filter(tool => {
+    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         tool.targetPopulation.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesDomain = selectedDomain === '' || tool.domains.includes(selectedDomain);
+    
+    return matchesSearch && matchesDomain;
+  });
+
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
         <button
           onClick={() => setCurrentPage('resources')}
-          className="flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors"
+          className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Resources
@@ -21,116 +40,161 @@ const MeasurementToolsTable: React.FC<MeasurementToolsTableProps> = ({ setCurren
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Measurement Tools
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Validated instruments for assessing climate-related mental health outcomes
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Validated instruments and assessment tools for measuring climate-related mental health impacts in youth populations.
           </p>
         </div>
 
-        {/* Tools Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {measurementTools.map((tool) => (
-            <div key={tool.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold text-gray-900 leading-tight">
-                  {tool.name}
-                </h3>
-                {tool.link && (
-                  <a
-                    href={tool.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 ml-2 flex-shrink-0"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                )}
-              </div>
-
-              <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                {tool.description}
-              </p>
-
-              <div className="space-y-3">
-                <div className="flex items-center text-sm text-gray-700">
-                  <Users className="w-4 h-4 mr-2 text-blue-600" />
-                  <span className="font-medium">Target:</span>
-                  <span className="ml-1">{tool.targetPopulation}</span>
-                </div>
-
-                <div className="flex items-center text-sm text-gray-700">
-                  <Clock className="w-4 h-4 mr-2 text-green-600" />
-                  <span className="font-medium">Time:</span>
-                  <span className="ml-1">{tool.administrationTime}</span>
-                </div>
-
-                <div className="flex items-start text-sm text-gray-700">
-                  <FileText className="w-4 h-4 mr-2 mt-0.5 text-purple-600" />
-                  <div>
-                    <span className="font-medium">Format:</span>
-                    <span className="ml-1">{tool.format}</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-1 mt-3">
-                  {tool.domains.map((domain, index) => (
-                    <span
-                      key={index}
-                      className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                    >
-                      {domain}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="pt-3 border-t border-gray-200">
-                  <div className="flex items-center justify-between">
-                    <span className={`text-xs px-2 py-1 rounded-full ${
-                      tool.availability === 'Open access' 
-                        ? 'bg-green-100 text-green-800' 
-                        : 'bg-yellow-100 text-yellow-800'
-                    }`}>
-                      {tool.availability}
-                    </span>
-                  </div>
-                  
-                  {tool.reference && (
-                    <p className="text-xs text-gray-500 mt-2 leading-relaxed">
-                      {tool.reference}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Search and Filter */}
+        <div className="mb-8 flex flex-col md:flex-row gap-4">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search measurement tools..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#2D6AA3] focus:outline-none transition-colors"
+            />
+          </div>
+          <div className="relative">
+            <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <select
+              value={selectedDomain}
+              onChange={(e) => setSelectedDomain(e.target.value)}
+              className="pl-10 pr-8 py-3 border-2 border-gray-200 rounded-lg focus:border-[#2D6AA3] focus:outline-none transition-colors bg-white min-w-48"
+            >
+              <option value="">All Domains</option>
+              {allDomains.map(domain => (
+                <option key={domain} value={domain}>{domain}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
+        {/* Results Count */}
+        <div className="mb-6">
+          <p className="text-gray-600">
+            Showing {filteredTools.length} of {measurementTools.length} measurement tools
+          </p>
+        </div>
+
+        {/* Tools Table */}
+        <div className="bg-white rounded-xl shadow-lg border-2 border-gray-200 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50 border-b-2 border-gray-200">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Tool Name</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Description</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Target Population</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Domains</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Administration</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Format</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Availability</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Reference</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {filteredTools.map((tool, index) => (
+                  <tr key={tool.id} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-6 py-4">
+                      <div className="font-semibold text-gray-900">{tool.name}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="text-sm text-gray-600 max-w-xs">{tool.description}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="text-sm text-gray-900">{tool.targetPopulation}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="flex flex-wrap gap-1">
+                        {tool.domains.map(domain => (
+                          <span
+                            key={domain}
+                            className="px-2 py-1 bg-[#2D6AA3] bg-opacity-10 text-[#2D6AA3] text-xs rounded-full"
+                          >
+                            {domain}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="text-sm text-gray-900">{tool.administrationTime}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="text-sm text-gray-900">{tool.format}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <span className={`px-2 py-1 text-xs rounded-full ${
+                        tool.availability === 'Open access' 
+                          ? 'bg-green-100 text-green-800' 
+                          : 'bg-yellow-100 text-yellow-800'
+                      }`}>
+                        {tool.availability}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="text-sm text-gray-900">{tool.reference}</div>
+                      {tool.link && (
+                        <a
+                          href={tool.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-[#2D6AA3] hover:text-[#1e4d73] text-xs mt-1"
+                        >
+                          View <ExternalLink className="w-3 h-3 ml-1" />
+                        </a>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* No Results */}
+        {filteredTools.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">No measurement tools found matching your criteria.</p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedDomain('');
+              }}
+              className="mt-4 text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
+
         {/* Additional Information */}
-        <div className="mt-16 bg-blue-50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Using These Tools
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 text-gray-700">
-            <div>
-              <h3 className="font-semibold mb-2">For Researchers</h3>
-              <p className="text-sm">
-                These validated instruments can be used in research studies to assess climate-related mental health outcomes. 
-                Please cite the original references when using these tools.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">For Clinicians</h3>
-              <p className="text-sm">
-                These tools can help screen and assess climate-related anxiety and distress in clinical settings. 
-                Consider training and supervision when implementing new assessment tools.
-              </p>
-            </div>
+        <div className="mt-12 bg-blue-50 border-2 border-blue-200 rounded-xl p-8">
+          <h3 className="text-xl font-bold text-blue-900 mb-4">
+            Using These Measurement Tools
+          </h3>
+          <div className="text-blue-800 space-y-3">
+            <p>
+              <strong>Open Access:</strong> Tools are freely available for research and clinical use.
+            </p>
+            <p>
+              <strong>Contact Authors:</strong> Permission required from original authors before use.
+            </p>
+            <p>
+              <strong>Administration:</strong> Most tools are self-report and can be administered digitally or on paper.
+            </p>
+            <p>
+              <strong>Validation:</strong> All listed tools have undergone psychometric validation in relevant populations.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
