@@ -148,7 +148,7 @@ const StudyTeam = () => {
         'Senior Research Fellow, Orygen/CYMH, University of Melbourne. Focus on social determinants of youth mental health including relationships, work, housing and community participation.',
     },
     {
-      name: 'Dr Katitza Marinkovic Chávez',
+      name: 'Dr Katitza Marinkovic Chavez',
       role: 'Participatory Methods & Youth-Centred Disaster Mental Health',
       bio:
         'Research Fellow, Disaster, Climate & Adversity Unit & Climate CATCH Lab, MSPGH, University of Melbourne. Focus on co-designing interventions with children and disaster-impacted communities.',
