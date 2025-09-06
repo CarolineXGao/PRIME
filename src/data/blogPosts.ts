@@ -39,7 +39,7 @@ At PRIME, we are working to build this platform: a space where researchers, clin
   },
   {
   id: 'vulnerability-psychosocial-impacts',
-  image: "https://images.pexels.com/photos/7551640/pexels-photo-7551640.jpeg?auto=compress&cs=tinysrgb&w=400",
+  image: "/Image3.png",
   category: "Research Insights",
   title: "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
   excerpt: "A new open-access study using data from 19,501 teens (15–19 years) finds that adolescents exposed to floods, fires, storms or droughts report higher climate concerns, more psychological distress, and greater housing/financial challenges.",
@@ -68,7 +68,7 @@ What this means for action:
   },
   {
     id: 'intervention-effectiveness-results',
-    image: "https://images.pexels.com/photos/6646913/pexels-photo-6646913.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/Image4.png",
     category: "Research Insights",
     title: "Intervention Effectiveness: Early Results",
     excerpt: "Preliminary findings from our randomized controlled trials show promising results for cognitive-behavioral approaches to climate anxiety.",
@@ -76,6 +76,38 @@ What this means for action:
     date: "March 8, 2024",
     readTime: "6 min read"
   },
+  {
+  id: 'climate-concerns-distress-outlook',
+  image: "https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=400",
+  category: "Research Insights",
+  title: "Climate Concern, Distress, and Future Outlook in Young Australians",
+  excerpt: "Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and remote youth.",
+  fullContent: `Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and young people living outside major cities.
+
+This study analysed the 2022 Mission Australia Youth Survey to examine how climate change concerns relate to psychological distress (K6) and future outlook after accounting for social determinants and pre-existing mental health conditions.
+
+Key findings:
+
+• <strong class="text-[#2D6AA3] font-semibold">One in four young people were very or extremely concerned about climate change.</strong>
+
+• <strong class="text-[#2D6AA3] font-semibold">Female and gender-diverse youth, and those with a self-reported mental health condition, reported higher climate concerns.</strong>
+
+• <strong class="text-[#2D6AA3] font-semibold">Very/extremely concerned youth had higher psychological distress (RRR = 1.81; 95% CI: 1.56–2.11).</strong>
+
+• <strong class="text-[#2D6AA3] font-semibold">They were also more likely to have a negative future outlook (RRR = 1.52; 95% CI: 1.27–1.81).</strong>
+
+• <strong class="text-[#2D6AA3] font-semibold">Associations were stronger among gender-diverse, Indigenous, and outer-regional/remote participants.</strong>
+
+Why this matters:
+
+- <strong class="text-[#2D6AA3] font-semibold">Support must go beyond “one-size-fits-all”</strong>—targeted, culturally safe approaches are needed for groups at higher risk.  
+- <strong class="text-[#2D6AA3] font-semibold">Integrate youth mental health into climate policy</strong>—education, communication, and services should address climate-related distress and foster hope.  
+- <strong class="text-[#2D6AA3] font-semibold">Track outcomes over time</strong>—longitudinal monitoring can guide effective responses and prevention.
+
+👉 Read the full open-access article: https://doi.org/10.1016/j.jenvp.2023.102209`,
+  date: "December 12, 2023",
+  readTime: "4 min read"
+},
 
   // Events & Webinars
   {
