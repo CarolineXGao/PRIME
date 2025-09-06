@@ -188,11 +188,29 @@ These stories highlight the importance of youth-centered approaches and the powe
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
               <div className="prose max-w-none">
-                {selectedPost.fullContent.split('\n').map((paragraph, index) => (
-                  <p key={index} className="mb-4 text-gray-700 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
+                {selectedPost.fullContent.split('\n').map((paragraph, index) => {
+                  // Check if paragraph contains the DOI URL
+                  if (paragraph.includes('https://doi.org/10.1007/s43151-025-00174-1')) {
+                    return (
+                      <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                        👉 You can read the full open access article here:{' '}
+                        <a 
+                          href="https://doi.org/10.1007/s43151-025-00174-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium"
+                        >
+                          https://doi.org/10.1007/s43151-025-00174-1
+                        </a>
+                      </p>
+                    );
+                  }
+                  return (
+                    <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  );
+                })}
               </div>
             </div>
           </div>
