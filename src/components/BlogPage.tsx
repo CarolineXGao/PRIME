@@ -10,9 +10,9 @@ const BlogPage = () => {
     'Research Insights': [
       {
         image: "https://images.pexels.com/photos/8549835/pexels-photo-8549835.jpeg?auto=compress&cs=tinysrgb&w=400",
-        title: "New Findings: Climate Anxiety in Australian Youth",
-        excerpt: "Our latest research reveals significant patterns in how young people experience and cope with climate-related distress across different communities and demographics.",
-        date: "March 15, 2024",
+        title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",
+        excerpt: "We know that climate change is more than an environmental crisis — it's also a mental health challenge. Our new commentary calls for urgent action to close the gap between what young people are experiencing and the slow pace of research and policy responses.",
+        date: "March 18, 2024",
         readTime: "5 min read",
         category: "Research Insights"
       },
