@@ -38,7 +38,6 @@ At PRIME, we are working to build this platform: a space where researchers, clin
     readTime: "3 min read"
   },
   {
-    {
   id: 'vulnerability-psychosocial-impacts',
   image: "https://images.pexels.com/photos/7551640/pexels-photo-7551640.jpeg?auto=compress&cs=tinysrgb&w=400",
   category: "Research Insights",
@@ -66,8 +65,6 @@ What this means for action:
 👉 Read the full open access article here: https://doi.org/10.1016/j.envres.2025.121385`,
   date: "March 12, 2024",
   readTime: "3 min read"
-}
-
   },
   {
     id: 'intervention-effectiveness-results',
