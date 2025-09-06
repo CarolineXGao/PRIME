@@ -30,7 +30,10 @@ const BlogUpdates = () => {
               Stay informed with our latest insights, research findings, and community stories.
             </p>
           </div>
-          <button className="hidden sm:flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold">
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'blog' }))}
+            className="hidden sm:flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
+          >
             View All Posts
             <ArrowRight className="ml-2 w-4 h-4" />
           </button>
@@ -89,7 +92,10 @@ const BlogUpdates = () => {
         </div>
 
         <div className="text-center mt-8 sm:hidden">
-          <button className="flex items-center mx-auto text-[#2D6AA3] hover:text-[#1e4d73] font-semibold">
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'blog' }))}
+            className="flex items-center mx-auto text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
+          >
             View All Posts
             <ArrowRight className="ml-2 w-4 h-4" />
           </button>
