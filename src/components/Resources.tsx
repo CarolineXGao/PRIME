@@ -1,35 +1,43 @@
 import React from 'react';
 import { Users, Stethoscope, School, UserCheck, ArrowRight } from 'lucide-react';
 
-const Resources = () => {
+interface ResourcesProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const Resources = ({ setCurrentPage }: ResourcesProps) => {
   const audiences = [
     {
       icon: <Users className="w-8 h-8" />,
       title: "Researchers",
       description: "Access research protocols, measurement tools, and collaboration opportunities for climate and mental health studies.",
       color: "#2D6AA3",
-      resources: ["Research Protocols", "Measurement Tools", "Data Sharing Guidelines", "Collaboration Network"]
+      resources: ["Research Protocols", "Measurement Tools", "Data Sharing Guidelines", "Collaboration Network"],
+      page: "resources-researchers"
     },
     {
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Clinicians",
       description: "Evidence-based interventions, training materials, and clinical guidelines for treating climate-related mental health issues.",
       color: "#3A9C62",
-      resources: ["Clinical Guidelines", "Intervention Manuals", "Training Videos", "Assessment Tools"]
+      resources: ["Clinical Guidelines", "Intervention Manuals", "Training Videos", "Assessment Tools"],
+      page: "resources-clinicians"
     },
     {
       icon: <School className="w-8 h-8" />,
       title: "Schools & Communities",
       description: "Implementation guides, educational materials, and community-based intervention resources.",
       color: "#F4B43D",
-      resources: ["Implementation Guides", "Educational Materials", "Community Toolkits", "Workshop Resources"]
+      resources: ["Implementation Guides", "Educational Materials", "Community Toolkits", "Workshop Resources"],
+      page: "resources-schools"
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
       title: "Participants",
       description: "Information for young people interested in participating in research or accessing support resources.",
       color: "#2D6AA3",
-      resources: ["Participation Info", "Support Resources", "FAQs", "Contact Information"]
+      resources: ["Participation Info", "Support Resources", "FAQs", "Contact Information"],
+      page: "resources-participants"
     }
   ];
 
@@ -90,6 +98,7 @@ const Resources = () => {
 
               {/* CTA Button */}
               <button 
+                onClick={() => setCurrentPage(audience.page)}
                 className="w-full text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center hover:shadow-lg"
                 style={{ backgroundColor: audience.color }}
               >

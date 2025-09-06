@@ -9,6 +9,10 @@ import StudyDesign from './components/StudyDesign';
 import StudyTeam from './components/StudyTeam';
 import BlogPage from './components/BlogPage';
 import Resources from './components/Resources';
+import ResourcesResearchers from './components/ResourcesResearchers';
+import ResourcesClinicians from './components/ResourcesClinicians';
+import ResourcesSchools from './components/ResourcesSchools';
+import ResourcesParticipants from './components/ResourcesParticipants';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -26,7 +30,15 @@ function App() {
       case 'blog':
         return <BlogPage />;
       case 'resources':
-        return <Resources />;
+        return <Resources setCurrentPage={setCurrentPage} />;
+      case 'resources-researchers':
+        return <ResourcesResearchers setCurrentPage={setCurrentPage} />;
+      case 'resources-clinicians':
+        return <ResourcesClinicians setCurrentPage={setCurrentPage} />;
+      case 'resources-schools':
+        return <ResourcesSchools setCurrentPage={setCurrentPage} />;
+      case 'resources-participants':
+        return <ResourcesParticipants setCurrentPage={setCurrentPage} />;
       case 'contact':
         return <Contact />;
       default:

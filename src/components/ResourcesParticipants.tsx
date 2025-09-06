@@ -1,0 +1,214 @@
+import React from 'react';
+import { UserCheck, Download, Heart, Phone, MessageCircle, ArrowLeft } from 'lucide-react';
+
+interface ResourcesParticipantsProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) => {
+  const resources = [
+    {
+      icon: <UserCheck className="w-6 h-6" />,
+      title: "Participation Information",
+      description: "Everything you need to know about participating in PRIME research",
+      items: [
+        "What to Expect",
+        "Your Rights as a Participant",
+        "How Your Data is Protected",
+        "Compensation and Benefits"
+      ],
+      downloadLink: "#"
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Support Resources",
+      description: "Mental health support and wellbeing resources for young people",
+      items: [
+        "Crisis Support Contacts",
+        "Self-Care Strategies",
+        "Peer Support Networks",
+        "Professional Help Directory"
+      ],
+      downloadLink: "#"
+    },
+    {
+      icon: <MessageCircle className="w-6 h-6" />,
+      title: "FAQs",
+      description: "Frequently asked questions about climate mental health and research",
+      items: [
+        "About Climate Anxiety",
+        "Research Participation",
+        "Getting Help",
+        "Supporting Others"
+      ],
+      downloadLink: "#"
+    },
+    {
+      icon: <Phone className="w-6 h-6" />,
+      title: "Contact Information",
+      description: "How to get in touch with our team and support services",
+      items: [
+        "Research Team Contacts",
+        "24/7 Crisis Lines",
+        "Local Support Services",
+        "Online Chat Support"
+      ],
+      downloadLink: "#"
+    }
+  ];
+
+  const supportServices = [
+    {
+      name: "Lifeline",
+      number: "13 11 14",
+      description: "24/7 crisis support and suicide prevention",
+      website: "lifeline.org.au"
+    },
+    {
+      name: "Kids Helpline",
+      number: "1800 55 1800",
+      description: "Free counselling for young people aged 5-25",
+      website: "kidshelpline.com.au"
+    },
+    {
+      name: "headspace",
+      number: "1800 650 890",
+      description: "Mental health support for 12-25 year olds",
+      website: "headspace.org.au"
+    },
+    {
+      name: "Beyond Blue",
+      number: "1300 22 4636",
+      description: "Support for anxiety, depression and suicide prevention",
+      website: "beyondblue.org.au"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back Navigation */}
+        <button
+          onClick={() => setCurrentPage('resources')}
+          className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5 mr-2" />
+          Back to Resources
+        </button>
+
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="w-20 h-20 bg-[#2D6AA3] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <UserCheck className="w-10 h-10 text-[#2D6AA3]" />
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            Resources for Participants
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Information for young people interested in participating in research or accessing support resources for climate-related mental health concerns.
+          </p>
+        </div>
+
+        {/* Resource Cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {resources.map((resource, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:border-[#2D6AA3] hover:border-opacity-30"
+            >
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-[#2D6AA3] bg-opacity-10 rounded-lg flex items-center justify-center mr-4 text-[#2D6AA3]">
+                  {resource.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">{resource.title}</h3>
+              </div>
+
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {resource.description}
+              </p>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Available Resources:</h4>
+                <ul className="space-y-2">
+                  {resource.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center text-gray-600">
+                      <div className="w-2 h-2 bg-[#2D6AA3] rounded-full mr-3"></div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
+                <Download className="w-4 h-4 mr-2" />
+                Access Resources
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Crisis Support Section */}
+        <div className="bg-red-50 border-2 border-red-200 rounded-xl p-8 mb-16">
+          <h3 className="text-2xl font-bold text-red-800 mb-6 text-center">
+            Need Immediate Support?
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 text-center border border-red-200">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h4>
+                <p className="text-2xl font-bold text-red-600 mb-2">{service.number}</p>
+                <p className="text-sm text-gray-600 mb-3">{service.description}</p>
+                <a 
+                  href={`https://${service.website}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 hover:text-red-800 text-sm font-semibold underline"
+                >
+                  {service.website}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Participation Process */}
+        <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            How to Get Involved
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#2D6AA3] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-[#2D6AA3]">1</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Learn More</h4>
+              <p className="text-gray-600">
+                Read about our research and what participation involves.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#3A9C62] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-[#3A9C62]">2</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Express Interest</h4>
+              <p className="text-gray-600">
+                Contact us to express your interest and ask any questions.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#F4B43D] bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-[#F4B43D]">3</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Participate</h4>
+              <p className="text-gray-600">
+                Join our research and help shape the future of climate mental health.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ResourcesParticipants;
