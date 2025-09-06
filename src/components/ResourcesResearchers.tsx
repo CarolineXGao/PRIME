@@ -9,51 +9,19 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
   const resources = [
     {
       icon: <BookOpen className="w-6 h-6" />,
-      title: "Research Protocols",
-      description: "Standardized protocols for climate and mental health research studies",
-      items: [
-        "PRIME Master Protocol Framework",
-        "Youth Engagement Guidelines",
-        "Climate Exposure Assessment Tools",
-        "Ethical Considerations for Climate Research"
-      ],
+      title: "PRIME Master Protocol",
+      description: "Comprehensive research protocol framework for climate and mental health studies with standardized methodologies and youth engagement guidelines.",
+      buttonText: "Under Development",
+      buttonDisabled: true,
       downloadLink: "#"
     },
     {
       icon: <Database className="w-6 h-6" />,
       title: "Measurement Tools",
-      description: "Validated instruments for assessing climate-related mental health impacts",
-      items: [
-        "EnvironMental Health Measure",
-        "Climate Anxiety Scale",
-        "Eco-Grief Assessment Tool",
-        "Resilience and Coping Inventory"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Data Sharing Guidelines",
-      description: "Best practices for ethical data sharing and collaboration",
-      items: [
-        "Data Management Plans",
-        "Privacy Protection Protocols",
-        "Cross-institutional Agreements",
-        "Open Science Framework"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Network className="w-6 h-6" />,
-      title: "Collaboration Network",
-      description: "Connect with other researchers in the field",
-      items: [
-        "Researcher Directory",
-        "Collaboration Opportunities",
-        "Funding Resources",
-        "Conference and Events"
-      ],
-      downloadLink: "#"
+      description: "Validated instruments and assessment tools for measuring climate-related mental health impacts in youth populations.",
+      buttonText: "View Tools",
+      buttonDisabled: false,
+      downloadLink: "#measurement-tools"
     }
   ];
 
@@ -100,21 +68,16 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
                 {resource.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Available Resources:</h4>
-                <ul className="space-y-2">
-                  {resource.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-[#2D6AA3] rounded-full mr-3"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
+              <button 
+                className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center ${
+                  resource.buttonDisabled 
+                    ? 'bg-gray-400 text-white cursor-not-allowed' 
+                    : 'bg-[#2D6AA3] hover:bg-[#1e4d73] text-white'
+                }`}
+                disabled={resource.buttonDisabled}
+              >
                 <Download className="w-4 h-4 mr-2" />
-                Access Resources
+                {resource.buttonText}
               </button>
             </div>
           ))}

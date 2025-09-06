@@ -10,50 +10,9 @@ const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) =
     {
       icon: <UserCheck className="w-6 h-6" />,
       title: "Participation Information",
-      description: "Everything you need to know about participating in PRIME research",
-      items: [
-        "What to Expect",
-        "Your Rights as a Participant",
-        "How Your Data is Protected",
-        "Compensation and Benefits"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Support Resources",
-      description: "Mental health support and wellbeing resources for young people",
-      items: [
-        "Crisis Support Contacts",
-        "Self-Care Strategies",
-        "Peer Support Networks",
-        "Professional Help Directory"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "FAQs",
-      description: "Frequently asked questions about climate mental health and research",
-      items: [
-        "About Climate Anxiety",
-        "Research Participation",
-        "Getting Help",
-        "Supporting Others"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Contact Information",
-      description: "How to get in touch with our team and support services",
-      items: [
-        "Research Team Contacts",
-        "24/7 Crisis Lines",
-        "Local Support Services",
-        "Online Chat Support"
-      ],
-      downloadLink: "#"
+      description: "Everything you need to know about participating in PRIME research, including what to expect, your rights as a participant, data protection, and compensation information.",
+      buttonText: "View Information",
+      downloadLink: "#participation-info"
     }
   ];
 
@@ -127,21 +86,9 @@ const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) =
                 {resource.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Available Resources:</h4>
-                <ul className="space-y-2">
-                  {resource.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-[#2D6AA3] rounded-full mr-3"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               <button className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
                 <Download className="w-4 h-4 mr-2" />
-                Access Resources
+                {resource.buttonText}
               </button>
             </div>
           ))}

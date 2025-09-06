@@ -8,52 +8,18 @@ interface ResourcesCliniciansProps {
 const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
   const resources = [
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Clinical Guidelines",
-      description: "Evidence-based guidelines for treating climate-related mental health issues",
-      items: [
-        "Climate Anxiety Treatment Protocols",
-        "Eco-Grief Intervention Guidelines",
-        "Youth-Specific Assessment Tools",
-        "Crisis Response Frameworks"
-      ],
-      downloadLink: "#"
+      icon: <Database className="w-6 h-6" />,
+      title: "Measurement Tools",
+      description: "Validated instruments and assessment tools for measuring climate-related mental health impacts in clinical practice.",
+      buttonText: "View Tools",
+      downloadLink: "#measurement-tools"
     },
     {
       icon: <BookOpen className="w-6 h-6" />,
-      title: "Intervention Manuals",
-      description: "Step-by-step manuals for implementing climate-focused interventions",
-      items: [
-        "Group Therapy Manual",
-        "Individual Counseling Guide",
-        "Family Intervention Protocols",
-        "Peer Support Programs"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Video className="w-6 h-6" />,
-      title: "Training Videos",
-      description: "Professional development videos and webinar recordings",
-      items: [
-        "Climate Psychology Fundamentals",
-        "Youth Engagement Strategies",
-        "Cultural Competency Training",
-        "Supervision and Support"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Stethoscope className="w-6 h-6" />,
-      title: "Assessment Tools",
-      description: "Validated assessment instruments for clinical practice",
-      items: [
-        "Climate Distress Scale",
-        "Functional Impairment Measure",
-        "Treatment Progress Tracker",
-        "Risk Assessment Tools"
-      ],
-      downloadLink: "#"
+      title: "WHO's Nature-Based Solutions",
+      description: "World Health Organization's comprehensive guide on nature-based solutions for health and well-being, including climate-related mental health interventions.",
+      buttonText: "Access WHO Guide",
+      downloadLink: "https://iris.who.int/handle/10665/381437"
     }
   ];
 
@@ -100,22 +66,15 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
                 {resource.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Available Resources:</h4>
-                <ul className="space-y-2">
-                  {resource.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-[#3A9C62] rounded-full mr-3"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="w-full bg-[#3A9C62] hover:bg-[#2d7a4f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
+              <a
+                href={resource.downloadLink}
+                target={resource.downloadLink.startsWith('http') ? '_blank' : '_self'}
+                rel={resource.downloadLink.startsWith('http') ? 'noopener noreferrer' : ''}
+                className="w-full bg-[#3A9C62] hover:bg-[#2d7a4f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+              >
                 <Download className="w-4 h-4 mr-2" />
-                Access Resources
-              </button>
+                {resource.buttonText}
+              </a>
             </div>
           ))}
         </div>

@@ -8,52 +8,11 @@ interface ResourcesSchoolsProps {
 const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
   const resources = [
     {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "Implementation Guides",
-      description: "Step-by-step guides for implementing climate mental health programs in schools",
-      items: [
-        "School-Based Program Setup",
-        "Staff Training Protocols",
-        "Student Engagement Strategies",
-        "Parent and Family Involvement"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Presentation className="w-6 h-6" />,
-      title: "Educational Materials",
-      description: "Age-appropriate educational resources and curriculum materials",
-      items: [
-        "Climate Psychology Curriculum",
-        "Interactive Workshop Materials",
-        "Student Workbooks",
-        "Teacher Resource Kits"
-      ],
-      downloadLink: "#"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Community Toolkits",
-      description: "Resources for engaging the broader school community",
-      items: [
-        "Community Engagement Plans",
-        "Stakeholder Communication Tools",
-        "Event Planning Resources",
-        "Partnership Development Guides"
-      ],
-      downloadLink: "#"
-    },
-    {
       icon: <School className="w-6 h-6" />,
-      title: "Workshop Resources",
-      description: "Ready-to-use materials for running climate mental health workshops",
-      items: [
-        "Facilitator Guides",
-        "Activity Templates",
-        "Assessment Tools",
-        "Follow-up Resources"
-      ],
-      downloadLink: "#"
+      title: "School Toolkit",
+      description: "Comprehensive toolkit for schools and communities to implement climate mental health programs, including implementation guides, educational materials, and workshop resources.",
+      buttonText: "Access Toolkit",
+      downloadLink: "#school-toolkit"
     }
   ];
 
@@ -100,21 +59,9 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
                 {resource.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Available Resources:</h4>
-                <ul className="space-y-2">
-                  {resource.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-[#F4B43D] rounded-full mr-3"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               <button className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
                 <Download className="w-4 h-4 mr-2" />
-                Access Resources
+                {resource.buttonText}
               </button>
             </div>
           ))}
