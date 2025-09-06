@@ -143,13 +143,28 @@ const BlogUpdates = () => {
                           className="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium"
                         >
                           https://doi.org/10.1007/s43151-025-00174-1
-                        href={`https://doi.org/${paragraph.split('https://doi.org/')[1]}`}
+                        </a>
                       </p>
                     );
-                if (paragraph.includes('https://doi.org/')) {
+                  }
+                  if (paragraph.includes('https://doi.org/')) {
+                    return (
+                      <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                        <a 
+                          href={`https://doi.org/${paragraph.split('https://doi.org/')[1]}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#2D6AA3] hover:text-[#1e4d73] underline font-medium"
+                        >
+                          https://doi.org/{paragraph.split('https://doi.org/')[1]}
+                        </a>
+                        {paragraph.split('https://doi.org/')[0]}
+                      </p>
+                    );
+                  }
                   return (
-                        https://doi.org/{paragraph.split('https://doi.org/')[1]}
-                      {paragraph.split('https://doi.org/')[0]}
+                    <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                      {paragraph}
                     </p>
                   );
                 })}
