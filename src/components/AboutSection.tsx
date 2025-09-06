@@ -42,7 +42,7 @@ const AboutSection = () => {
                 working in partnership with young people, clinicians and community organisations.
               </p>
               <p>
-                PRIME was established in response to rising climate anxiety, eco-grief and
+                PRIME was established in response to rising climate distress, eco-grief and
                 related psychological impacts among youth, alongside a striking absence of
                 coordinated, evidence-based interventions. Our platform brings together
                 globally recognised researchers and young people as co-designers to fast-track
@@ -54,12 +54,11 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="bg-gray-200 rounded-xl h-64 lg:h-full flex items-center justify-center">
-              <p className="text-gray-500 text-center px-4">
-                [Youth Collaboration / Climate Image]<br/>
-                <span className="text-sm">Placeholder for custom illustration</span>
-              </p>
-            </div>
+            <img 
+              src="/Image1.png" 
+              alt="Youth collaboration and climate resilience" 
+              className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg"
+            />
           </div>
         </div>
 
