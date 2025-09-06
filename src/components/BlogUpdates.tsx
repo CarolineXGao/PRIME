@@ -130,7 +130,6 @@ const BlogUpdates = () => {
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
               <div className="prose max-w-none">
-                {selectedPost.fullContent.split('\n').map((paragraph, index) => {
                 <div 
                   className="text-gray-700 leading-relaxed space-y-4"
                   dangerouslySetInnerHTML={{ 
