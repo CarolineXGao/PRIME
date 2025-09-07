@@ -193,7 +193,7 @@ Our emotions were not designed for the slow violence of climate change, they wer
 
 Carried into today’s crisis, however, the same instincts can overwhelm us. Fear immobilises. Anxiety spirals. Grief sinks into despair. Anger divides instead of uniting. Denial blinds us to what is unfolding before our eyes. Our evolutionary inheritance, once protective, now risks trapping us.
 
-And yet, if we can recognise these ancient patterns, we can begin to master them. Fear can become courage. Anxiety can sharpen preparedness. Grief can draw us into collective renewal. Anger can fuel determination to protect what matters most. Even denial, when met with compassion rather than scorn, can soften into dialogue. These instincts are not enemies to silence but raw materials to guide — pathways that, if tended carefully, can lead us toward resilience and action.
+And yet, if we can recognise these ancient patterns, we can begin to master them. Fear can become courage. Anxiety can sharpen preparedness. Grief can draw us into collective renewal. Anger can fuel determination to protect what matters most. Even denial, when met with compassion rather than scorn, can soften into dialogue. These instincts are not enemies to silence but raw materials to guide — pathways that, if tended carefully, can lead us toward resilience and action. 
 
 The story of the Dragon King reminds us that people have always invented ways to survive the unbearable. What matters now is whether our stories will lock us into cruelty, paralysis or open us into action. 
 
