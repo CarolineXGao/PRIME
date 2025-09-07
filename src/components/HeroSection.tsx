@@ -21,9 +21,9 @@ const HeroSection = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  PRIME: Research Platform for{' '}
+                  Platform for Research and Interventions in  {' '}
                   <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
-                  <span className="text-[#3A9C62]">Climate Resilience</span>
+                  <span className="text-[#3A9C62]">Environment</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
                   Accelerating evidence-based interventions to mitigate climate distress in young people
