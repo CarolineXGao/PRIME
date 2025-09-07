@@ -173,7 +173,28 @@ Speakers
 "The research process itself was empowering. We weren't just participants - we were partners in designing something that could help other young people." - Aisha, 17
 
 These stories highlight the importance of youth-centered approaches and the power of peer support in building climate resilience.`,
-    date: "March 10, 2024",
+    date: "Sep 10, 2025",
+    readTime: "3 min read",
+  },
+  {
+    id: "youth-participant-stories",
+    image: "/Images/Image11.png",
+    category: "Voices from the Field",
+    title: "Reflection on climate emotions",
+    excerpt:
+      "Our ancient instincts can trap us in fear or denial — or be transformed into courage and hope.",
+    fullContent: `In times of great drought, Chinese communities turned to the Dragon King, sovereign of rivers and rain. Temples were raised, incense burned, offerings laid at his feet. Yet when the skies remained unbroken, stories tell of villages so desperate that they gave up their own children to the Dragon King, believing such a terrible sacrifice might summon the rains. To us, this feels unthinkable, even monstrous. But the story is not about cruelty — it is about the crushing weight of uncertainty. When people are powerless before forces larger than themselves, they cling to whatever explanations and remedies their culture provides, no matter how desperate or irrational.
+    
+This is not just a story of the past. It is a mirror for how we confront climate change today. Faced with fires, floods, and rising seas, many are overcome by grief and anxiety, unable to picture a safe future; some are swept into anger and blame. Still others retreat into denial, persuading themselves the danger is exaggerated or unreal. These reactions may seem opposed, but all arise from the same source: the ancient circuitry of the human mind, instincts honed to shield us when the world feels unbearably unsafe.
+Our emotions were not designed for the slow violence of climate change — they were forged in the hunter-gatherer world. Fear kept our ancestors alive by sharpening attention to sudden threats. Anxiety prepared the body for swift action. Grief created rituals that bound communities together. Anger rallied courage to defend kin and territory. Even denial had its place, sparing the mind from terror when survival demanded focus on the immediate task. These were not flaws but finely tuned adaptations to an unpredictable world.
+
+Carried into today’s crisis, however, the same instincts can overwhelm us. Fear immobilises. Anxiety spirals. Grief sinks into despair. Anger divides instead of uniting. Denial blinds us to what is unfolding before our eyes. Our evolutionary inheritance, once protective, now risks trapping us.
+
+And yet, if we can recognise these ancient patterns, we can begin to master them. Fear can become courage. Anxiety can sharpen preparedness. Grief can draw us into collective renewal. Anger can fuel determination to protect what matters most. Even denial, when met with compassion rather than scorn, can soften into dialogue. These instincts are not enemies to silence but raw materials to guide — pathways that, if tended carefully, can lead us toward resilience and action.
+
+The story of the Dragon King reminds us that people have always invented ways to survive the unbearable. What matters now is whether our stories will lock us into cruelty, paralysis or open us into action. To face the future, we need new rituals, new narratives that make climate reality livable, not unspeakable. Only then can we transform the ancient instincts of distress and denial into pathways for resilience, imagination, and hope.
+`,
+    date: "Sep 10, 2025",
     readTime: "3 min read",
   },
 ];
