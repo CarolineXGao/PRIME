@@ -187,6 +187,8 @@ These stories highlight the importance of youth-centered approaches and the powe
 
     
 This is not just a story of the past. It is a mirror for how we confront climate change today. Faced with fires, floods, and rising seas, many are overcome by grief and anxiety, unable to picture a safe future; some are swept into anger and blame. Still others retreat into denial, persuading themselves the danger is exaggerated or unreal. These reactions may seem opposed, but all arise from the same source: the ancient circuitry of the human mind, instincts honed to shield us when the world feels unbearably unsafe.
+
+
 Our emotions were not designed for the slow violence of climate change — they were forged in the hunter-gatherer world. Fear kept our ancestors alive by sharpening attention to sudden threats. Anxiety prepared the body for swift action. Grief created rituals that bound communities together. Anger rallied courage to defend kin and territory. Even denial had its place, sparing the mind from terror when survival demanded focus on the immediate task. These were not flaws but finely tuned adaptations to an unpredictable world.
 
 Carried into today’s crisis, however, the same instincts can overwhelm us. Fear immobilises. Anxiety spirals. Grief sinks into despair. Anger divides instead of uniting. Denial blinds us to what is unfolding before our eyes. Our evolutionary inheritance, once protective, now risks trapping us.
