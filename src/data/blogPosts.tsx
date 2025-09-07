@@ -195,7 +195,9 @@ Carried into today’s crisis, however, the same instincts can overwhelm us. Fea
 
 And yet, if we can recognise these ancient patterns, we can begin to master them. Fear can become courage. Anxiety can sharpen preparedness. Grief can draw us into collective renewal. Anger can fuel determination to protect what matters most. Even denial, when met with compassion rather than scorn, can soften into dialogue. These instincts are not enemies to silence but raw materials to guide — pathways that, if tended carefully, can lead us toward resilience and action.
 
-The story of the Dragon King reminds us that people have always invented ways to survive the unbearable. What matters now is whether our stories will lock us into cruelty, paralysis or open us into action. To face the future, we need new rituals, new narratives that make climate reality livable, not unspeakable. Only then can we transform the ancient instincts of distress and denial into pathways for resilience, imagination, and hope.
+The story of the Dragon King reminds us that people have always invented ways to survive the unbearable. What matters now is whether our stories will lock us into cruelty, paralysis or open us into action. 
+
+To face the future, we need new rituals, new narratives that make climate reality livable not unspeakable, climate emotions embraced not dismissed - woven into connections that unite instead of divide. Only then can we transform the ancient instincts of distress and denial into pathways for resilience, imagination, and hope.
 
 
 Caroline Gao reflecting on completing Climate Cafe training
