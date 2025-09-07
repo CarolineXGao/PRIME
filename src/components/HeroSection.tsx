@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/Landing-page.png" 
+          src="/Images/Landing-page.png" 
           alt="PRIME Background" 
           className="w-full h-full object-cover opacity-60"
         />
@@ -21,7 +21,7 @@ const HeroSection = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  PRIME: A Research Platform for{' '}
+                  PRIME: Research Platform for{' '}
                   <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
                   <span className="text-[#3A9C62]">Climate Resilience</span>
                 </h1>
