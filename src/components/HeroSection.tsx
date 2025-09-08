@@ -21,7 +21,7 @@ const HeroSection = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  PRIME: Platform for Research and Innovations in {' '}
+                  PRIME: Platform for Research and Innovation in {' '}
                   <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
                   <span className="text-[#3A9C62]">Environment</span>
                 </h1>
