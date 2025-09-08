@@ -177,7 +177,7 @@ These stories highlight the importance of youth-centered approaches and the powe
     readTime: "3 min read",
   },
   {
-    id: "youth-participant-stories",
+    id: "Reflection-climate-emotions",
     image: "/Images/Image11.png",
     category: "Voices from the Field",
     title: "Reflection on climate emotions",
