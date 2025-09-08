@@ -13,6 +13,12 @@ const collaborators = [
     alt: "University of Melbourne logo",
     url: "https://www.unimelb.edu.au"
   },
+   {
+    name: "Climate CATCH Lab",
+    logo: "https://www.unimelb.edu.au/__data/assets/image/0007/4756228/varieties/thumb.png",
+    alt: "Climate CATCH Lab logo",
+    url: "https://www.unimelb.edu.au/climate/collaboration/climate-catch-lab"
+  },
   {
     name: "Matilda Centre (University of Sydney)",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaU01mLySlNvgDfJU__6AxYuNMehJ7FTzqmuRk644U0WbH9nfYsqsx2W8&s",
@@ -54,12 +60,6 @@ const collaborators = [
     logo: "https://sttop2030.com/media/site/56edc6627f-1710994515/sttop_logo_black.png",
     alt: "STTOP logo",
     url: "https://sttop2030.com/"
-  },
-  {
-    name: "Climate CATCH Lab",
-    logo: "https://www.unimelb.edu.au/__data/assets/image/0007/4756228/varieties/thumb.png",
-    alt: "Climate CATCH Lab logo",
-    url: "https://www.unimelb.edu.au/climate/collaboration/climate-catch-lab"
   },
   {
     name: "Blue Minds",
