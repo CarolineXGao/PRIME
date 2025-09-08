@@ -199,7 +199,7 @@ The story of the Dragon King reminds us that people have always invented ways to
 
 To face the future, we need new rituals, new narratives that make climate reality livable not unspeakable, climate emotions embraced not dismissed - woven into connections that unite instead of divide. Only then can we transform the ancient instincts of distress and denial into pathways for resilience, imagination, and hope.
 
-This reflection comes after completing Climate Café training delivered by Psychology for a Safe Climate (PSC) — a reminder that creating space for our emotions is not a weakness but a pathway to collective strength. By naming, sharing, and honouring our climate emotions, our own climate journey can truly begain.
+This reflection comes after completing Climate Café training delivered by Psychology for a Safe Climate (PSC) — an experience that showed me creating space for our emotions is not a weakness but a pathway to collective strength. By naming, sharing, and honouring our climate emotions, our own climate journey can truly begain.
 
 Caroline Gao 
 `,
