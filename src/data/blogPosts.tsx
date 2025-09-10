@@ -204,7 +204,7 @@ This reflection comes after completing Climate Café training delivered by Psych
 Caroline Gao 
 `,
     date: "Sep 10, 2025",
-    readTime: "3 min read",
+    readTime: "5 min read",
   },
 ];
 
