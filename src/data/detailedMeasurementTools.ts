@@ -286,7 +286,53 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
       ]
     }
   ]
-  }
+  },
+  {
+  id: 'climate-change-hope-scale',
+  name: 'Climate Change Hope Scale (CCHS)',
+  description:
+    'An 11-item scale for high-school students assessing hope about addressing climate change (agency, collective efficacy, and willingness to act).',
+  targetPopulation: 'High school students (adolescents)',
+  domains: ['Climate Change Hope'],
+  administrationTime: '~5 minutes',
+  format: 'Self-report questionnaire (11 items)',
+  availability: 'Open access',
+  reference:
+    'Li, C., & Monroe, M. C. (2018). Development and Validation of the Climate Change Hope Scale for High School Students. Environment & Behavior, 50(4), 454–479.',
+  link: 'https://doi.org/10.1177/0013916517708325',
+  hasDetailedScale: true,
+  instructions:
+    'Climate change refers to long-term changes in the Earth’s climate (e.g., temperature, precipitation, wind patterns), primarily due to greenhouse gas emissions and land-use change, which may cause sea-level rise, heat events, fires, droughts, storms, and floods. Scientists project impacts on forests, agriculture, water, coasts, human health and migration, wildlife habitat, and the economy.\n\nFor each statement below, choose one answer on the scale from −3 (Strongly disagree) to +3 (Strongly agree). Select “X” if you do not think climate is changing.',
+  responseOptions: [
+    { label: '−3 – Strongly disagree', value: -3 },
+    { label: '−2 – Disagree', value: -2 },
+    { label: '−1 – Slightly disagree', value: -1 },
+    { label: '0 – Neutral', value: 0 },
+    { label: '1 – Slightly agree', value: 1 },
+    { label: '2 – Agree', value: 2 },
+    { label: '3 – Strongly agree', value: 3 },
+    // Encode the non-numeric “X” choice as 999; handle as missing in scoring.
+    { label: 'X – I do not think climate is changing', value: 999 }
+  ],
+  sections: [
+    {
+      title: 'Climate change hope',
+      items: [
+        { number: 1, text: 'I believe people will be able to solve problems caused by climate change.' },
+        { number: 2, text: 'I believe scientists will be able to find ways to solve problems caused by climate change.' },
+        { number: 3, text: 'Even when some people give up, I know there will be others who will continue to try to solve problems caused by climate change.' },
+        { number: 4, text: 'If everyone works together, we can solve problems caused by climate change.' },
+        { number: 5, text: 'I am willing to take actions to help solve problems caused by climate change.' },
+        { number: 6, text: 'I believe more people are willing to take actions to help solve problems caused by climate change.' },
+        { number: 7, text: 'I know that there are things that I can do to help solve problems caused by climate change.' },
+        { number: 8, text: 'I know what to do to help solve problems caused by climate change.' },
+        { number: 9, text: 'Climate change is beyond my control, so I won’t even bother trying to solve problems caused by climate change.' },   // reverse-scored
+        { number: 10, text: 'Climate change is so complex we will not be able to solve problems that it causes.' },                               // reverse-scored
+        { number: 11, text: 'The actions I can take are too small to help solve problems caused by climate change.' }                            // reverse-scored
+      ]
+    }
+  ]
+}
 ];
 
 // Helper functions
