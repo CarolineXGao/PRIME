@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ExternalLink, Search, Filter } from 'lucide-react';
-import { measurementTools, MeasurementTool } from '../data/measurementTools';
+import { ArrowLeft, ExternalLink, Search, Filter, ChevronDown, ChevronRight } from 'lucide-react';
+import { detailedMeasurementTools, DetailedMeasurementTool } from '../data/detailedMeasurementTools';
 
 interface MeasurementToolsTableProps {
   setCurrentPage: (page: string) => void;
@@ -9,14 +9,15 @@ interface MeasurementToolsTableProps {
 const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDomain, setSelectedDomain] = useState('');
+  const [expandedTools, setExpandedTools] = useState<Set<string>>(new Set());
 
   // Get all unique domains for filter
   const allDomains = Array.from(
-    new Set(measurementTools.flatMap(tool => tool.domains))
+    new Set(detailedMeasurementTools.flatMap(tool => tool.domains))
   ).sort();
 
   // Filter tools based on search and domain
-  const filteredTools = measurementTools.filter(tool => {
+  const filteredTools = detailedMeasurementTools.filter(tool => {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.targetPopulation.toLowerCase().includes(searchTerm.toLowerCase());
@@ -25,6 +26,16 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
     
     return matchesSearch && matchesDomain;
   });
+
+  const toggleExpanded = (toolId: string) => {
+    const newExpanded = new Set(expandedTools);
+    if (newExpanded.has(toolId)) {
+      newExpanded.delete(toolId);
+    } else {
+      newExpanded.add(toolId);
+    }
+    setExpandedTools(newExpanded);
+  };
 
   return (
     <section className="py-16 bg-white">
@@ -78,57 +89,20 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-gray-600">
-            Showing {filteredTools.length} of {measurementTools.length} measurement tools
+            Showing {filteredTools.length} of {detailedMeasurementTools.length} measurement tools
           </p>
         </div>
 
-        {/* Tools Table */}
-        <div className="bg-white rounded-xl shadow-lg border-2 border-gray-200 overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-gray-50 border-b-2 border-gray-200">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Tool Name</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Description</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Target Population</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Domains</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Administration</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Format</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Availability</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Reference</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {filteredTools.map((tool, index) => (
-                  <tr key={tool.id} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="px-6 py-4">
-                      <div className="font-semibold text-gray-900">{tool.name}</div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="text-sm text-gray-600 max-w-xs">{tool.description}</div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="text-sm text-gray-900">{tool.targetPopulation}</div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="flex flex-wrap gap-1">
-                        {tool.domains.map(domain => (
-                          <span
-                            key={domain}
-                            className="px-2 py-1 bg-[#2D6AA3] bg-opacity-10 text-[#2D6AA3] text-xs rounded-full"
-                          >
-                            {domain}
-                          </span>
-                        ))}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="text-sm text-gray-900">{tool.administrationTime}</div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="text-sm text-gray-900">{tool.format}</div>
-                    </td>
-                    <td className="px-6 py-4">
+        {/* Tools Cards */}
+        <div className="space-y-6">
+          {filteredTools.map((tool) => (
+            <div key={tool.id} className="bg-white rounded-xl shadow-lg border-2 border-gray-200 overflow-hidden">
+              {/* Tool Header */}
+              <div className="p-6 border-b border-gray-200">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl font-bold text-gray-900">{tool.name}</h3>
                       <span className={`px-2 py-1 text-xs rounded-full ${
                         tool.availability === 'Open access' 
                           ? 'bg-green-100 text-green-800' 
@@ -136,25 +110,135 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                       }`}>
                         {tool.availability}
                       </span>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="text-sm text-gray-900">{tool.reference}</div>
-                      {tool.link && (
-                        <a
-                          href={tool.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-[#2D6AA3] hover:text-[#1e4d73] text-xs mt-1"
-                        >
-                          View <ExternalLink className="w-3 h-3 ml-1" />
-                        </a>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                    </div>
+                    <p className="text-gray-600 mb-3">{tool.description}</p>
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                      <span><strong>Population:</strong> {tool.targetPopulation}</span>
+                      <span><strong>Time:</strong> {tool.administrationTime}</span>
+                      <span><strong>Format:</strong> {tool.format}</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    {tool.link && (
+                      <a
+                        href={tool.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors"
+                      >
+                        Open Access <ExternalLink className="w-4 h-4 ml-2" />
+                      </a>
+                    )}
+                    {tool.hasDetailedScale && (
+                      <button
+                        onClick={() => toggleExpanded(tool.id)}
+                        className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors"
+                      >
+                        {expandedTools.has(tool.id) ? 'Hide Scale' : 'View Full Scale'}
+                        {expandedTools.has(tool.id) ? 
+                          <ChevronDown className="w-4 h-4 ml-2" /> : 
+                          <ChevronRight className="w-4 h-4 ml-2" />
+                        }
+                      </button>
+                    )}
+                  </div>
+                </div>
+                
+                {/* Domains */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {tool.domains.map(domain => (
+                    <span
+                      key={domain}
+                      className="px-3 py-1 bg-[#2D6AA3] bg-opacity-10 text-[#2D6AA3] text-sm rounded-full"
+                    >
+                      {domain}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Expanded Scale Content */}
+              {expandedTools.has(tool.id) && tool.hasDetailedScale && tool.sections && tool.responseOptions && (
+                <div className="p-6 bg-gray-50">
+                  {tool.instructions && (
+                    <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                      <p className="text-blue-800 font-medium">{tool.instructions}</p>
+                    </div>
+                  )}
+                  
+                  {/* Response Options Header */}
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Response Options:</h4>
+                    <div className="grid grid-cols-5 gap-2">
+                      {tool.responseOptions.map((option) => (
+                        <div key={option.value} className="text-center p-2 bg-white border border-gray-300 rounded">
+                          <div className="font-semibold text-gray-900">{option.label}</div>
+                          <div className="text-sm text-gray-600">{option.value}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Scale Sections */}
+                  {tool.sections.map((section, sectionIndex) => (
+                    <div key={sectionIndex} className="mb-8">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4 p-3 bg-[#2D6AA3] bg-opacity-10 rounded-lg">
+                        {section.title}
+                      </h4>
+                      
+                      {/* Items Table */}
+                      <div className="overflow-x-auto">
+                        <table className="w-full border border-gray-300 rounded-lg overflow-hidden">
+                          <thead>
+                            <tr className="bg-gray-100">
+                              <th className="px-4 py-3 text-left font-semibold text-gray-900 border-r border-gray-300">
+                                Item
+                              </th>
+                              {tool.responseOptions.map((option) => (
+                                <th key={option.value} className="px-3 py-3 text-center font-semibold text-gray-900 border-r border-gray-300 min-w-[80px]">
+                                  <div>{option.label}</div>
+                                  <div className="text-xs text-gray-600">({option.value})</div>
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.items.map((item, itemIndex) => (
+                              <tr key={item.number} className={itemIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                                <td className="px-4 py-3 border-r border-gray-300">
+                                  <div className="flex items-start gap-3">
+                                    <span className="font-semibold text-gray-700 mt-1">{item.number}.</span>
+                                    <span className="text-gray-900">{item.text}</span>
+                                  </div>
+                                </td>
+                                {tool.responseOptions.map((option) => (
+                                  <td key={option.value} className="px-3 py-3 text-center border-r border-gray-300">
+                                    <input
+                                      type="radio"
+                                      name={`item-${item.number}`}
+                                      value={option.value}
+                                      className="w-4 h-4 text-[#2D6AA3] focus:ring-[#2D6AA3]"
+                                      disabled
+                                    />
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  ))}
+                  
+                  {/* Reference */}
+                  <div className="mt-6 p-4 bg-white border border-gray-200 rounded-lg">
+                    <h5 className="font-semibold text-gray-900 mb-2">Reference:</h5>
+                    <p className="text-sm text-gray-700">{tool.reference}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* No Results */}
