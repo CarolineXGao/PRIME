@@ -117,7 +117,6 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   ],
   sections: [
     {
-      title: 'Eco-Anxiety Symptoms',
       items: [
         { number: 1, text: 'Feeling nervous, anxious or on edge' },
         { number: 2, text: 'Not being able to stop or control worrying' },
