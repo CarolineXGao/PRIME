@@ -17,7 +17,7 @@ export const measurementTools: MeasurementTool[] = [
     name: 'Climate Change Anxiety Scale (CCAS)',
     description: 'A 22-item validated scale assessing climate-related anxiety, including cognitive and functional impairment.',
     targetPopulation: 'Adolescents and adults',
-    domains: ['Climate Anxiety', 'Cognitive Impairment', 'Functional Impairment'],
+    domains: ['Climate Anxiety', 'Climate emotions', 'Functional Impairment'],
     administrationTime: '~10 minutes',
     format: 'Self-report questionnaire (22 items, Likert scale)',
     availability: 'Open access',
