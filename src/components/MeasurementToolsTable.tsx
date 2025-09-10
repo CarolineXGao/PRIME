@@ -126,7 +126,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                         rel="noopener noreferrer"
                         className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors"
                       >
-                        Open Access <ExternalLink className="w-4 h-4 ml-2" />
+                        Publication <ExternalLink className="w-4 h-4 ml-2" />
                       </a>
                     )}
                     {tool.hasDetailedScale && (
