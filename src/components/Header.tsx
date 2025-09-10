@@ -43,13 +43,13 @@ const Header = ({ currentPage, setCurrentPage }: HeaderProps) => {
             <div className="relative">
               <button 
                 onClick={() => handleNavClick('about')}
-                className={`font-medium flex items-center border-b-2 pb-1 transition-colors ${
+                className={`font-medium border-b-2 pb-1 transition-colors ${
                   currentPage === 'about' 
                     ? 'text-[#2D6AA3] border-[#2D6AA3]' 
                     : 'text-gray-700 hover:text-[#2D6AA3] border-transparent hover:border-[#2D6AA3]'
                 }`}
               >
-                About <ChevronDown className="ml-1 h-4 w-4" />
+                About
               </button>
             </div>
             <button 
