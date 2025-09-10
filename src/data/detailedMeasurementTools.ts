@@ -101,7 +101,7 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
     name: 'Hogg Eco-Anxiety Scale (HEAS)',
     description: 'A 13-item validated measure of eco-anxiety, assessing affective, cognitive, and behavioral symptoms related to environmental change.',
     targetPopulation: 'Adolescents and adults',
-    domains: ['Eco-Anxiety', 'Affective Symptoms', 'Cognitive Symptoms', 'Behavioral Symptoms'],
+    domains: [ 'Eco-anxiety', 'Climate emotions', 'Functional Impairment'],
     administrationTime: '~5 minutes',
     format: 'Self-report questionnaire (13 items, Likert scale)',
     availability: 'Open access',
@@ -156,7 +156,7 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
     name: 'Inventory of Climate Emotions (ICE)',
     description: 'A multidimensional self-report tool capturing the intensity and frequency of a wide range of emotions in response to climate change.',
     targetPopulation: 'Adolescents and adults',
-    domains: ['Climate Emotions', 'Affective Responses'],
+    domains: ['Climate Emotions'],
     administrationTime: '~10 minutes',
     format: 'Self-report questionnaire (22 items, Likert scale)',
     availability: 'Open access',
@@ -249,30 +249,43 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   ]
   },
   {
-    id: 'eco-emotion-scale',
-    name: 'Eco-Emotion Scale (EES)',
-    description: 'A multidimensional self-report scale assessing the range of emotions (e.g., worry, anger, hope, guilt) that people experience in relation to climate change and ecological crises.',
-    targetPopulation: 'Adolescents and adults',
-    domains: ['Worry', 'Anger', 'Hope', 'Guilt', 'Despair'],
-    administrationTime: '~10 minutes',
-    format: 'Self-report questionnaire (23 items)',
-    availability: 'Open access',
-    reference: 'Stanley, S. K., Hogg, T. L., Leviston, Z., & Walker, I. (2021). From anger to action: Differential impacts of eco-emotions on climate change policy support and pro-environmental behaviour. Journal of Environmental Psychology, 76, 101649.',
-    link: 'https://doi.org/10.1016/j.jenvp.2021.101649',
-    hasDetailedScale: false // Can be expanded later
-  },
-  {
     id: 'climate-change-worry-scale',
     name: 'Climate Change Worry Scale (CCWS)',
     description: 'A brief self-report scale assessing the frequency and intensity of worry about climate change and its perceived impacts.',
     targetPopulation: 'Adolescents and adults',
-    domains: ['Worry', 'Climate Concern'],
+    domains: ['Climate Emotions'],
     administrationTime: '~5 minutes',
     format: 'Self-report questionnaire (10 items)',
     availability: 'Open access',
-    reference: 'Stewart, A. E., & Hauser, D. J. (2018). A brief worry scale for climate change: Development and validation of the Climate Change Worry Scale. Journal of Environmental Psychology, 60, 1–10.',
-    link: 'https://doi.org/10.1016/j.jenvp.2018.08.003',
-    hasDetailedScale: false // Can be expanded later
+    reference: 'Stewart, A. E. (2021). Psychometric Properties of the Climate Change Worry Scale. Int. J. Environ. Res. Public Health, 18, 494',
+    link: ' https://doi.org/10.3390/ijerph18020494',
+    hasDetailedScale: true,  
+    instructions:
+    'No instruction',
+  responseOptions: [
+    { label: '1 – Strongly disagree', value: 1 },
+    { label: '2 – Somewhat disagree', value: 2 },
+    { label: '3 – Neither agree nor disagree', value: 3 },
+    { label: '4 – Somewhat agree', value: 4 },
+    { label: '5 – Strongly agree', value: 5 }
+  ],
+  sections: [
+    {
+      title: 'Climate change worry',
+      items: [
+        { number: 1, text: 'I worry about climate change more than other people.' },
+        { number: 2, text: 'Thoughts about climate change cause me to have worries about what the future may hold.' },
+        { number: 3, text: 'I tend to seek out information about climate change in the media (e.g., TV, newspapers, internet).' },
+        { number: 4, text: 'I tend to worry when I hear about climate change, even when the effects of climate change may be some time away.' },
+        { number: 5, text: 'I worry that outbreaks of severe weather may be the result of a changing climate.' },
+        { number: 6, text: 'I worry about climate change so much that I feel paralyzed in being able to do anything about it.' },
+        { number: 7, text: 'I worry that I might not be able to cope with climate change.' },
+        { number: 8, text: 'I notice that I have been worrying about climate change.' },
+        { number: 9, text: 'Once I begin to worry about climate change, I find it difficult to stop.' },
+        { number: 10, text: 'I worry about how climate change may affect the people I care about.' }
+      ]
+    }
+  ]
   }
 ];
 
