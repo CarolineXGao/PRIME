@@ -304,15 +304,15 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   instructions:
     'Climate change refers to long-term changes in the Earth’s climate (e.g., temperature, precipitation, wind patterns), primarily due to greenhouse gas emissions and land-use change, which may cause sea-level rise, heat events, fires, droughts, storms, and floods. Scientists project impacts on forests, agriculture, water, coasts, human health and migration, wildlife habitat, and the economy.\n\nFor each statement below, choose one answer on the scale from −3 (Strongly disagree) to +3 (Strongly agree). Select “X” if you do not think climate is changing.',
   responseOptions: [
-    { label: '−3 – Strongly disagree', value: -3 },
-    { label: '−2 – Disagree', value: -2 },
-    { label: '−1 – Slightly disagree', value: -1 },
-    { label: '0 – Neutral', value: 0 },
-    { label: '1 – Slightly agree', value: 1 },
-    { label: '2 – Agree', value: 2 },
-    { label: '3 – Strongly agree', value: 3 },
+    { label: 'Strongly disagree', value: -3 },
+    { label: 'Disagree', value: -2 },
+    { label: 'Slightly disagree', value: -1 },
+    { label: 'Neutral', value: 0 },
+    { label: 'Slightly agree', value: 1 },
+    { label: 'Agree', value: 2 },
+    { label: 'Strongly agree', value: 3 },
     // Encode the non-numeric “X” choice as 999; handle as missing in scoring.
-    { label: 'X – I do not think climate is changing', value: 999 }
+    { label: 'I do not think climate is changing', value: X }
   ],
   sections: [
     {
