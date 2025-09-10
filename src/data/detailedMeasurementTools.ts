@@ -107,7 +107,34 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
     availability: 'Open access',
     reference: 'Hogg, T. L. et al. (2021). The Hogg Eco-Anxiety Scale: Development and validation of a multidimensional measure. Journal of Environmental Psychology, 76, 101641.',
     link: 'https://doi.org/10.1016/j.jenvp.2021.101641',
-    hasDetailedScale: false // Can be expanded later
+    hasDetailedScale: true,
+  instructions: 'Over the last 2 weeks, how often have you been bothered by the following problems, when thinking about climate change and other global environmental conditions (e.g., global warming, ecological degradation, resource depletion, species extinction, ozone hole, pollution of the oceans, deforestation)?',
+  responseOptions: [
+    { label: 'Not at all', value: 0 },
+    { label: 'Several days', value: 1 },
+    { label: 'Over half the days', value: 2 },
+    { label: 'Nearly every day', value: 3 }
+  ],
+  sections: [
+    {
+      title: 'Eco-Anxiety Symptoms',
+      items: [
+        { number: 1, text: 'Feeling nervous, anxious or on edge' },
+        { number: 2, text: 'Not being able to stop or control worrying' },
+        { number: 3, text: 'Worrying too much' },
+        { number: 4, text: 'Feeling afraid' },
+        { number: 5, text: 'Unable to stop thinking about future climate change and other global environmental problems' },
+        { number: 6, text: 'Unable to stop thinking about past events related to climate change' },
+        { number: 7, text: 'Unable to stop thinking about losses to the environment' },
+        { number: 8, text: 'Difficulty sleeping' },
+        { number: 9, text: 'Difficulty enjoying social situations with family and friends' },
+        { number: 10, text: 'Difficulty working and/or studying' },
+        { number: 11, text: 'Feeling anxious about the impact of your personal behaviours on the earth' },
+        { number: 12, text: 'Feeling anxious about your personal responsibility to help address environmental problems' },
+        { number: 13, text: 'Feeling anxious that your personal behaviours will do little to help fix the problem' }
+      ]
+    }
+  ]
   },
   {
     id: 'inventory-climate-emotions',
