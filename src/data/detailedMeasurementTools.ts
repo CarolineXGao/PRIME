@@ -311,8 +311,7 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
     { label: 'Slightly agree', value: 1 },
     { label: 'Agree', value: 2 },
     { label: 'Strongly agree', value: 3 },
-    // Encode the non-numeric “X” choice as 999; handle as missing in scoring.
-    { label: 'I do not think climate is changing', value:  }
+    { label: 'I do not think climate is changing', value: 999 }
   ],
   sections: [
     {
