@@ -162,7 +162,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                 <div className="p-6 bg-gray-50">
                   {tool.instructions && (
                     <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                      <p className="text-blue-800 font-medium">{tool.instructions}</p>
+                      <p className="text-black font-medium">{tool.instructions}</p>
                     </div>
                   )}
                   
