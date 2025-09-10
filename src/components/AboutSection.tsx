@@ -55,7 +55,7 @@ const AboutSection = () => {
           </div>
           <div className="relative">
             <img 
-             src="/Image1.png"
+             src="/Images/Image1.png"
               alt="Youth collaboration and climate resilience" 
               className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg"
             />
