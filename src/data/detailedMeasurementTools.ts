@@ -162,7 +162,91 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
     availability: 'Open access',
     reference: 'Hickman, C. et al. (2022). Climate emotions and mental distress: Development and validation of the Inventory of Climate Emotions (ICE). Journal of Environmental Psychology, 83, 101866.',
     link: 'https://doi.org/10.1016/j.jenvp.2022.101866',
-    hasDetailedScale: false // Can be expanded later
+    hasDetailedScale: true
+    instructions:
+    'What do you feel in relation to climate change? The aim of this questionnaire is to examine your feelings on this subject. Rate the extent to which each statement applies to you, from “strongly disagree” to “strongly agree.” There are no right or wrong answers—choose the answer that best describes what you feel.',
+  responseOptions: [
+    { label: '1 – Strongly disagree', value: 1 },
+    { label: '2 – Somewhat disagree', value: 2 },
+    { label: '3 – Neither agree nor disagree', value: 3 },
+    { label: '4 – Somewhat agree', value: 4 },
+    { label: '5 – Strongly agree', value: 5 }
+  ],
+  // Present items in random order when administering; scoring uses the subscale groupings below.
+  sections: [
+    {
+      title: 'Climate anger',
+      items: [
+        { number: 1, text: 'I feel angry that the political and economic system that we live in harms the climate.' },
+        { number: 2, text: 'I am outraged that politicians allowed climate change to come this far.' },
+        { number: 3, text: 'I feel outraged at corporations that harm the climate.' },
+        { number: 4, text: 'I feel anger when I think of politicians who delay efforts to mitigate climate change.' }
+      ]
+    },
+    {
+      title: 'Climate contempt',
+      items: [
+        { number: 5, text: 'It annoys me to watch people succumb to climate hysteria.' },
+        { number: 6, text: 'I am annoyed by the constant publicity around climate change.' },
+        { number: 7, text: 'I am bored of hearing about climate change.' },
+        { number: 8, text: 'I am surprised that people experience strong emotions in connection with climate change.' }
+      ]
+    },
+    {
+      title: 'Climate enthusiasm',
+      items: [
+        { number: 9, text: 'The increasing public engagement with climate change gives me hope.' },
+        { number: 10, text: 'I believe that there are emerging solutions that will allow us to stop climate change.' },
+        { number: 11, text: 'Concrete actions for the climate allow me to be optimistic about the future.' },
+        { number: 12, text: 'Social mobilization in the fight against climate change makes me feel that together we can achieve this goal.' }
+      ]
+    },
+    {
+      title: 'Climate powerlessness',
+      items: [
+        { number: 13, text: 'I feel confused about what I can do to reduce climate change.' },
+        { number: 14, text: 'I am overwhelmed by how many aspects of life would need to be changed to limit climate change.' },
+        { number: 15, text: 'As an individual, I feel powerless with little agency over what happens with the climate.' },
+        { number: 16, text: 'I feel helpless when I think of how difficult it is to live in a climate-friendly way.' }
+      ]
+    },
+    {
+      title: 'Climate guilt',
+      items: [
+        { number: 17, text: 'I have a guilty conscience about not doing enough to mitigate climate change.' },
+        { number: 18, text: 'It upsets me that I have a big negative impact on the climate.' },
+        { number: 19, text: 'I feel guilty that my lifestyle contributes to climate change.' },
+        { number: 20, text: 'I am angry at myself for not doing enough to limit my negative impact on the climate.' }
+      ]
+    },
+    {
+      title: 'Climate isolation',
+      items: [
+        { number: 21, text: 'I feel like one of the few people who actually understand what climate change entails.' },
+        { number: 22, text: "I feel lonely because most of the people around me don't care about climate change as much as I do." },
+        { number: 23, text: 'I feel lonely because it is difficult to talk about my climate change concerns with other people.' },
+        { number: 24, text: 'I feel alienated because society considers concern for climate change as something strange.' }
+      ]
+    },
+    {
+      title: 'Climate anxiety',
+      items: [
+        { number: 25, text: 'Thinking about climate change makes me fear for the future of our children.' },
+        { number: 26, text: 'I am overwhelmed by the awareness of the approaching climate disaster.' },
+        { number: 27, text: 'Everything seems uncertain because of climate change.' },
+        { number: 28, text: 'I fear how climate change will affect me and my loved ones.' }
+      ]
+    },
+    {
+      title: 'Climate sorrow',
+      items: [
+        { number: 29, text: 'The thought of so many species going extinct under the pressure of climate change fills me with sorrow.' },
+        { number: 30, text: 'The thought that the world I know is disappearing forever because of climate change makes me sad.' },
+        { number: 31, text: 'I feel sorry about the possibilities we are losing forever because of climate change.' },
+        { number: 32, text: 'I am sad that so many living creatures suffer because of climate change.' }
+      ]
+    }
+  ]
   },
   {
     id: 'eco-emotion-scale',
