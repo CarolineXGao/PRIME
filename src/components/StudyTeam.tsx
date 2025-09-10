@@ -90,6 +90,7 @@ const StudyTeam = () => {
       role: 'Public Health & Climate Research',
       bio:
         'Academic Convener, Climate CATCH Lab; Associate Professor (Climate Change & Health), MSPGH, University of Melbourne. Focus on climate change, youth mental health and participatory research.',
+      image: '/Team/Rebecca_Patrick.png'
     },
     {
       name: 'Dr Jana Menssink (CI)',
