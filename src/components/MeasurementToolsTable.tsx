@@ -166,19 +166,6 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                     </div>
                   )}
                   
-                  {/* Response Options Header */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Response Options:</h4>
-                    <div className="grid grid-cols-5 gap-2">
-                      {tool.responseOptions.map((option) => (
-                        <div key={option.value} className="text-center p-2 bg-white border border-gray-300 rounded">
-                          <div className="font-semibold text-gray-900">{option.label}</div>
-                          <div className="text-sm text-gray-600">{option.value}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Scale Sections */}
                   {tool.sections.map((section, sectionIndex) => (
                     <div key={sectionIndex} className="mb-8">
