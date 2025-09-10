@@ -162,7 +162,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                 <div className="p-6 bg-gray-50">
                   {tool.instructions && (
                     <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                      <p className="text-black font-medium">{tool.instructions}</p>
+                      <p className="text-black">{tool.instructions}</p>
                     </div>
                   )}
                   
@@ -188,8 +188,8 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                           <React.Fragment key={sectionIndex}>
                             {/* Section Header Row */}
                             <tr>
-                              <td colSpan={tool.responseOptions.length + 1} className="px-4 py-3 bg-[#2D6AA3] bg-opacity-10 border-r border-gray-300">
-                                <h4 className="text-lg font-semibold text-gray-900">{section.title}</h4>
+                              <td colSpan={tool.responseOptions.length + 1} className="px-4 py-3 bg-blue-50 border border-blue-200 border-r border-gray-300">
+                                <h4 className="text-gray-900">{section.title}</h4>
                               </td>
                             </tr>
                             {/* Section Items */}
