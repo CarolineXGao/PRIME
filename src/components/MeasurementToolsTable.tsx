@@ -167,55 +167,62 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                   )}
                   
                   {/* Scale Sections */}
-                  {tool.sections.map((section, sectionIndex) => (
-                    <div key={sectionIndex} className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-4 p-3 bg-[#2D6AA3] bg-opacity-10 rounded-lg">
-                        {section.title}
-                      </h4>
-                      
-                      {/* Items Table */}
-                      <div className="overflow-x-auto">
-                        <table className="w-full border border-gray-300 rounded-lg overflow-hidden">
-                          <thead>
-                            <tr className="bg-gray-100">
-                              <th className="px-4 py-3 text-left font-semibold text-gray-900 border-r border-gray-300">
-                                Item
-                              </th>
-                              {tool.responseOptions.map((option) => (
-                                <th key={option.value} className="px-3 py-3 text-center font-semibold text-gray-900 border-r border-gray-300 min-w-[80px]">
-                                  <div>{option.label}</div>
-                                  <div className="text-xs text-gray-600">({option.value})</div>
-                                </th>
-                              ))}
+                  {/* Single Combined Table */}
+                  <div className="overflow-x-auto mb-6">
+                    <table className="w-full border border-gray-300 rounded-lg overflow-hidden">
+                      <thead>
+                        <tr className="bg-gray-100">
+                          <th className="px-4 py-3 text-left font-semibold text-gray-900 border-r border-gray-300">
+                            Item
+                          </th>
+                          {tool.responseOptions.map((option) => (
+                            <th key={option.value} className="px-3 py-3 text-center font-semibold text-gray-900 border-r border-gray-300 min-w-[80px]">
+                              <div>{option.label}</div>
+                              <div className="text-xs text-gray-600">({option.value})</div>
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {tool.sections.map((section, sectionIndex) => (
+                          <React.Fragment key={sectionIndex}>
+                            {/* Section Header Row */}
+                            <tr>
+                              <td colSpan={tool.responseOptions.length + 1} className="px-4 py-3 bg-[#2D6AA3] bg-opacity-10 border-r border-gray-300">
+                                <h4 className="text-lg font-semibold text-gray-900">{section.title}</h4>
+                              </td>
                             </tr>
-                          </thead>
-                          <tbody>
-                            {section.items.map((item, itemIndex) => (
-                              <tr key={item.number} className={itemIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                                <td className="px-4 py-3 border-r border-gray-300">
-                                  <div className="flex items-start gap-3">
-                                    <span className="font-semibold text-gray-700 mt-1">{item.number}.</span>
-                                    <span className="text-gray-900">{item.text}</span>
-                                  </div>
-                                </td>
-                                {tool.responseOptions.map((option) => (
-                                  <td key={option.value} className="px-3 py-3 text-center border-r border-gray-300">
-                                    <input
-                                      type="radio"
-                                      name={`item-${item.number}`}
-                                      value={option.value}
-                                      className="w-4 h-4 text-[#2D6AA3] focus:ring-[#2D6AA3]"
-                                      disabled
-                                    />
+                            {/* Section Items */}
+                            {section.items.map((item, itemIndex) => {
+                              // Calculate overall row index for alternating colors
+                              const overallIndex = tool.sections.slice(0, sectionIndex).reduce((acc, s) => acc + s.items.length, 0) + itemIndex;
+                              return (
+                                <tr key={item.number} className={overallIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                                  <td className="px-4 py-3 border-r border-gray-300">
+                                    <div className="flex items-start gap-3">
+                                      <span className="font-semibold text-gray-700 mt-1">{item.number}.</span>
+                                      <span className="text-gray-900">{item.text}</span>
+                                    </div>
                                   </td>
-                                ))}
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  ))}
+                                  {tool.responseOptions.map((option) => (
+                                    <td key={option.value} className="px-3 py-3 text-center border-r border-gray-300">
+                                      <input
+                                        type="radio"
+                                        name={`item-${item.number}`}
+                                        value={option.value}
+                                        className="w-4 h-4 text-[#2D6AA3] focus:ring-[#2D6AA3]"
+                                        disabled
+                                      />
+                                    </td>
+                                  ))}
+                                </tr>
+                              );
+                            })}
+                          </React.Fragment>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                   
                   {/* Reference */}
                   <div className="mt-6 p-4 bg-white border border-gray-200 rounded-lg">
