@@ -117,17 +117,33 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   ],
   sections: [
     {
+      title: 'Affective symptoms',
       items: [
         { number: 1, text: 'Feeling nervous, anxious or on edge' },
         { number: 2, text: 'Not being able to stop or control worrying' },
         { number: 3, text: 'Worrying too much' },
-        { number: 4, text: 'Feeling afraid' },
+        { number: 4, text: 'Feeling afraid' }
+      ]
+    },
+    {
+      title: 'Rumination',
+      items: [
         { number: 5, text: 'Unable to stop thinking about future climate change and other global environmental problems' },
         { number: 6, text: 'Unable to stop thinking about past events related to climate change' },
-        { number: 7, text: 'Unable to stop thinking about losses to the environment' },
+        { number: 7, text: 'Unable to stop thinking about losses to the environment' }
+      ]
+    },
+    {
+      title: 'Behavioural symptoms',
+      items: [
         { number: 8, text: 'Difficulty sleeping' },
         { number: 9, text: 'Difficulty enjoying social situations with family and friends' },
-        { number: 10, text: 'Difficulty working and/or studying' },
+        { number: 10, text: 'Difficulty working and/or studying' }
+      ]
+    },
+    {
+      title: 'Anxiety about personal impact',
+      items: [
         { number: 11, text: 'Feeling anxious about the impact of your personal behaviours on the earth' },
         { number: 12, text: 'Feeling anxious about your personal responsibility to help address environmental problems' },
         { number: 13, text: 'Feeling anxious that your personal behaviours will do little to help fix the problem' }
