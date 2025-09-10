@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/Landing-page.png" 
+          src="/Images/Landing page.png" 
           alt="PRIME Background" 
           className="w-full h-full object-cover opacity-60"
         />
