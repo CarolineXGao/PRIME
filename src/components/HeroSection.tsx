@@ -5,7 +5,7 @@ const HeroSection = () => {
     <section className="relative py-16 lg:py-24 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <img  
           src="/Images/Landing%20page.png" 
           alt="PRIME Background" 
           className="w-full h-full object-cover opacity-60"
