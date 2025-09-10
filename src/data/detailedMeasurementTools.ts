@@ -315,19 +315,33 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   ],
   sections: [
     {
-      title: 'Climate change hope',
+      title: 'Collective-sphere will and way (CW)',
       items: [
         { number: 1, text: 'I believe people will be able to solve problems caused by climate change.' },
-        { number: 2, text: 'I believe scientists will be able to find ways to solve problems caused by climate change.' },
+        { number: 2, text: 'I believe that scientists will be able to find ways to solve problems caused by climate change.' },
         { number: 3, text: 'Even when some people give up, I know there will be others who will continue to try to solve problems caused by climate change.' },
-        { number: 4, text: 'If everyone works together, we can solve problems caused by climate change.' },
-        { number: 5, text: 'I am willing to take actions to help solve problems caused by climate change.' },
-        { number: 6, text: 'I believe more people are willing to take actions to help solve problems caused by climate change.' },
-        { number: 7, text: 'I know that there are things that I can do to help solve problems caused by climate change.' },
-        { number: 8, text: 'I know what to do to help solve problems caused by climate change.' },
-        { number: 9, text: 'Climate change is beyond my control, so I won’t even bother trying to solve problems caused by climate change.' },   // reverse-scored
-        { number: 10, text: 'Climate change is so complex we will not be able to solve problems that it causes.' },                               // reverse-scored
-        { number: 11, text: 'The actions I can take are too small to help solve problems caused by climate change.' }                            // reverse-scored
+        { number: 4, text: 'Because people can learn from their mistakes, they will eventually mitigate and adapt to climate change.' },
+        { number: 5, text: 'Every day, more people begin to care about problems caused by climate change.' },
+        { number: 6, text: 'If everyone works together, we can solve problems caused by climate change.' }, 
+        { number: 8,  text: 'I believe more people are willing to take actions to help solve problems caused by climate change.' },
+      ]
+    },
+    {
+      title: 'Personal-sphere will and way (PW)',
+      items: [
+        { number: 7,  text: 'I am willing to take actions to help solve problems caused by climate change.' },    
+        { number: 9,  text: 'At the present time, I am energetically pursuing ways to solve problems caused by climate change.' },
+        { number: 10, text: 'I know that there are things that I can do to help solve problems caused by climate change.' },
+        { number: 11, text: 'I know what to do to help solve problems caused by climate change.' }
+      ]
+    },
+    {
+      title: 'Lack of will and way (LW)',
+      items: [
+        { number: 12, text: 'I can’t think of what I can do to help solve problems caused by climate change.' },                  // reverse-scored
+        { number: 13, text: 'Climate change is beyond my control, so I won’t even bother trying to solve problems caused by climate change.' }, // reverse-scored
+        { number: 14, text: 'Climate change is so complex we will not be able to solve problems that it causes.' },               // reverse-scored
+        { number: 15, text: 'The actions I can take are too small to help solve problems caused by climate change.' }            // reverse-scored
       ]
     }
   ]
