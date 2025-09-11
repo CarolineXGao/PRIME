@@ -124,7 +124,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                         href={tool.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w45 h-10"
+                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w44 h-10"
                       >
                         Publication <ExternalLink className="w-4 h-4 ml-2" />
                       </a>
@@ -132,7 +132,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                     {tool.hasDetailedScale && (
                       <button
                         onClick={() => toggleExpanded(tool.id)}
-                        className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w-45 h-10"
+                        className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w-44 h-10"
                       >
                         {expandedTools.has(tool.id) ? 'Hide Scale' : 'View Full Scale'}
                         {expandedTools.has(tool.id) ? 
