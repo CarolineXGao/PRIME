@@ -124,7 +124,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                         href={tool.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w-32 h-10"
+                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w-42 h-10"
                       >
                         Publication <ExternalLink className="w-4 h-4 ml-2" />
                       </a>
