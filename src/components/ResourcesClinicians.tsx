@@ -1,5 +1,12 @@
 import React from 'react';
-import { Stethoscope, Download, BookOpen, Video, FileText, ArrowLeft, Database } from 'lucide-react';
+import { 
+  Stethoscope, 
+  Download, 
+  BookOpen, 
+  ArrowLeft, 
+  Database, 
+  Users 
+} from 'lucide-react';
 
 interface ResourcesCliniciansProps {
   setCurrentPage: (page: string) => void;
@@ -20,6 +27,59 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
       description: "World Health Organization's comprehensive guide on nature-based solutions for health and well-being, including climate-related mental health interventions.",
       buttonText: "Access WHO Guide",
       downloadLink: "https://iris.who.int/handle/10665/381437"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Climate Superpower",
+      description:
+        "Interactive platform and resources designed to empower young people with climate action skills and knowledge through engaging activities and community building.",
+      buttonText: "Visit Climate Superpower",
+      downloadLink: "https://climatesuperpowers.org/"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Understanding & Managing Psychological Distress (AJGP)",
+      description:
+        "Article from the Australian Journal of General Practice exploring climate distress (including eco-anxiety), its prevalence, and evidence-based approaches to assessment and management.",
+      buttonText: "Read AJGP Article",
+      downloadLink:
+        "https://www1.racgp.org.au/ajgp/2023/may/understanding-and-managing-psychological-distress"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Brief Guide to Individual Therapy for Climate-Related Mental Distress",
+      description:
+        "A practical guide by Robert Feder and colleagues offering therapeutic approaches for clinicians addressing climate-related mental distress.",
+      buttonText: "Download Therapy Guide",
+      downloadLink:
+        "https://static1.squarespace.com/static/612cd210a8d3d07eb4886599/t/63a09eb8ed5d7c496f6eb131/1671470776778/A+Brief+Guide+to+Individual+Therapy+for+Climate-Related+Mental+Distress.+(with+justice+edits).pdf"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Social Prescribing Toolkit (NHS Green SP)",
+      description:
+        "NHS toolkit offering insights and practical wisdom on implementing green social prescribing to prevent mental ill-health through nature-based interventions.",
+      buttonText: "View Toolkit",
+      downloadLink:
+        "https://socialprescribingacademy.org.uk/media/3ozd3tv2/nhs-green-social-prescribing-toolkit.pdf"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Mental Health Professionals & Climate Change (PMC)",
+      description:
+        "A research article discussing the role of mental health professionals in addressing climate change impacts on psychological well-being.",
+      buttonText: "Explore PMC Article",
+      downloadLink:
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8499631/"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Google Drive Resource (private)",
+      description:
+        "A resource accessible via Google Drive link; content may require permission or sign-in to view.",
+      buttonText: "Open Drive File",
+      downloadLink:
+        "https://drive.google.com/file/d/1Cq4gdK70Tnahi8n0RD1MFuWVgOzXrqJZ/view"
     }
   ];
 
