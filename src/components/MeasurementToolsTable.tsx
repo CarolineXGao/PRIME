@@ -132,7 +132,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
                     {tool.hasDetailedScale && (
                       <button
                         onClick={() => toggleExpanded(tool.id)}
-                        className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w-32 h-10"
+                        className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-4 py-2 rounded-lg font-semibold text-sm flex items-center justify-center transition-colors w-42 h-10"
                       >
                         {expandedTools.has(tool.id) ? 'Hide Scale' : 'View Full Scale'}
                         {expandedTools.has(tool.id) ? 
