@@ -256,7 +256,7 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
           <h3 className="text-xl font-bold text-blue-900 mb-4">
             Using These Measurement Tools
           </h3>
-          <div className="text-blue-800 space-y-3">
+          <div className="text-blue-900 space-y-3">
             <p>
               <strong>Open Access:</strong> Tools are freely available for research and clinical use.
             </p>
