@@ -81,7 +81,7 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
       downloadLink:
         "https://drive.google.com/file/d/1Cq4gdK70Tnahi8n0RD1MFuWVgOzXrqJZ/view"
     }
-  ];
+  ]; 
 
   return (
     <section className="py-16 bg-white">
