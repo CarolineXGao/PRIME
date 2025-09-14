@@ -402,7 +402,7 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
 }, 
   {
   id: 'ecological-grief-questionnaire-egriq6',
-  name: 'Ecological Grief Questionnaire (EGriQ-6)',
+  name: 'Eco-Grief Questionnaire (EGriQ-6)',
   description: 'A brief self-report questionnaire assessing ecological grief, defined as sadness, loss, and distress in response to ecological degradation and climate change impacts.',
   targetPopulation: 'Adolescents and adults',
   domains: ['Climate Emotions'],
