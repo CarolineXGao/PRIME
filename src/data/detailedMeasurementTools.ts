@@ -354,7 +354,7 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   domains: ['Climate Emotions'],
   administrationTime: '~10 minutes',
   format: 'Self-report questionnaire (22 items)',
-  availability: 'Open access (research use)',
+  availability: 'Open access',
   reference: 'Ágoston, C., Urbán, R., Nagy, B., Csaba, B., Kőváry, Z., Kovács, K., Varga, A., Dúll, A., Mónus, F., Shaw, C. A., & Demetrovics, Z. (2022). The psychological consequences of the ecological crisis: Three new questionnaires to assess eco-anxiety, eco-guilt, and ecological grief. Climate Risk Management, 37, 100441. https://doi.org/10.1016/j.crm.2022.100441',
   link: 'https://www.sciencedirect.com/science/article/pii/S2212096322000481',
   hasDetailedScale: true,
