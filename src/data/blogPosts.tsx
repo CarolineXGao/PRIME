@@ -180,7 +180,7 @@ These stories highlight the importance of youth-centered approaches and the powe
     id: "Reflection-climate-emotions",
     image: "/Images/Image11.png",
     category: "Voices from the Field",
-    title: "Reflection on climate emotions",
+    title: "Reflection on Climate Emotions",
     excerpt:
       "Our ancient instincts can trap us in fear or denial — or be transformed into courage and hope.",
     fullContent: `In times of great drought, Chinese communities turned to the Dragon King, sovereign of rivers and rain. Temples were raised, incense burned, offerings laid at his feet. Yet when the skies remained unbroken, stories tell of villages so desperate that they gave up their own children to the Dragon King, believing such a terrible sacrifice might summon the rains. To us, this feels unthinkable, even monstrous. But the story is not about cruelty — it is about the crushing weight of uncertainty. When people are powerless before forces larger than themselves, they cling to whatever explanations and remedies their culture provides, no matter how desperate or irrational.
