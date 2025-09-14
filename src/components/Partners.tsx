@@ -79,7 +79,7 @@ const Collaborators = () => (
   <section className="py-12 bg-gray-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h3 className="text-center text-lg font-semibold text-gray-600 mb-8">
-        Collaborating with Leading Organisations
+        Collaborating with leading organisations
       </h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
         {collaborators.map(({ name, logo, alt, url }, idx) => (
