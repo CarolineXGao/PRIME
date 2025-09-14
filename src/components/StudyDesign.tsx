@@ -67,7 +67,7 @@ const StudyDesign = () => {
     },
     {
       icon: <Building2 className="w-6 h-6" />,
-      title: "Cross-Sector Settings",
+      title: "Cross-sector settings",
       body:
         "Programs operate where young people are—schools, communities and services, supporting early intervention and equitable access."
     },
