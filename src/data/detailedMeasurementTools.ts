@@ -345,7 +345,63 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
       ]
     }
   ]
+},
+  {
+  id: 'eco-anxiety-questionnaire-eaq22',
+  name: 'Eco-Anxiety Questionnaire (EAQ-22)',
+  description: 'A self-report questionnaire assessing eco-anxiety, with two subdomains: habitual ecological worry and negative consequences of eco-anxiety.',
+  targetPopulation: 'Adolescents and adults',
+  domains: ['Climate Emotions'],
+  administrationTime: '~10 minutes',
+  format: 'Self-report questionnaire (22 items)',
+  availability: 'Open access (research use)',
+  reference: 'Ágoston, C., Urbán, R., Nagy, B., Csaba, B., Kőváry, Z., Kovács, K., Varga, A., Dúll, A., Mónus, F., Shaw, C. A., & Demetrovics, Z. (2022). The psychological consequences of the ecological crisis: Three new questionnaires to assess eco-anxiety, eco-guilt, and ecological grief. Climate Risk Management, 37, 100441. https://doi.org/10.1016/j.crm.2022.100441',
+  link: 'https://www.sciencedirect.com/science/article/pii/S2212096322000481',
+  hasDetailedScale: true,
+  instructions: 'People have many different thoughts, feelings, and reactions regarding climate change and the ecological crisis. Please indicate how strongly you agree or disagree with the following statements.',
+  responseOptions: [
+    { label: '1 – Strongly disagree', value: 1 },
+    { label: '2 – Somewhat disagree', value: 2 },
+    { label: '3 – Somewhat agree', value: 3 },
+    { label: '4 – Strongly agree', value: 4 }
+  ],
+  sections: [
+    {
+      title: 'Habitual ecological worry',
+      items: [
+        { number: 1, text: 'It really upsets me to see how animals are suffering because of environmental pollution.' },
+        { number: 2, text: 'I worry about the next generation because they will be drastically affected by climate change.' },
+        { number: 4, text: 'It makes me angry that many people fail to do even the most basic things to protect the environment.' },
+        { number: 6, text: 'I feel sorry for those whose health is already negatively affected by climate change.' },
+        { number: 7, text: 'I am terrified by how many things have changed in just a few years because of climate change.' },
+        { number: 9, text: 'I am worried about the increasing number of natural disasters caused by climate change.' },
+        { number: 11, text: 'It makes me sick to think about how much certain countries are polluting the environment, and there is nothing I can do about it.' },
+        { number: 12, text: 'It scares me that the weather is becoming more and more unpredictable because of climate change.' },
+        { number: 14, text: 'It is frustrating that we elect decision makers who do not seriously consider the work of climate scientists/experts.' },
+        { number: 15, text: 'I feel uneasy when I think about the consequences of climate change.' },
+        { number: 17, text: 'I find it terrifying that the seasons have changed a lot in a short time.' },
+        { number: 19, text: 'It makes me angry that our environmentally damaging behaviors increase the suffering of people who live in areas that are more impacted by climate change.' },
+        { number: 20, text: 'I have a very negative perspective on the future of the planet because of climate change.' }
+      ]
+    },
+    {
+      title: 'Negative consequences of eco-anxiety',
+      items: [
+        { number: 3, text: 'I am so anxious about climate change that I cry.' },
+        { number: 5, text: "I have unusual tension in my muscles since I've become more aware of climate change." },
+        { number: 8, text: 'My loved ones become irritated because I talk about my climate change concerns too often.' },
+        { number: 10, text: 'Thoughts of climate change often distract me from my current tasks.' },
+        { number: 13, text: 'I am so anxious about climate change that it affects my performance at school/work.' },
+        { number: 16, text: 'People look at me in a strange way, because I am so passionate about environmental action.' },
+        { number: 18, text: 'I worry that every decision I make will result in something harmful to the environment.' },
+        { number: 21, text: 'I am constantly on alert because there could be a climate change related disaster at any time.' },
+        { number: 22, text: 'I sleep poorly because I keep thinking about climate change.' }
+      ]
+    }
+  ]
+  }
 }
+
 ];
 
 // Helper functions
