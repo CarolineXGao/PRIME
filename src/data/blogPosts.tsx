@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",
     excerpt:
       "Our new commentary calls for urgent action to fast-track youth mental health solutions in the climate crisis...",
-    fullContent: `We know that climate change is more than an environmental crisis — it's also a mental health challenge. Young people, in particular, are experiencing rising levels of anxiety, grief and hopelessness in the face of floods, bushfires, heatwaves and ongoing climate uncertainty.
+    fullContent: `We know that climate change is more than an environmental crisis, it's also a mental health challenge. Young people, in particular, are experiencing rising levels of anxiety, grief and hopelessness in the face of floods, bushfires, heatwaves and ongoing climate uncertainty.
 
 Our new commentary, published in the Journal of Applied Youth Studies, calls for urgent action to close the gap between what young people are experiencing and the slow pace of research and policy responses.
 
@@ -63,7 +63,7 @@ We highlight that:
 <ul class="list-none space-y-1">
   <li>• Adolescents <strong>outside major cities</strong>, in <strong>lower-SES areas</strong>, and those who are <strong>Indigenous</strong>, <strong>gender diverse</strong>, <strong>living with disability</strong>, or from <strong>CALD communities</strong> are more likely to be exposed.</li>
   <li>• Those exposed report <strong>higher climate concern</strong> and <strong>greater psychological distress (K6)</strong>.</li>
-  <li>• Exposure increases the odds of <strong>financial hardship</strong> and <strong>housing challenges</strong> — especially when the household is directly affected.</li>
+  <li>• Exposure increases the odds of <strong>financial hardship</strong> and <strong>housing challenges</strong>, especially when the household is directly affected.</li>
   <li>• Recovery cannot be <strong>"one size fits all"</strong>: supports must be <strong>age-appropriate</strong>, <strong>culturally safe</strong>, and <strong>targeted</strong> to vulnerable groups.</li>
 </ul>
 
