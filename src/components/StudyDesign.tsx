@@ -22,13 +22,13 @@ const StudyDesign = () => {
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Co-Design",
+      title: "Co-design",
       description:
         "Partner with youth and communities to shape priorities, content, delivery and evaluation so programs are relevant and acceptable."
     },
     {
       icon: <FlaskConical className="w-8 h-8" />,
-      title: "Trial Testing",
+      title: "Trial testing",
       description:
         "Use an adaptive platform to evaluate multiple group-based interventions efficiently under a shared master protocol."
     },
@@ -43,25 +43,25 @@ const StudyDesign = () => {
   const pillars = [
     {
       icon: <Layers className="w-6 h-6" />,
-      title: "Adaptive Platform",
+      title: "Adaptive platform",
       body:
         "Simultaneous, efficient testing of multiple interventions using a shared infrastructure, an approach informed by COVID-19 response platforms."
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Master Protocol",
+      title: "Master protocol",
       body:
         "A common set of methods, outcomes and governance streamlines co-development, evaluation and implementation across projects."
     },
     {
       icon: <ClipboardCheck className="w-6 h-6" />,
-      title: "EnvironMental Health Measure",
+      title: "Environ-Mental Health measure",
       body:
         "A strengths-based, co-developed outcome measure to inform climate–mental-health responses and track resilience and wellbeing."
     },
     {
       icon: <HeartHandshake className="w-6 h-6" />,
-      title: "Youth & Community Advisory",
+      title: "Youth & community advisory",
       body:
         "Advisory groups guide priorities, design, evaluation and policy engagement to centre youth leadership and lived experience."
     },
@@ -73,7 +73,7 @@ const StudyDesign = () => {
     },
     {
       icon: <LineChart className="w-6 h-6" />,
-      title: "Real-World Translation",
+      title: "Real-world translation",
       body:
         "Implementation science ensures effective programs are scalable, sustainable and embedded in existing systems."
     },
@@ -108,10 +108,10 @@ const StudyDesign = () => {
                   <strong>Prioritises young Australians (12–25),</strong> among the most affected by climate-related disruption.
                 </li>
                 <li>
-                  <strong>Establishes Youth & Community Advisory groups</strong> to guide priorities, design, evaluation and policy.
+                  <strong>Establishes youth & community advisory groups</strong> to guide priorities, design, evaluation and policy.
                 </li>
                 <li>
-                  <strong>Co-develops the EnvironMental Health measure</strong> to inform responses and monitor outcomes.
+                  <strong>Co-develops the Environ-Mental Health measure</strong> to inform responses and monitor outcomes.
                 </li>
                 <li>
                   <strong>Enables rapid co-development and evaluation</strong> of clinician-, researcher- and community-led programs
