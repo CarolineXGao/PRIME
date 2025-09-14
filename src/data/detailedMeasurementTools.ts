@@ -399,7 +399,80 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
       ]
     }
   ]
+}, 
+  {
+  id: 'ecological-grief-questionnaire-egriq6',
+  name: 'Ecological Grief Questionnaire (EGriQ-6)',
+  description: 'A brief self-report questionnaire assessing ecological grief, defined as sadness, loss, and distress in response to ecological degradation and climate change impacts.',
+  targetPopulation: 'Adolescents and adults',
+  domains: ['Climate Emotions'],
+  administrationTime: '~5 minutes',
+  format: 'Self-report questionnaire (6 items)',
+  availability: 'Open access (research use)',
+  reference: 'Ágoston, C., Urbán, R., Nagy, B., Csaba, B., Kőváry, Z., Kovács, K., Varga, A., Dúll, A., Mónus, F., Shaw, C. A., & Demetrovics, Z. (2022). The psychological consequences of the ecological crisis: Three new questionnaires to assess eco-anxiety, eco-guilt, and ecological grief. Climate Risk Management, 37, 100441. https://doi.org/10.1016/j.crm.2022.100441',
+  link: 'https://www.sciencedirect.com/science/article/pii/S2212096322000481',
+  hasDetailedScale: true,
+  instructions: 'People have many different thoughts, feelings, and reactions regarding climate change and the ecological crisis. Please indicate how strongly you agree or disagree with the following statements.',
+  responseOptions: [
+    { label: '1 – Strongly disagree', value: 1 },
+    { label: '2 – Somewhat disagree', value: 2 },
+    { label: '3 – Somewhat agree', value: 3 },
+    { label: '4 – Strongly agree', value: 4 }
+  ],
+  sections: [
+    {
+      title: 'Ecological grief',
+      items: [
+        { number: 1, text: 'I feel some sense of loss because of climate change impacts that are becoming apparent in my local area.' },
+        { number: 2, text: 'Watching videos of the destruction of the environment makes me cry.' },
+        { number: 3, text: 'It makes me sad that I don\'t see many of the plants and animals I used to see often.' },
+        { number: 4, text: 'It is frightening that climate change is causing the destruction of natural areas at such a dramatic rate that they will never be the same again.' },
+        { number: 5, text: 'The wildlife around me has changed in a disturbing way.' },
+        { number: 6, text: 'I am not comforted by the thought that nature can regenerate itself to some extent, because what we have destroyed will never return.' }
+      ]
+    }
+  ]
+}, 
+  {
+  id: "eco-guilt-questionnaire-eguiq11",
+  name: "Eco-Guilt Questionnaire (EGuiQ-11)",
+  description: "A self-report questionnaire assessing guilt related to personal and collective contributions to climate change and environmental degradation.",
+  targetPopulation: "Adolescents and adults",
+  domains: ["Climate Emotions"],
+  administrationTime: "~8–10 minutes",
+  format: "Self-report questionnaire (11 items)",
+  availability: "Open access (research use)",
+  reference: "Ágoston, C., Urbán, R., Nagy, B., Csaba, B., Kőváry, Z., Kovács, K., Varga, A., Dúll, A., Mónus, F., Shaw, C. A., & Demetrovics, Z. (2022). The psychological consequences of the ecological crisis: Three new questionnaires to assess eco-anxiety, eco-guilt, and ecological grief. Climate Risk Management, 37, 100441. https://doi.org/10.1016/j.crm.2022.100441",
+  link: "https://www.sciencedirect.com/science/article/pii/S2212096322000481",
+  hasDetailedScale: true,
+  instructions: "People have many different thoughts, feelings, and reactions regarding climate change and the ecological crisis. Please indicate how strongly you agree or disagree with the following statements.",
+  responseOptions: [
+    { label: "1 – Strongly disagree", value: 1 },
+    { label: "2 – Somewhat disagree", value: 2 },
+    { label: "3 – Somewhat agree", value: 3 },
+    { label: "4 – Strongly agree", value: 4 }
+  ],
+  sections: [
+    {
+      title: "Eco-guilt",
+      items: [
+        { number: 1, text: "I very often feel that what I do for the environment is not enough, because it cannot balance other negative behaviors." },
+        { number: 2, text: "At times I feel some personal responsibility for the problems and unfolding impacts of climate change." },
+        { number: 3, text: "I blame myself for often behaving in an environmentally destructive way in situations where it could have been avoided." },
+        { number: 4, text: "I experience some guilt over the fact that my family and friends' lifestyles and consumption patterns are in part responsible for the unfolding impacts of climate change." },
+        { number: 5, text: "I often feel like a hypocrite when it comes to environmental action." },
+        { number: 6, text: "I feel guilty for not paying enough attention to the issue of climate change." },
+        { number: 7, text: "The more I know about the human causes of climate change, the more things I feel guilty about." },
+        { number: 8, text: "I am constantly angry with myself because I think that I am not doing enough and that I am harming the environment by my very existence." },
+        { number: 9, text: "It makes me feel uneasy that I am part of a system that is amplifying climate change." },
+        { number: 10, text: "I often blame myself for the fact that my needs and my work are not really important, but they contribute to the destruction of the environment." },
+        { number: 11, text: "I feel guilty when I do something polluting that I had stopped doing before." }
+      ]
+    }
+  ]
 }
+
+
 
 ];
 
