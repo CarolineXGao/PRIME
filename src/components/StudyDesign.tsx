@@ -45,7 +45,7 @@ const StudyDesign = () => {
       icon: <Layers className="w-6 h-6" />,
       title: "Adaptive Platform",
       body:
-        "Simultaneous, efficient testing of multiple interventions using a shared infrastructure—an approach informed by COVID-19 response platforms."
+        "Simultaneous, efficient testing of multiple interventions using a shared infrastructure, an approach informed by COVID-19 response platforms."
     },
     {
       icon: <Workflow className="w-6 h-6" />,
@@ -69,7 +69,7 @@ const StudyDesign = () => {
       icon: <Building2 className="w-6 h-6" />,
       title: "Cross-Sector Settings",
       body:
-        "Programs operate where young people are—schools, communities and services—supporting early intervention and equitable access."
+        "Programs operate where young people are—schools, communities and services, supporting early intervention and equitable access."
     },
     {
       icon: <LineChart className="w-6 h-6" />,
@@ -100,7 +100,7 @@ const StudyDesign = () => {
             <div className="lg:col-span-2 space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Leveraging expertise in research, clinical care and health promotion, PRIME supports{" "}
-                <strong>simultaneous testing of multiple group-based interventions</strong> through shared infrastructure—
+                <strong>simultaneous testing of multiple group-based interventions</strong> through shared infrastructure, 
                 adopting an <strong>adaptive platform</strong> design inspired by COVID-19 response models.
               </p>
               <ul className="list-disc pl-5 space-y-2">
