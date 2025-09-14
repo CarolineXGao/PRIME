@@ -5,25 +5,25 @@ const CoreHighlights = () => {
   const highlights = [
     {
       icon: <Microscope className="w-8 h-8" />,
-      title: "Research-Driven",
+      title: "Research-driven",
       description: "Evidence-based interventions built on rigorous scientific methodology and peer-reviewed research.",
       color: "#2D6AA3"
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Youth-Focused",
+      title: "Youth-focused",
       description: "Specifically designed for young people, addressing their unique needs and climate-related concerns.",
       color: "#3A9C62"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Collaborative Approach",
+      title: "Collaborative approach",
       description: "Co-designed with youth, researchers, clinicians, and communities for maximum impact and relevance.",
       color: "#F4B43D"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Impact-Oriented",
+      title: "Impact-oriented",
       description: "Focused on measurable outcomes and real-world applications to create lasting positive change.",
       color: "#2D6AA3"
     }
