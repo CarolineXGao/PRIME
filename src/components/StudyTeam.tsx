@@ -174,7 +174,7 @@ const StudyTeam = () => {
   const projectAI: Member[] = [
     {
       name: 'Dr Isabel Zbukvic',
-      role: 'Implementation Science & Knowledge Translation',
+      role: 'Implementation science & knowledge Translation',
       bio:
         'Senior Research Fellow and Academic Specialist (Knowledge Translation), Orygen/CYMH, University of Melbourne. Focus on behaviour change, equity and implementation science.',
     },
