@@ -399,7 +399,6 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
       ]
     }
   ]
-  }
 }
 
 ];
