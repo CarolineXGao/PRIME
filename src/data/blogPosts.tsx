@@ -103,8 +103,8 @@ Key findings:
 Why this matters:
 
 <ul class="list-none space-y-1">
-  <li>- <strong>Integrate youth mental health</strong> into <strong>climate policy</strong> — education, communication, and services should address <strong>climate-related distress</strong> and foster hope.</li>
-  <li>- <strong>Track outcomes over time</strong> — <strong>longitudinal monitoring</strong> can guide effective responses and prevention.</li>
+  <li>- <strong>Integrate youth mental health</strong> into <strong>climate policy</strong>: education, communication, and services should address <strong>climate-related distress</strong> and foster hope.</li>
+  <li>- <strong>Track outcomes over time</strong> :<strong>longitudinal monitoring</strong> can guide effective responses and prevention.</li>
 </ul>
 
 👉 Read the full open-access article: https://doi.org/10.1016/j.jenvp.2023.102209`,
