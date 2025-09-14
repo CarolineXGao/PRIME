@@ -35,7 +35,7 @@ We highlight that:
   <li>• Young people are disproportionately affected by <strong>climate-related disasters</strong> and <strong>exclusion from decision-making</strong>.</li>
   <li>• <strong>Youth-specific interventions</strong> are rare, and <strong>translation into practice</strong> can take decades.</li>
   <li>• <strong>Adaptive platform trials</strong> can help us <strong>test and scale solutions</strong> much faster.</li>
-  <li>• Youth must be at the centre — not only as participants, but as <strong>co-designers</strong> and <strong>leaders</strong> in shaping responses.</li>
+  <li>• Youth must be at the centre. not only as participants, but as <strong>co-designers</strong> and <strong>leaders</strong> in shaping responses.</li>
 </ul>
 
 
@@ -86,7 +86,7 @@ What this means for action:
     title: "Climate Concern, Distress, and Future Outlook in Young Australians",
     excerpt:
       "Study of 18,800 young Australians shows higher climate concern links to greater distress and negative outlook.",
-    fullContent: `Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook—especially for gender-diverse, Indigenous, and young people living outside major cities.
+    fullContent: `Using data from 18,800 Australians aged 15–19, higher climate concern is linked to greater psychological distress and a more negative outlook, especially for gender-diverse, Indigenous, and young people living outside major cities.
 
 This study analysed the 2022 Mission Australia Youth Survey to examine how climate change concerns relate to psychological distress (K6) and future outlook after accounting for social determinants and pre-existing mental health conditions.
 
