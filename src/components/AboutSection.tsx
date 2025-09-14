@@ -5,19 +5,19 @@ const AboutSection = () => {
   const goals = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Better Measurement",
+      title: "Better measurement",
       description:
         "Developing robust tools and methodologies to assess climate-related mental health impacts in youth populations."
     },
     {
       icon: <Eye className="w-8 h-8" />,
-      title: "Stronger Research Systems",
+      title: "Stronger research systems",
       description:
         "Building collaborative research infrastructure that connects researchers, clinicians, and communities."
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Real-World Impact",
+      title: "Real-world impact",
       description:
         "Translating research findings into practical interventions and policy recommendations."
     }
