@@ -34,7 +34,7 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                In early 2025 we launched <strong>PRIME—Australia’s first dedicated
+                In early 2025 we launched <strong>PRIME, Australia’s first dedicated
                 research and implementation platform addressing the mental health impacts of
                 climate change on young people</strong>, funded by the NHMRC ($1M). PRIME is
                 led by researchers from the <strong>Centre for Youth Mental Health (Orygen)</strong> and the
