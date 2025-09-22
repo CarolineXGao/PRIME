@@ -27,6 +27,13 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       description: "Interactive platform and resources designed to empower young people with climate action skills and knowledge through engaging activities and community building.",
       buttonText: "Visit Climate Superpower",
       downloadLink: "https://climatesuperpowers.org/"
+    },
+        {
+      icon: <Users className="w-6 h-6" />,
+      title: "Blue Mind school workshop",
+      description: "Interactive workshop designed to empower students with practical tools to manage climate stress, deepen their understanding of climate change, and take positive action for themselves and their communities.",
+      buttonText: "Visit Blue Mind",
+      downloadLink: "https://blueminds.org.au/"
     }
   ];
 
