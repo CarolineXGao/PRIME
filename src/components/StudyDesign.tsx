@@ -57,7 +57,7 @@ const StudyDesign = () => {
       icon: <ClipboardCheck className="w-6 h-6" />,
       title: "Environ-Mental Health measure",
       body:
-        "A strengths-based, co-developed outcome measure to inform climate–mental-health responses and track resilience and wellbeing."
+        "Strengths-based, co-developed outcome measures to inform climate–mental-health responses and track resilience and wellbeing."
     },
     {
       icon: <HeartHandshake className="w-6 h-6" />,
@@ -111,7 +111,7 @@ const StudyDesign = () => {
                   <strong>Establishes youth & community advisory groups</strong> to guide priorities, design, evaluation and policy.
                 </li>
                 <li>
-                  <strong>Co-develops the Environ-Mental Health measure</strong> to inform responses and monitor outcomes.
+                  <strong>Co-develops the Environ-Mental Health measures</strong> to inform responses and monitor outcomes.
                 </li>
                 <li>
                   <strong>Enables rapid co-development and evaluation</strong> of clinician-, researcher- and community-led programs
