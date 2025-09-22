@@ -30,7 +30,7 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
     },
         {
       icon: <Users className="w-6 h-6" />,
-      title: "Blue Mind school workshop",
+      title: "Blue Mind School Workshop",
       description: "Interactive workshop designed to empower students with practical tools to manage climate stress, deepen their understanding of climate change, and take positive action for themselves and their communities.",
       buttonText: "Visit Blue Mind",
       downloadLink: "https://blueminds.org.au/"
