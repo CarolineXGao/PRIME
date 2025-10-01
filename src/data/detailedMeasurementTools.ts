@@ -479,7 +479,7 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
   domains: ['Climate emotions', 'Distress', 'Functional Impairment'],
   administrationTime: '~5 minutes',
   format: 'Self-report questionnaire (23 items, 5-point Likert)',
-  availability: 'Open access (items available on OSF; CC BY 4.0)',
+  availability: 'Open access',
   reference: 'Hepp, J., Klein, S. A., Horsten, L. K., Urbild, J., & Lane, S. P. (2023). Introduction and behavioral validation of the climate change distress and impairment scale. Scientific Reports, 13, 11272.',
   link: 'https://doi.org/10.1038/s41598-023-37573-4',
   hasDetailedScale: true,
