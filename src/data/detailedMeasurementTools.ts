@@ -470,7 +470,64 @@ export const detailedMeasurementTools: DetailedMeasurementTool[] = [
       ]
     }
   ]
+},
+{
+  id: 'cc-dis',
+  name: 'Climate Change Distress and Impairment Scale (CC-DIS)',
+  description: 'A 23-item measure that distinguishes affective distress about climate change (anger, anxiety, sadness) from functional impairment.',
+  targetPopulation: 'Adults (validated in 18+); adaptable for adolescents',
+  domains: ['Climate emotions', 'Distress', 'Functional Impairment'],
+  administrationTime: '~5 minutes',
+  format: 'Self-report questionnaire (23 items, 5-point Likert)',
+  availability: 'Open access (items available on OSF; CC BY 4.0)',
+  reference: 'Hepp, J., Klein, S. A., Horsten, L. K., Urbild, J., & Lane, S. P. (2023). Introduction and behavioral validation of the climate change distress and impairment scale. Scientific Reports, 13, 11272.',
+  link: 'https://doi.org/10.1038/s41598-023-37573-4',
+  hasDetailedScale: true,
+  instructions: 'Please indicate how much you agree with each statement.',
+  responseOptions: [
+    { label: 'Strongly disagree', value: 1 },
+    { label: 'Disagree', value: 2 },
+    { label: 'Neither agree nor disagree', value: 3 },
+    { label: 'Agree', value: 4 },
+    { label: 'Strongly agree', value: 5 }
+  ],
+  sections: [
+    {
+      title: 'Distress',
+      items: [
+        { number: 1, text: 'I feel angry when I see how little is done to combat climate change.' },
+        { number: 2, text: 'When I think about climate change, I worry about the future.' },
+        { number: 3, text: 'I am not sad about climate change. (r)' },
+        { number: 4, text: 'I am enraged that we have missed many chances to stop climate change.' },
+        { number: 5, text: 'I do not fear for my future on this planet. (r)' },
+        { number: 6, text: 'News about climate change makes me feel depressed.' },
+        { number: 7, text: 'I am not mad when others damage the climate. (r)' },
+        { number: 8, text: 'The uncertainty about how climate change will progress scares me.' },
+        { number: 9, text: 'I feel sad that climate change is causing people and animals to suffer.' },
+        { number: 10, text: 'I do not get upset when others ignore climate change. (r)' },
+        { number: 11, text: 'I am scared that people will lose their homes because of climate change.' },
+        { number: 12, text: 'I feel sad that some parts of the environment will not recover from the effects of climate change.' },
+        { number: 13, text: 'I am not angry that some countries have missed their climate protection goals. (r)' },
+        { number: 14, text: 'The impact that climate change has had on the planet saddens me.' },
+        { number: 15, text: 'I feel carefree when I think about climate change. (r)' }
+      ]
+    },
+    {
+      title: 'Impairment',
+      items: [
+        { number: 16, text: 'Climate change drains all my energy.' },
+        { number: 17, text: 'My thoughts and feelings about climate change do not affect how well I sleep. (r)' },
+        { number: 18, text: 'When I think about climate change, I get a headache or stomachache.' },
+        { number: 19, text: 'Because of climate change, I am overwhelmed by everyday activities.' },
+        { number: 20, text: 'My thoughts and feelings about climate change do not negatively impact my everyday life. (r)' },
+        { number: 21, text: 'I have no trouble mentally tuning out climate change. (r)' },
+        { number: 22, text: 'Constant discussions about climate change are affecting my relationships.' },
+        { number: 23, text: 'When I think about climate change, I cannot bring myself to work/study' }
+      ]
+    }
+  ]
 }
+
 
 
 
