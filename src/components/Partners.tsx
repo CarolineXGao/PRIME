@@ -45,7 +45,7 @@ const collaborators = [
   },
   {
     name: "Psychology for a Safe Climate",
-    logo: "https://www.psychologyforasafeclimate.org/wp-content/uploads/2021/05/Asset-3-8.png",
+    logo: "https://cdn.prod.website-files.com/66cd274b33c44e807584831d/68c7576e2646441b0d7165bb_PSC-LogoPattern-Horizontal_Green.svg",
     alt: "Psychology for a Safe Climate logo",
     url: "https://www.psychologyforasafeclimate.org"
   },
