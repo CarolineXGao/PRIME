@@ -34,7 +34,7 @@ export const measurementTools: MeasurementTool[] = [
     format: 'Self-report questionnaire (13 items, Likert scale)',
     availability: 'Open access',
     reference: 'Hogg, T. L. et al. (2021). The Hogg Eco-Anxiety Scale: Development and validation of a multidimensional measure. Journal of Environmental Psychology, 76, 101641.',
-    link: 'https://doi.org/10.1016/j.jenvp.2021.101641'
+    link: 'https://doi.org/10.1016/j.gloenvcha.2021.102391'
   },
   {
      id: 'inventory-climate-emotions',
