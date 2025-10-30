@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ExternalLink, Search, Filter, ChevronDown, ChevronRight } from 'lucide-react';
-import { detailedMeasurementTools, DetailedMeasurementTool } from '../data/detailedMeasurementTools';
+import { detailedMeasurementTools, DetailedMeasurementTool } from '../data/measurementTools';
 
 interface MeasurementToolsTableProps {
   setCurrentPage: (page: string) => void;
