@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, X } from 'lucide-react';
 import { getLatestPosts, BlogPost } from '../data/blogPosts';
 
