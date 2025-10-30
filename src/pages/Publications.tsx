@@ -15,7 +15,7 @@ const Publications = () => {
       journal: "OSF Preprints",
       year: "2025",
       doi: "10.31234/osf.io/e4sfb_v1",
-      type: "National Survey Study",
+      type: "Research Article",
       description: "A large-scale Australian survey of over 3,000 young people examining how climate change shapes emotions, wellbeing, and engagement, revealing multidimensional climate responses across affective, cognitive, and behavioural domains."
     },
     {
@@ -96,7 +96,7 @@ const Publications = () => {
       journal: "Health & Place",
       year: "2023",
       doi: "10.1016/j.healthplace.2023.103134",
-      type: "Qualitative Research Article",
+      type: "Research Article",
       description: "A systems science study using Group Model Building workshops with health, youth, and climate experts to map the complex factors affecting young Australians' climate-related mental wellbeing, identifying policy, community, and nature-based pathways for resilience."
     }, 
     {
