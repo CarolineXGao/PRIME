@@ -341,8 +341,8 @@ export const measurementTools: MeasurementTool[] = [
     {
       title: 'Lack of will and way (LW)',
       items: [
-        { number: 12, text: 'I can't think of what I can do to help solve problems caused by climate change.' },                  // reverse-scored
-        { number: 13, text: 'Climate change is beyond my control, so I won't even bother trying to solve problems caused by climate change.' }, // reverse-scored
+        { number: 12, text: 'I can\'t think of what I can do to help solve problems caused by climate change.' },                  // reverse-scored
+        { number: 13, text: 'Climate change is beyond my control, so I won\'t even bother trying to solve problems caused by climate change.' }, // reverse-scored
         { number: 14, text: 'Climate change is so complex we will not be able to solve problems that it causes.' },               // reverse-scored
         { number: 15, text: 'The actions I can take are too small to help solve problems caused by climate change.' }            // reverse-scored
       ]
