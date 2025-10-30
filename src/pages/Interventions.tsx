@@ -18,17 +18,17 @@ const Interventions = () => {
       icon: <Target className="w-5 h-5" />
     },
     {
-      title: "EM-Act Group Program",
-      description: "Evidence-based group intervention combining climate education, emotional regulation, and collective action planning for young people.",
+      title: "EcoConnections",
+      description: "Youth co-designed social-prescribing program led by Orygen with Museums Victoria and the University of Melbourne, using hands-on environmental activities and peer support to build connection and agency.",
       type: "Group Intervention",
       status: "In Development",
       color: "#3A9C62",
       icon: <Users className="w-5 h-5" />
     },
     {
-      title: "EM-Care Clinical Guidelines",
-      description: "Clinical practice guidelines for mental health professionals working with climate-distressed young people.",
-      type: "Clinical Resource",
+      title: "Y-CARE",
+      description: "International collaboration between Stanford’s CIRCLE, Foundry BC, Orygen, and headspace, bringing together climate-concerned youth (16–25) to co-design a peer model for addressing climate distress and building resilience.",
+      type: "Clinical Intervetion",
       status: "In Development",
       color: "#F4B43D",
       icon: <BookOpen className="w-5 h-5" />
