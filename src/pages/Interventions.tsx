@@ -10,7 +10,7 @@ const Interventions = () => {
   const interventions = [
     {
       title: "My Climate Journey Badges",
-      description: "Digital badges and micro-credentials that recognize young people's climate action and mental health resilience building activities.",
+      description: "Digital communication tool that describes diverse archetypes of how young people feel, think, and act in response to climate change, helping foster reflection, inclusion, and understanding across youth audiences.",
       type: "Digital Platform",
       status: "Available",
       link: "https://osf.io/e4sfb_v1",
