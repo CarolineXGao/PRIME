@@ -42,8 +42,8 @@ const HeroSection = ({
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-3 space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   {title}
@@ -80,7 +80,7 @@ const HeroSection = ({
               )}
             </div>
 
-            <div className="hidden lg:block">
+            <div className="hidden lg:block lg:col-span-2">
               {/* Space for background image visibility */}
             </div>
           </div>
