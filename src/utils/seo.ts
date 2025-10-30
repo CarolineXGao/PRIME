@@ -26,9 +26,14 @@ export const seoData: Record<string, SEOData> = {
     path: "/partners"
   },
   programs: {
-    title: "PRIME Programs & Work Packages",
-    description: "Explore our evidence-based programs including EM-Act, EM-Measure, EM-Care and other interventions designed to support youth mental health in climate contexts.",
+    title: "PRIME Study Design & Framework",
+    description: "Learn about PRIME's research framework, adaptive platform design, and systematic approach to developing climate-informed mental health interventions.",
     path: "/programs"
+  },
+  interventions: {
+    title: "PRIME Interventions & Programs",
+    description: "Evidence-based interventions and programs designed to support youth mental health in the context of climate change, including digital platforms and group programs.",
+    path: "/interventions"
   },
   resources: {
     title: "Resources & Downloads",

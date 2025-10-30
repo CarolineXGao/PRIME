@@ -139,15 +139,6 @@ const Publications = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <CallToAction
-          title="Stay Updated on Our Research"
-          description="New publications and reports are added regularly. Follow our research progress and access the latest evidence-based findings on climate and youth mental health."
-          buttons={[
-            { text: "View Latest News", href: "/news", primary: true },
-            { text: "Contact Research Team", href: "/contact" }
-          ]}
-        />
       </div>
     </section>
   );

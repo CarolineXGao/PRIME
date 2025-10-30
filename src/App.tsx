@@ -10,6 +10,7 @@ import Resources from './pages/Resources';
 import Publications from './pages/Publications';
 import News from './pages/News';
 import Contact from './pages/Contact';
+import Interventions from './pages/Interventions';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/interventions" element={<Interventions />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/news" element={<News />} />
