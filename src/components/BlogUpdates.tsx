@@ -30,13 +30,13 @@ const BlogUpdates = () => {
               Stay informed with our latest insights, research findings, and community stories.
             </p>
           </div>
-          <button 
-            onClick={() => window.location.href = '/news'}
+          <Link
+            to="/news"
             className="hidden sm:flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
           >
             View All Posts
             <ArrowRight className="ml-2 w-4 h-4" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -94,13 +94,13 @@ const BlogUpdates = () => {
         </div>
 
         <div className="text-center mt-8 sm:hidden">
-          <button 
-            onClick={() => window.location.href = '/news'}
+          <Link
+            to="/news"
             className="flex items-center mx-auto text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
           >
             View All Posts
             <ArrowRight className="ml-2 w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
       </section>
@@ -113,7 +113,8 @@ const BlogUpdates = () => {
               <div>
                 <span 
                   className="px-3 py-1 rounded-full text-sm font-medium text-white mb-2 inline-block"
-                  style={{ backgroundColor: selectedPost.category === 'Research Insights' ? '#2D6AA3' : selectedPost.category === 'Events & Webinars' ? '#3A9C62' : '#F4B43D' }}
+                  className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold group focus:outline-none focus:ring-2 focus:ring-[#2D6AA3] focus:ring-offset-2 rounded"
+                  aria-label={`Read more about ${update.title}`}
                 >
                   {selectedPost.category}
                 </span>
@@ -125,7 +126,8 @@ const BlogUpdates = () => {
               </div>
               <button
                 onClick={closeModal}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#2D6AA3] focus:ring-offset-2"
+                aria-label="Close article"
               >
                 <X className="w-6 h-6" />
               </button>

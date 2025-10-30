@@ -76,9 +76,9 @@ const collaborators = [
 ];
 
 const Collaborators = () => (
-  <section className="py-12 bg-gray-100">
+  <section className="py-12 bg-gray-100" aria-labelledby="collaborators-heading">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h3 className="text-center text-lg font-semibold text-gray-600 mb-8">
+      <h3 id="collaborators-heading" className="text-center text-lg font-semibold text-gray-600 mb-8">
         Collaborating with leading organisations
       </h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -88,13 +88,14 @@ const Collaborators = () => (
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-white border-2 border-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-between hover:border-[#2D6AA3] hover:border-opacity-30 transition-all duration-200"
+            className="block bg-white border-2 border-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-between hover:border-[#2D6AA3] hover:border-opacity-30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#2D6AA3] focus:ring-offset-2"
+            aria-label={`Visit ${name} website (opens in new tab)`}
           >
             <div className="flex-1 flex items-center justify-center">
               {logo ? (
-                <img src={logo} alt={alt} className="max-h-16 object-contain mx-auto" />
+                <img src={logo} alt="" className="max-h-16 object-contain mx-auto" />
               ) : (
-                <div className="w-full h-12 bg-gray-300 rounded"></div>
+                <div className="w-full h-12 bg-gray-300 rounded" aria-hidden="true"></div>
               )}
             </div>
             <p className="text-xs text-gray-600 font-medium mt-3">{name}</p>

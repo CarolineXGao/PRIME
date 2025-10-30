@@ -1,5 +1,7 @@
 import React from 'react';
 import { Target, Eye, Award } from 'lucide-react';
+import StatCard from './StatCard';
+import CallToAction from './CallToAction';
 
 const AboutSection = () => {
   const goals = [
@@ -108,41 +110,29 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Stat cards */}
             <div className="space-y-8">
-              <a
+              <StatCard
+                value="6 in 10"
+                description="Young Australians worried about climate change"
+                color="#2D6AA3"
                 href="https://orygen.org.au/getmedia/61b84cfb-36fb-42d4-8a3f-33843fa614c5/91663_MA-Climate-change-report_full-report_Final_15April.aspx?ext=.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="block focus:outline-none focus:ring-4 focus:ring-[#2D6AA3]/30 rounded-xl"
-              >
-                <div className="text-center p-6 bg-[#2D6AA3] text-white rounded-xl hover:brightness-105 transition">
-                  <div className="text-4xl font-bold mb-2">6 in 10</div>
-                  <p>Young Australians worried about climate change</p>
-                </div>
-              </a>
+                source="Mission Australia Youth Survey"
+              />
 
-              <a
+              <StatCard
+                value="Two-thirds"
+                description="16–25 year-olds feel anxious, afraid or sad about climate change"
+                color="#3A9C62"
                 href="https://doi.org/10.1016/S2542-5196(21)00278-3"
-                target="_blank"
-                rel="noreferrer"
-                className="block focus:outline-none focus:ring-4 focus:ring-[#3A9C62]/30 rounded-xl"
-              >
-                <div className="text-center p-6 bg-[#3A9C62] text-white rounded-xl hover:brightness-105 transition">
-                  <div className="text-4xl font-bold mb-2">Two-thirds</div>
-                  <p>16–25 year-olds feel anxious, afraid or sad</p>
-                </div>
-              </a>
+                source="The Lancet Planetary Health"
+              />
 
-              <a
+              <StatCard
+                value="1 in 4"
+                description="Children aged 10–14 fear the world might end"
+                color="#F4B43D"
                 href="https://doi.org/10.1016/j.oneear.2024.02.017"
-                target="_blank"
-                rel="noreferrer"
-                className="block focus:outline-none focus:ring-4 focus:ring-[#F4B43D]/30 rounded-xl"
-              >
-                <div className="text-center p-6 bg-[#F4B43D] text-gray-900 rounded-xl hover:brightness-105 transition">
-                  <div className="text-4xl font-bold mb-2">1 in 4</div>
-                  <p>Children aged 10–14 fear the world might end</p>
-                </div>
-              </a>
+                source="One Earth Journal"
+              />
             </div>
 
             {/* Narrative */}

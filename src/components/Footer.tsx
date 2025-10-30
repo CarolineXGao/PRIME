@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2D6AA3] text-white">
+    <footer className="bg-[#2D6AA3] text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Acknowledgment Section */}
-        <div className="mb-8 space-y-4">
+        <div className="mb-8 space-y-4" role="region" aria-label="Acknowledgments">
           <p className="text-blue-100 text-sm leading-relaxed">
             PRIME acknowledges the Traditional Owners of the lands we are on and pays respect to their Elders past and present. We recognise and respect their cultural heritage, beliefs and relationship to Country, which continue to be important to the First Nations people living today.
           </p>
@@ -14,10 +14,10 @@ const Footer = () => {
           </p>
           
           {/* Flags */}
-          <div className="flex justify-start space-x-4 mt-4">
+          <div className="flex justify-start space-x-4 mt-4" role="img" aria-label="Indigenous, Torres Strait Islander, and Gender Diversity flags">
             <img 
               src="/Ind.avif" 
-              alt="Indigenous flag" 
+              alt="Aboriginal flag" 
               className="h-8 w-auto rounded shadow-sm"
             />
             <img 
@@ -27,7 +27,7 @@ const Footer = () => {
             />
             <img 
               src="/Gen.avif" 
-              alt="Gender diversity flag" 
+              alt="Progress Pride flag" 
               className="h-8 w-auto rounded shadow-sm"
             />
           </div>

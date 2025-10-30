@@ -139,35 +139,14 @@ const Publications = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 bg-[#2D6AA3] bg-opacity-5 border-2 border-[#2D6AA3] border-opacity-20 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Stay Updated on Our Research
-          </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            New publications and reports are added regularly. Follow our research progress and 
-            access the latest evidence-based findings on climate and youth mental health.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/news"
-              className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
-            >
-              href="/news"
-              className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-            >
-              View Latest News
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-[#2D6AA3] text-[#2D6AA3] hover:bg-[#2D6AA3] hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-            <a
-              href="/contact"
-              className="border-2 border-[#2D6AA3] text-[#2D6AA3] hover:bg-[#2D6AA3] hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
-            >
-              Contact Research Team
-            </a>
-          </div>
-        </div>
+        <CallToAction
+          title="Stay Updated on Our Research"
+          description="New publications and reports are added regularly. Follow our research progress and access the latest evidence-based findings on climate and youth mental health."
+          buttons={[
+            { text: "View Latest News", href: "/news", primary: true },
+            { text: "Contact Research Team", href: "/contact" }
+          ]}
+        />
       </div>
     </section>
   );

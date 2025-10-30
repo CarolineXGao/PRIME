@@ -30,11 +30,11 @@ const CoreHighlights = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" aria-labelledby="highlights-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Explainer */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          <h2 id="highlights-heading" className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Empowering Youth Through Climate-Informed Mental Health Research
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -44,15 +44,17 @@ const CoreHighlights = () => {
         </div>
 
         {/* Highlight Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" role="list">
           {highlights.map((highlight, index) => (
             <div
               key={index}
               className="bg-gray-50 border-2 border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:border-opacity-50 group"
+              role="listitem"
               style={{ '--accent-color': highlight.color } as React.CSSProperties}
             >
               <div 
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200"
+                aria-hidden="true"
                 style={{ backgroundColor: `${highlight.color}15`, color: highlight.color }}
               >
                 {highlight.icon}

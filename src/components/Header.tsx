@@ -57,6 +57,9 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2"
           >
@@ -66,7 +69,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-4">
+          <nav id="mobile-navigation" className="md:hidden py-4 space-y-4" aria-label="Mobile navigation">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -79,7 +82,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-          </div>
+          </nav>
         )}
       </div>
     </header>
