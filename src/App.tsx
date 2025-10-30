@@ -1,79 +1,35 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import CoreHighlights from './components/CoreHighlights';
-import BlogUpdates from './components/BlogUpdates';
-import Partners from './components/Partners';
-import AboutSection from './components/AboutSection';
-import StudyDesign from './components/StudyDesign';
-import StudyTeam from './components/StudyTeam';
-import BlogPage from './components/BlogPage';
-import Resources from './components/Resources';
-import MeasurementToolsTable from './components/MeasurementToolsTable';
-import ResourcesResearchers from './components/ResourcesResearchers';
-import ResourcesClinicians from './components/ResourcesClinicians';
-import ResourcesSchools from './components/ResourcesSchools';
-import ResourcesParticipants from './components/ResourcesParticipants';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Team from './pages/Team';
+import Partners from './pages/Partners';
+import Programs from './pages/Programs';
+import Resources from './pages/Resources';
+import Publications from './pages/Publications';
+import News from './pages/News';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  useEffect(() => {
-    const handleNavigate = (event: CustomEvent) => {
-      setCurrentPage(event.detail);
-    };
-
-    window.addEventListener('navigate', handleNavigate as EventListener);
-    return () => window.removeEventListener('navigate', handleNavigate as EventListener);
-  }, []);
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'about':
-        return <AboutSection />;
-      case 'study-design':
-        return <StudyDesign />;
-      case 'team':
-        return <StudyTeam />;
-      case 'blog':
-        return <BlogPage />;
-      case 'resources':
-        return <Resources setCurrentPage={setCurrentPage} />;
-      case 'measurement-tools':
-        return <MeasurementToolsTable setCurrentPage={setCurrentPage} />;
-      case 'resources-researchers':
-        return <ResourcesResearchers setCurrentPage={setCurrentPage} />;
-      case 'resources-clinicians':
-        return <ResourcesClinicians setCurrentPage={setCurrentPage} />;
-      case 'resources-schools':
-        return <ResourcesSchools setCurrentPage={setCurrentPage} />;
-      case 'resources-participants':
-        return <ResourcesParticipants setCurrentPage={setCurrentPage} />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return (
-          <>
-            <HeroSection />
-            <CoreHighlights />
-            <BlogUpdates />
-            <Partners />
-          </>
-        );
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-white">
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>
-        {renderPage()}
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

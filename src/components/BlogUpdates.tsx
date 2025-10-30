@@ -31,7 +31,7 @@ const BlogUpdates = () => {
             </p>
           </div>
           <button 
-            onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'blog' }))}
+            onClick={() => window.location.href = '/news'}
             className="hidden sm:flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
           >
             View All Posts
@@ -95,7 +95,7 @@ const BlogUpdates = () => {
 
         <div className="text-center mt-8 sm:hidden">
           <button 
-            onClick={() => window.dispatchEvent(new CustomEvent('navigate', { detail: 'blog' }))}
+            onClick={() => window.location.href = '/news'}
             className="flex items-center mx-auto text-[#2D6AA3] hover:text-[#1e4d73] font-semibold"
           >
             View All Posts
