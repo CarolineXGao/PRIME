@@ -11,7 +11,7 @@ const Interventions = () => {
     {
       title: "My Climate Journey Badges",
       description: "Digital communication tool that describes diverse archetypes of how young people feel, think, and act in response to climate change, helping foster reflection, inclusion, and understanding across youth audiences.",
-      type: "Digital Platform",
+      type: "Digital Tool",
       status: "Available",
       link: "https://osf.io/e4sfb_v1",
       color: "#2D6AA3",
@@ -20,7 +20,7 @@ const Interventions = () => {
     {
       title: "EcoConnections",
       description: "Youth co-designed social-prescribing program led by Orygen with Museums Victoria and the University of Melbourne, using hands-on environmental activities and peer support to build connection and agency.",
-      type: "Group Intervention",
+      type: "Social-prescribing",
       status: "In Development",
       color: "#3A9C62",
       icon: <Users className="w-5 h-5" />
