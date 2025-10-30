@@ -163,8 +163,8 @@ export const measurementTools: MeasurementTool[] = [
     administrationTime: '~10 minutes',
     format: 'Self-report questionnaire (22 items, Likert scale)',
     availability: 'Open access',
-    reference: 'Hickman, C. et al. (2022). Climate emotions and mental distress: Development and validation of the Inventory of Climate Emotions (ICE). Journal of Environmental Psychology, 83, 101866.',
-    link: 'https://doi.org/10.1016/j.jenvp.2022.101866',
+    reference: 'Marczak, M. et al. (2023). Climate emotions and mental distress: Development and validation of the Inventory of Climate Emotions (ICE). Global Environmental Change, 83, 102764.',
+    link: 'https://doi.org/10.1016/j.gloenvcha.2023.102764',
     hasDetailedScale: true,
     instructions:
     'What do you feel in relation to climate change? The aim of this questionnaire is to examine your feelings on this subject. Rate the extent to which each statement applies to you, from "strongly disagree" to "strongly agree." There are no right or wrong answers—choose the answer that best describes what you feel.',
