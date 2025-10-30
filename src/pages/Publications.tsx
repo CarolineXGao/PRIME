@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BookOpen, ExternalLink, Calendar } from 'lucide-react';
 import { updateSEO } from '../utils/seo';
+import CallToAction from '../components/CallToAction';
 
 const Publications = () => {
   useEffect(() => {
