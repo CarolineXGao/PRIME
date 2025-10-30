@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <HeroSection
         title="Youth Mental Health & Climate Change"
-        subtitle="Platform for Research and Interventions in Mental Health and the Environment"
+        subtitle="Platform for Research and Interventions in Youth Mental Health and the Environment (PRIME)"
         description="Australia's first dedicated research platform addressing the mental health impacts of climate change on young people through evidence-based interventions and community partnerships."
         primaryCTA={{
           text: "Learn About PRIME",
