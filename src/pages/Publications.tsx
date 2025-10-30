@@ -179,7 +179,6 @@ const Publications = () => {
                     >
                       View Paper <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
-                    <p className="text-xs text-gray-500 text-center">DOI: {pub.doi}</p>
                   </div>
                 </div>
               </div>
