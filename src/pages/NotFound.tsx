@@ -43,16 +43,16 @@ const NotFound = () => {
               Looking for something specific?
             </h3>
             <div className="grid grid-cols-2 gap-4 text-sm">
-              <a href="/about" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
+              <Link to="/about" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
                 About PRIME
               </Link>
-              <a href="/team" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
+              <Link to="/team" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
                 Our Team
               </Link>
-              <a href="/resources" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
+              <Link to="/resources" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
                 Resources
               </Link>
-              <a href="/contact" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
+              <Link to="/contact" className="text-[#2D6AA3] hover:text-[#1e4d73] font-medium">
                 Contact Us
               </Link>
             </div>
