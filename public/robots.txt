@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://prime-website-wirefr-ckg5.bolt.host/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

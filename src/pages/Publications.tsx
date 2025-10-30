@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BookOpen, ExternalLink, Calendar } from 'lucide-react';
+import { updateSEO } from '../utils/seo';
 
 const Publications = () => {
+  useEffect(() => {
+    updateSEO('publications');
+  }, []);
+
   const publications = [
     {
       title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",

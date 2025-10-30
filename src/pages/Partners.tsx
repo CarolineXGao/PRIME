@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PartnersComponent from '../components/Partners';
+import { updateSEO } from '../utils/seo';
 
 const Partners = () => {
+  useEffect(() => {
+    updateSEO('partners');
+  }, []);
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
