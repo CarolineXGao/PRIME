@@ -305,7 +305,7 @@ export const measurementTools: MeasurementTool[] = [
   link: 'https://doi.org/10.1177/0013916517708325',
   hasDetailedScale: true,
   instructions:
-    'Climate change refers to long-term changes in the Earth's climate (e.g., temperature, precipitation, wind patterns), primarily due to greenhouse gas emissions and land-use change, which may cause sea-level rise, heat events, fires, droughts, storms, and floods. Scientists project impacts on forests, agriculture, water, coasts, human health and migration, wildlife habitat, and the economy.\n\nFor each statement below, choose one answer on the scale from −3 (Strongly disagree) to +3 (Strongly agree). Select "X" if you do not think climate is changing.',
+    'Climate change refers to long-term changes in the Earth\'s climate (e.g., temperature, precipitation, wind patterns), primarily due to greenhouse gas emissions and land-use change, which may cause sea-level rise, heat events, fires, droughts, storms, and floods. Scientists project impacts on forests, agriculture, water, coasts, human health and migration, wildlife habitat, and the economy.\n\nFor each statement below, choose one answer on the scale from −3 (Strongly disagree) to +3 (Strongly agree). Select "X" if you do not think climate is changing.',
   responseOptions: [
     { label: 'Strongly disagree', value: -3 },
     { label: 'Disagree', value: -2 },
