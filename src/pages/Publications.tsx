@@ -150,6 +150,9 @@ const Publications = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/news"
+              className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
+            >
+              href="/news"
               className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               View Latest News
@@ -157,6 +160,9 @@ const Publications = () => {
             <a
               href="/contact"
               className="border-2 border-[#2D6AA3] text-[#2D6AA3] hover:bg-[#2D6AA3] hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+            <a
+              href="/contact"
+              className="border-2 border-[#2D6AA3] text-[#2D6AA3] hover:bg-[#2D6AA3] hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
             >
               Contact Research Team
             </a>

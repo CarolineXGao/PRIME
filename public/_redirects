@@ -1,1 +1,12 @@
+# Handle trailing slashes - redirect to canonical URLs without trailing slash
+/about/    /about    301
+/team/     /team     301
+/partners/ /partners 301
+/programs/ /programs 301
+/resources/ /resources 301
+/publications/ /publications 301
+/news/     /news     301
+/contact/  /contact  301
+
+# SPA fallback - serve index.html for all other routes
 /*    /index.html   200

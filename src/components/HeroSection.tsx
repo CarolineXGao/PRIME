@@ -21,12 +21,18 @@ const HeroSection = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  PRIME: Platform for Research and Innovation in {' '}
+                  <a 
+                    href="/about"
+                    className="bg-[#2D6AA3] hover:bg-[#1e4d73] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl text-center"
+                  >
                   <span className="text-[#2D6AA3]">Youth Mental Health</span> &{' '}
-                  <span className="text-[#3A9C62]">Environment</span>
-                </h1>
+                  </a>
+                  <a 
+                    href="/resources"
+                    className="border-2 border-[#2D6AA3] text-[#2D6AA3] hover:bg-[#2D6AA3] hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl text-center"
+                  >
                 <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed">
-                  Accelerating evidence-based interventions to mitigate climate distress in young people
+                  </a>
                 </p>
               </div>
             </div>
