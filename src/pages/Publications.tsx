@@ -10,15 +10,24 @@ const Publications = () => {
 
   const publications = [
     {
-      title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",
-      authors: "Gao, C. X., Patrick, R., Fava, N., Browne, V., Gunasiri, H., & Menssink, J. M.",
-      journal: "Journal of Applied Youth Studies",
-      year: "2024",
-      doi: "10.1007/s43151-025-00174-1",
-      type: "Commentary",
-      description: "A call for urgent action to close the gap between what young people are experiencing and the slow pace of research and policy responses to climate-related mental health impacts."
+      title: "Over 3,000 Voices: Understanding How Climate Change Shapes the Minds and Lives of Young People in Australia",
+      authors: "Eala, S. J. L., Gao, C. X., Zhang, Y., Gunasiri, H., Patrick, R., Filia, K., Nguyen, S. N., Singh, N., Teo, S. M., Lawrance, E., Wray, B., Boon, B., Brennan, N., & Menssink, J.",
+      journal: "OSF Preprints",
+      year: "2025",
+      doi: "10.31234/osf.io/e4sfb_v1",
+      type: "National Survey Study",
+      description: "A large-scale Australian survey of over 3,000 young people examining how climate change shapes emotions, wellbeing, and engagement, revealing multidimensional climate responses across affective, cognitive, and behavioural domains."
     },
     {
+      title: "Climate Change and Social Health: An Urgent Call to Action",
+      authors: "Bower, M., Filia, K. M., Lawrance, E., Card, K., Teesson, L., Smout, S., Gao, C. X., Naderpajouh, N., Donohoe-Bales, A., Lagi, R. K., Njeru, M. W., Kim, Y., Anchang, K. Y., Misawa, N., Zhang, Y., Spallek, S., Howard, A., Stapinski, L., Herrman, H., & Atwoli, L.",
+      journal: "PsyArXiv",
+      year: "2025",
+      doi: "10.31219/osf.io/5w9r8",
+      type: "Narrative Review",
+      description: "A narrative synthesis exploring how climate change and social health interact, highlighting how social connection, trust, and community resilience influence both vulnerability and capacity for climate action, and proposing a new framework linking social health with climate resilience."
+    },
+      {
       title: "Vulnerability and Psychosocial Impacts of Extreme Weather Events Among Young People in Australia",
       authors: "Ziou, M., Gan, D. Z. Q., Boon, B., Teo, S. M., Menssink, J. M., Yu, W., Smith, C. L., Patrick, R., Gunasiri, H., Fava, N. J., Baker, D. G., Browne, V., Simmons, M. B., Zbukvic, I., Bower, M., Stapinski, L., Killackey, E., McGorry, P., Brennan, N., Filia, K. M., & Gao, C. X.",
       journal: "Environmental Research",
@@ -26,6 +35,33 @@ const Publications = () => {
       doi: "10.1016/j.envres.2025.121385",
       type: "Research Article",
       description: "Analysis of 19,501 Australian teens showing that exposure to extreme weather increases climate concerns and psychological distress."
+    },
+    {
+      title: "Healthy Me, Healthy Planet: Evaluation of a Pilot Planetary Health Library Program",
+      authors: "Patrick, R., Bruges, N., Gunasiri, H., Wang, Y., & Henderson-Wilson, C.",
+      journal: "Health Promotion Journal of Australia",
+      year: "2024",
+      doi: "10.1002/hpja.882",
+      type: "Research Article",
+      description: "A mixed-methods evaluation of the Healthy Me, Healthy Planet library program involving 136 adult participants, demonstrating improvements in wellbeing, social connection, and pro-environmental attitudes, highlighting libraries as key community settings for planetary health promotion."
+    },
+    {
+      title: "Coping with the Mental Health Impacts of Climate Change: A Green Script for Sustainable Action",
+      authors: "Gunasiri, H., Patrick, R., Garad, R., Enticott, J., Meadows, G., & Snell, T.",
+      journal: "Sustainability",
+      year: "2024",
+      doi: "10.3390/su16031022",
+      type: "Research Article",
+      description: "A cross-sectional survey of 5,483 Australians examining coping strategies for the mental health impacts of climate change, identifying key adaptive approaches including contact with nature, sustainable action, and mental health help-seeking, and proposing green prescribing as a framework for sustainable health practice."
+    },   
+    {
+      title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",
+      authors: "Gao, C. X., Patrick, R., Fava, N., Browne, V., Gunasiri, H., & Menssink, J. M.",
+      journal: "Journal of Applied Youth Studies",
+      year: "2024",
+      doi: "10.1007/s43151-025-00174-1",
+      type: "Commentary",
+      description: "A call for urgent action to close the gap between what young people are experiencing and the slow pace of research and policy responses to climate-related mental health impacts."
     },
     {
       title: "Climate Change Concerns Impact on Young Australians’ Psychological Distress and Outlook for the Future",
@@ -44,7 +80,34 @@ const Publications = () => {
     doi: "10.1111/eip.13374",
     type: "Scoping Review",
     description: "A review of 26 studies published before March 2022 examining climate-related emotions and mental ill-health among young people, highlighting widespread concern about climate change and the need for further research on its psychological impacts."
-}
+    }, 
+    {
+      title: "Prevalence and Determinants of Mental Health Related to Climate Change in Australia",
+      authors: "Patrick, R., Snell, T., Gunasiri, H., Garad, R., Meadows, G., & Enticott, J.",
+      journal: "Australian & New Zealand Journal of Psychiatry",
+      year: "2023",
+      doi: "10.1177/00048674221107872",
+      type: "Research Article",
+      description: "A national Australian survey of 5,483 adults linking climate change experiences to mental health outcomes, identifying high rates of eco-anxiety, pre-traumatic, and post-traumatic stress, with younger people, women, and disadvantaged populations most affected."
+    },
+    {
+      title: "Minding Our Futures: Understanding Climate-Related Mental Wellbeing Using Systems Science",
+      authors: "Patrick, R., Noy, S., Henderson-Wilson, C., Hayward, J., Allender, S., Gunasiri, H., Bruges, N., Snell, T., & Capetola, T.",
+      journal: "Health & Place",
+      year: "2023",
+      doi: "10.1016/j.healthplace.2023.103134",
+      type: "Qualitative Research Article",
+      description: "A systems science study using Group Model Building workshops with health, youth, and climate experts to map the complex factors affecting young Australians' climate-related mental wellbeing, identifying policy, community, and nature-based pathways for resilience."
+    }, 
+    {
+      title: "Young People's Mental Health in a Changing Climate",
+      authors: "Gunasiri, H., Patrick, R., Snell, T., Garad, R., Enticott, J., Meadows, G., & Gao, C. X.",
+      journal: "The Lancet Planetary Health",
+      year: "2022",
+      doi: "10.1016/S2542-5196(22)00243-1",
+      type: "Research Article",
+      description: "A quantitative analysis of an Australian national survey (n = 5,483) showing that young people aged 18–24 experience significantly higher rates of eco-anxiety, pre-trauma, and PTSD linked to climate change, highlighting the need for health systems to integrate climate-related mental health responses."
+    }
   ];
 
   const reports = [
@@ -54,6 +117,20 @@ const Publications = () => {
       year: "2023",
       description: "Comprehensive analysis of climate change impacts on Australian youth mental health based on national survey data.",
       link: "https://orygen.org.au/getmedia/61b84cfb-36fb-42d4-8a3f-33843fa614c5/91663_MA-Climate-change-report_full-report_Final_15April.aspx?ext=.pdf"
+    },
+    {
+      title: "Climate of Distress: Addressing the Mental Health Impacts of Climate Change on Young People in Australia",
+      organization: "Orygen",
+      year: "2023",
+      description: "Policy paper outlining the growing mental health impacts of climate change on young Australians, calling for systemic action through prevention, early intervention, and youth-led climate resilience strategies.",
+      link: "https://www.orygen.org.au/getmedia/ef72906e-b7ea-4486-8ad7-47d3122784f3/Climate-of-Distress-policy-paper-Aug-2023.aspx?ext=.pdf"
+    },
+    {
+      title: "Mission Australia & Orygen Climate Change and Youth Mental Health Report – 17 April",
+      organization: "Mission Australia & Orygen",
+      year: "2024",
+      description: "Report examining how climate change influences mental health among young Australians using national survey data and qualitative insights.",
+      link: "https://www.orygen.org.au/getmedia/4d21728e-f589-40a1-a271-ba9a070e86ff/Mission-Australia-Orygen-climatechange-report-17APRIL.aspx?ext=.pdf"
     }
   ];
 
