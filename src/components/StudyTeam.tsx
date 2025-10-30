@@ -234,7 +234,7 @@ const StudyTeam = () => {
       name: 'Yan Zhang',
       role: 'Built Environment & Wellbeing',
       bio:
-        'PhD Candidate, Infrastructure Engineering, University of Melbourne; Lecturer, Southern Cross University. Focus on indoor environmental quality and occupant wellbeing.',
+        'Lecturer, Southern Cross University. Focus on indoor environmental quality and occupant wellbeing.',
     },
     {
       name: 'Myriam Ziou',
