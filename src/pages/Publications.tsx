@@ -11,7 +11,7 @@ const Publications = () => {
   const publications = [
     {
       title: "Climate Change and Youth: Fast-Tracking Mental Health Solutions",
-      authors: "Gao, C., Patrick, R., et al.",
+      authors: "Gao, C. X., Patrick, R., Fava, N., Browne, V., Gunasiri, H., & Menssink, J. M.",
       journal: "Journal of Applied Youth Studies",
       year: "2024",
       doi: "10.1007/s43151-025-00174-1",
@@ -19,8 +19,8 @@ const Publications = () => {
       description: "A call for urgent action to close the gap between what young people are experiencing and the slow pace of research and policy responses to climate-related mental health impacts."
     },
     {
-      title: "Vulnerability and Psychosocial Impacts of Extreme Weather on Young People in Australia",
-      authors: "Gao, C., et al.",
+      title: "Vulnerability and Psychosocial Impacts of Extreme Weather Events Among Young People in Australia",
+      authors: "Ziou, M., Gan, D. Z. Q., Boon, B., Teo, S. M., Menssink, J. M., Yu, W., Smith, C. L., Patrick, R., Gunasiri, H., Fava, N. J., Baker, D. G., Browne, V., Simmons, M. B., Zbukvic, I., Bower, M., Stapinski, L., Killackey, E., McGorry, P., Brennan, N., Filia, K. M., & Gao, C. X.",
       journal: "Environmental Research",
       year: "2025",
       doi: "10.1016/j.envres.2025.121385",
@@ -28,19 +28,28 @@ const Publications = () => {
       description: "Analysis of 19,501 Australian teens showing that exposure to extreme weather increases climate concerns and psychological distress."
     },
     {
-      title: "Climate Concern, Distress, and Future Outlook in Young Australians",
-      authors: "Gao, C., et al.",
+      title: "Climate Change Concerns Impact on Young Australians’ Psychological Distress and Outlook for the Future",
+      authors: "Teo, S. M., Gao, C. X., Brennan, N., Fava, N., Simmons, M. B., Baker, D., Zbukvic, I., Rickwood, D. J., Brown, E., Smith, C. L., Watson, A. E., Browne, V., Cotton, S., McGorry, P., Killackey, E., Freeburn, T., & Filia, K. M.",
       journal: "Journal of Environmental Psychology",
       year: "2024",
       doi: "10.1016/j.jenvp.2023.102209",
       type: "Research Article",
       description: "Study of 18,800 young Australians examining how climate change concerns relate to psychological distress and future outlook."
-    }
+    },
+    {
+    title: "Empirical Evidence for Climate Concerns, Negative Emotions and Climate-Related Mental Ill-Health in Young People: A Scoping Review",
+    authors: "Ramadan, R., Randell, A., Lavoie, S., Gao, C. X., Cruz Manrique, P., Anderson, R., McDowell, C., & Zbukvic, I.",
+    journal: "Early Intervention in Psychiatry",
+    year: "2023",
+    doi: "10.1111/eip.13374",
+    type: "Scoping Review",
+    description: "A review of 26 studies published before March 2022 examining climate-related emotions and mental ill-health among young people, highlighting widespread concern about climate change and the need for further research on its psychological impacts."
+}
   ];
 
   const reports = [
     {
-      title: "Youth Survey Report: Climate Change and Mental Health",
+      title: "Impact of Extreme Weather Events on Young People: Findings from the 2023 Mission Australia Youth Survey",
       organization: "Mission Australia & Orygen",
       year: "2023",
       description: "Comprehensive analysis of climate change impacts on Australian youth mental health based on national survey data.",
