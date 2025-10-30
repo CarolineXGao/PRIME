@@ -18,25 +18,25 @@ const StudyDesign = () => {
       icon: <UserPlus className="w-8 h-8" />,
       title: "Recruitment",
       description:
-        "Engage diverse young people (12–25) through schools, services and community partners, and inclusive digital outreach."
+        "Engage diverse young people (12–25) through schools, services and community partners, and inclusive digital outreach to ensure broad representation."
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Co-design",
       description:
-        "Partner with youth and communities to shape priorities, content, delivery and evaluation so programs are relevant and acceptable."
+        "Partner with youth and communities to shape priorities, content, delivery and evaluation so programs are relevant, acceptable and effective."
     },
     {
       icon: <FlaskConical className="w-8 h-8" />,
       title: "Trial testing",
       description:
-        "Use an adaptive platform to evaluate multiple group-based interventions efficiently under a shared master protocol."
+        "Use an adaptive platform to evaluate multiple group-based interventions efficiently under a shared master protocol for rapid evidence generation."
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Scaling",
       description:
-        "Translate effective interventions into routine practice across schools, communities and mental-health services."
+        "Translate effective interventions into routine practice across schools, communities and mental-health services for widespread impact."
     },
   ];
 
