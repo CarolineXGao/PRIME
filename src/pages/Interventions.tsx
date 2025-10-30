@@ -28,7 +28,7 @@ const Interventions = () => {
     {
       title: "Y-CARE",
       description: "International collaboration between Stanford’s CIRCLE, Foundry BC, Orygen, and headspace, bringing together climate-concerned youth (16–25) to co-design a peer model for addressing climate distress and building resilience.",
-      type: "Clinical Intervetion",
+      type: "Clinical Intervention",
       status: "In Development",
       color: "#F4B43D",
       icon: <BookOpen className="w-5 h-5" />
