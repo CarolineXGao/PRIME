@@ -9,7 +9,7 @@ const collaborators = [
   },
   {
     name: "University of Melbourne",
-    logo: "https://en.wikipedia.org/wiki/File:The_University_of_Melbourne_Logo.svg",
+    logo: "https://designsystem.web.unimelb.edu.au/static/img/logo-icon.svg",
     alt: "University of Melbourne logo",
     url: "https://www.unimelb.edu.au"
   },
