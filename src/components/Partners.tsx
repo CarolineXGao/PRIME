@@ -51,7 +51,7 @@ const collaborators = [
   },
   {
     name: "Mission Australia",
-    logo: "https://www.shelterwa.org.au/wp-content/uploads/2022/09/Mission-Australia-Logo.png",
+    logo: "https://www.missionaustralia.com.au/globalassets/mission-australia-logo.svg",
     alt: "Mission Australia logo",
     url: "https://www.missionaustralia.com.au"
   },
