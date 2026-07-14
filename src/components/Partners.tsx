@@ -51,7 +51,7 @@ const collaborators = [
   },
   {
     name: "Mission Australia",
-    logo: "https://www.includeacharity.com.au/wp-content/uploads/2022/02/MA-MasterLogo-POS-CMYK-FA.png",
+    logo: "https://www.missionaustralia.com.au/globalassets/mission-australia-logo.svg",
     alt: "Mission Australia logo",
     url: "https://www.missionaustralia.com.au"
   },
