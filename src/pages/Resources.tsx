@@ -5,6 +5,7 @@ import ResourcesResearchers from '../components/ResourcesResearchers';
 import ResourcesClinicians from '../components/ResourcesClinicians';
 import ResourcesSchools from '../components/ResourcesSchools';
 import ResourcesParticipants from '../components/ResourcesParticipants';
+import ClimateConnect from '../components/ClimateConnect';
 import { updateSEO } from '../utils/seo';
 
 const Resources = () => {
@@ -24,6 +25,8 @@ const Resources = () => {
         return <ResourcesClinicians setCurrentPage={setCurrentView} />;
       case 'resources-schools':
         return <ResourcesSchools setCurrentPage={setCurrentView} />;
+      case 'climate-connect':
+        return <ClimateConnect setCurrentPage={setCurrentView} />;
       case 'resources-participants':
         return <ResourcesParticipants setCurrentPage={setCurrentView} />;
       default:

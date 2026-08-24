@@ -1,12 +1,23 @@
 import React from 'react';
-import { School, Download, BookOpen, Users, Presentation, ArrowLeft, FileText } from 'lucide-react';
+import { School, Download, BookOpen, Users, Presentation, ArrowLeft, FileText, Layers, ArrowRight } from 'lucide-react';
 
 interface ResourcesSchoolsProps {
   setCurrentPage: (page: string) => void;
 }
 
+interface SchoolResource {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  buttonText: string;
+  /** External URL or file in /public — opens in a new tab. */
+  downloadLink?: string;
+  /** Sub-page within Resources — navigates in place instead of leaving the site. */
+  internalPage?: string;
+}
+
 const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
-  const resources = [
+  const resources: SchoolResource[] = [
     {
       icon: <School className="w-6 h-6" />,
       title: "Orygen's Climate Emotions: Teacher Guide",
@@ -41,6 +52,13 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       description: "A resource outlining climate change feeling-thinking-behaviour archetypes to help understand and respond to different ways young people experience and engage with climate change.",
       buttonText: "Download PDF",
       downloadLink: "/FTB-Archetypes.pdf"
+    },
+    {
+      icon: <Layers className="w-6 h-6" />,
+      title: "Climate Connect",
+      description: "Card decks for classrooms and youth groups, across five themes: EXPLORE, CARE, CONNECT, BELONG and ACT.",
+      buttonText: "Explore Card Decks",
+      internalPage: "climate-connect"
     }
   ];
 
@@ -88,15 +106,25 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
               </p>
 
               <div className="mt-auto">
-                <a
-                  href={resource.downloadLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  {resource.buttonText}
-                </a>
+                {resource.internalPage ? (
+                  <button
+                    onClick={() => setCurrentPage(resource.internalPage as string)}
+                    className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    {resource.buttonText}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                ) : (
+                  <a
+                    href={resource.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </a>
+                )}
               </div>
             </div>
           ))}

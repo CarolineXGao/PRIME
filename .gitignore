@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Claude working files — snapshots, changelogs, throwaway verification scripts
+.snapshots/
+CHANGES-*.md
+__verify*
+__v*.cjs
+*.tsbuildinfo
