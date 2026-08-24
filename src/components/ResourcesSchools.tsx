@@ -1,5 +1,5 @@
 import React from 'react';
-import { School, Download, BookOpen, Users, Presentation, ArrowLeft } from 'lucide-react';
+import { School, Download, BookOpen, Users, Presentation, ArrowLeft, FileText } from 'lucide-react';
 
 interface ResourcesSchoolsProps {
   setCurrentPage: (page: string) => void;
@@ -34,6 +34,13 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       description: "Interactive workshop designed to empower students with practical tools to manage climate stress, deepen their understanding of climate change, and take positive action for themselves and their communities.",
       buttonText: "Visit Blue Mind",
       downloadLink: "https://blueminds.org.au/"
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "The Climate Change Feeling-Thinking-Behaviour Archetypes",
+      description: "A resource outlining climate change feeling-thinking-behaviour archetypes to help understand and respond to different ways young people experience and engage with climate change.",
+      buttonText: "Download PDF",
+      downloadLink: "/FTB-Archetypes.pdf"
     }
   ];
 

@@ -1,11 +1,12 @@
 import React from 'react';
-import { 
-  Stethoscope, 
-  Download, 
-  BookOpen, 
-  ArrowLeft, 
-  Database, 
-  Users 
+import {
+  Stethoscope,
+  Download,
+  BookOpen,
+  ArrowLeft,
+  Database,
+  Users,
+  FileText
 } from 'lucide-react';
 
 interface ResourcesCliniciansProps {
@@ -80,6 +81,14 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
       buttonText: "Open Drive File",
       downloadLink:
         "https://drive.google.com/file/d/1Cq4gdK70Tnahi8n0RD1MFuWVgOzXrqJZ/view"
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "The Climate Change Feeling-Thinking-Behaviour Archetypes",
+      description:
+        "A resource outlining climate change feeling-thinking-behaviour archetypes to help clinicians understand and respond to different ways young people experience and engage with climate change.",
+      buttonText: "Download PDF",
+      downloadLink: "/FTB-Archetypes.pdf"
     }
   ]; 
 
