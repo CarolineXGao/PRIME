@@ -1,9 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { School, Download, BookOpen, Users, Presentation, ArrowLeft, FileText, Layers, ArrowRight } from 'lucide-react';
-
-interface ResourcesSchoolsProps {
-  setCurrentPage: (page: string) => void;
-}
 
 interface SchoolResource {
   icon: React.ReactNode;
@@ -12,11 +9,11 @@ interface SchoolResource {
   buttonText: string;
   /** External URL or file in /public — opens in a new tab. */
   downloadLink?: string;
-  /** Sub-page within Resources — navigates in place instead of leaving the site. */
-  internalPage?: string;
+  /** In-app route — navigates without leaving the site. */
+  internalLink?: string;
 }
 
-const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
+const ResourcesSchools = () => {
   const resources: SchoolResource[] = [
     {
       icon: <School className="w-6 h-6" />,
@@ -58,7 +55,7 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
       title: "Climate Connect",
       description: "Card decks for classrooms and youth groups, across five themes: EXPLORE, CARE, CONNECT, BELONG and ACT.",
       buttonText: "Explore Card Decks",
-      internalPage: "climate-connect"
+      internalLink: "/climate-connect"
     }
   ];
 
@@ -66,13 +63,13 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
-        <button
-          onClick={() => setCurrentPage('resources')}
+        <Link
+          to="/resources"
           className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Resources
-        </button>
+        </Link>
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -106,14 +103,14 @@ const ResourcesSchools = ({ setCurrentPage }: ResourcesSchoolsProps) => {
               </p>
 
               <div className="mt-auto">
-                {resource.internalPage ? (
-                  <button
-                    onClick={() => setCurrentPage(resource.internalPage as string)}
+                {resource.internalLink ? (
+                  <Link
+                    to={resource.internalLink}
                     className="w-full bg-[#F4B43D] hover:bg-[#e5a334] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
                   >
                     {resource.buttonText}
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                  </Link>
                 ) : (
                   <a
                     href={resource.downloadLink}

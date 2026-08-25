@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Search, Filter, ChevronDown, ChevronRight } from 'lucide-react';
 import { detailedMeasurementTools, DetailedMeasurementTool } from '../data/measurementTools';
 
-interface MeasurementToolsTableProps {
-  setCurrentPage: (page: string) => void;
-}
-
-const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) => {
+const MeasurementToolsTable = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDomain, setSelectedDomain] = useState('');
   const [expandedTools, setExpandedTools] = useState<Set<string>>(new Set());
@@ -41,13 +38,13 @@ const MeasurementToolsTable = ({ setCurrentPage }: MeasurementToolsTableProps) =
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
-        <button
-          onClick={() => setCurrentPage('resources')}
+        <Link
+          to="/resources"
           className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Resources
-        </button>
+        </Link>
 
         {/* Header */}
         <div className="text-center mb-12">

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { ExternalLink, Calendar, Users, BookOpen, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ExternalLink, ArrowRight, Calendar, Users, BookOpen, Target, Layers } from 'lucide-react';
 import { updateSEO } from '../utils/seo';
 
 const Interventions = () => {
@@ -32,6 +33,15 @@ const Interventions = () => {
       status: "In Development",
       color: "#F4B43D",
       icon: <BookOpen className="w-5 h-5" />
+    },
+    {
+      title: "Climate Connect",
+      description: "Card decks for classrooms and youth groups, across five themes: EXPLORE, CARE, CONNECT, BELONG and ACT. Each card opens on an illustration and flips to reveal an activity.",
+      type: "Card Deck",
+      status: "Available",
+      internalLink: "/climate-connect",
+      color: "#3A9C62",
+      icon: <Layers className="w-5 h-5" />
     }
   ];
 
@@ -79,7 +89,15 @@ const Interventions = () => {
                   <p className="text-gray-600 leading-relaxed">{intervention.description}</p>
                 </div>
                 <div className="flex flex-col gap-3">
-                  {intervention.link ? (
+                  {intervention.internalLink ? (
+                    <Link
+                      to={intervention.internalLink}
+                      className="px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center whitespace-nowrap text-white hover:opacity-90"
+                      style={{ backgroundColor: intervention.color }}
+                    >
+                      Explore Card Decks <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  ) : intervention.link ? (
                     <a
                       href={intervention.link}
                       target="_blank"

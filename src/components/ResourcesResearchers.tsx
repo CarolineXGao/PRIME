@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Users, Download, BookOpen, Database, Network, ArrowLeft } from 'lucide-react';
 
-interface ResourcesResearchersProps {
-  setCurrentPage: (page: string) => void;
-}
-
-const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => {
+const ResourcesResearchers = () => {
   const resources = [
     {
       icon: <BookOpen className="w-6 h-6" />,
@@ -29,13 +26,13 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
-        <button
-          onClick={() => setCurrentPage('resources')}
+        <Link
+          to="/resources"
           className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Resources
-        </button>
+        </Link>
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -77,14 +74,16 @@ const ResourcesResearchers = ({ setCurrentPage }: ResourcesResearchersProps) => 
                     <Download className="w-4 h-4 mr-2" />
                     {resource.buttonText}
                   </button>
+                ) : resource.title === 'Measurement Tools' ? (
+                  <Link
+                    to="/resources/measurement-tools"
+                    className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </Link>
                 ) : (
                   <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (resource.title === 'Measurement Tools') {
-                        setCurrentPage('measurement-tools');
-                      }
-                    }}
                     className="w-full bg-[#2D6AA3] hover:bg-[#1e4d73] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
                   >
                     <Download className="w-4 h-4 mr-2" />

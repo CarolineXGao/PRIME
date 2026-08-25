@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Stethoscope,
   Download,
@@ -9,11 +10,7 @@ import {
   FileText
 } from 'lucide-react';
 
-interface ResourcesCliniciansProps {
-  setCurrentPage: (page: string) => void;
-}
-
-const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
+const ResourcesClinicians = () => {
   const resources = [
     {
       icon: <Database className="w-6 h-6" />,
@@ -96,13 +93,13 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
-        <button
-          onClick={() => setCurrentPage('resources')}
+        <Link
+          to="/resources"
           className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Resources
-        </button>
+        </Link>
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -136,21 +133,25 @@ const ResourcesClinicians = ({ setCurrentPage }: ResourcesCliniciansProps) => {
               </p>
 
               <div className="mt-auto">
-                <a
-                  href={resource.title === 'Measurement Tools' ? '#' : resource.downloadLink}
-                  onClick={(e) => {
-                    if (resource.title === 'Measurement Tools') {
-                      e.preventDefault();
-                      setCurrentPage('measurement-tools');
-                    }
-                  }}
-                  target={resource.title === 'Measurement Tools' ? undefined : "_blank"}
-                  rel={resource.title === 'Measurement Tools' ? undefined : "noopener noreferrer"}
-                  className="w-full bg-[#3A9C62] hover:bg-[#2d7a4f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  {resource.buttonText}
-                </a>
+                {resource.title === 'Measurement Tools' ? (
+                  <Link
+                    to="/resources/measurement-tools"
+                    className="w-full bg-[#3A9C62] hover:bg-[#2d7a4f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </Link>
+                ) : (
+                  <a
+                    href={resource.downloadLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#3A9C62] hover:bg-[#2d7a4f] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    {resource.buttonText}
+                  </a>
+                )}
               </div>
             </div>
           ))}

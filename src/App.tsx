@@ -11,6 +11,8 @@ import Publications from './pages/Publications';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Interventions from './pages/Interventions';
+import ClimateConnect from './pages/ClimateConnect';
+import ResourceSection from './pages/ResourceSection';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/interventions" element={<Interventions />} />
+          <Route path="/climate-connect" element={<ClimateConnect />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/:section" element={<ResourceSection />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />

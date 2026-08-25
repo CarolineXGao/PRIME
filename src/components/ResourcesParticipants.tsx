@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { UserCheck, Download, Heart, Phone, MessageCircle, ArrowLeft } from 'lucide-react';
 
-interface ResourcesParticipantsProps {
-  setCurrentPage: (page: string) => void;
-}
-
-const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) => {
+const ResourcesParticipants = () => {
   const resources = [
     {
       icon: <UserCheck className="w-6 h-6" />,
@@ -48,13 +45,13 @@ const ResourcesParticipants = ({ setCurrentPage }: ResourcesParticipantsProps) =
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
-        <button
-          onClick={() => setCurrentPage('resources')}
+        <Link
+          to="/resources"
           className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Resources
-        </button>
+        </Link>
 
         {/* Header */}
         <div className="text-center mb-16">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, ChevronLeft, ChevronRight, ImageIcon, RotateCw } from 'lucide-react';
 import {
   climateConnectIntro,
@@ -6,10 +7,6 @@ import {
   climateConnectCards,
   getAltText,
 } from '../data/climateConnectCards';
-
-interface ClimateConnectProps {
-  setCurrentPage: (page: string) => void;
-}
 
 /** A swipe must travel this far, and be more horizontal than vertical, to turn the page. */
 const SWIPE_THRESHOLD = 50;
@@ -50,7 +47,12 @@ const CardImage = ({
   );
 };
 
-const ClimateConnect = ({ setCurrentPage }: ClimateConnectProps) => {
+const ClimateConnect = () => {
+  const navigate = useNavigate();
+  // React Router stamps 'default' on the first entry in the history stack, so a
+  // key of anything else means the visitor navigated here from another page.
+  const cameFromInsideSite = useLocation().key !== 'default';
+
   // Multi-select: an empty selection means every deck is showing.
   const [activeThemes, setActiveThemes] = useState<Set<string>>(new Set());
   const [pageIndex, setPageIndex] = useState(0);
@@ -177,13 +179,15 @@ const ClimateConnect = ({ setCurrentPage }: ClimateConnectProps) => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Navigation */}
+        {/* Back Navigation — this page is reachable from more than one place,
+            so follow the visitor's own history rather than a fixed parent.
+            A visitor arriving on a shared link has none, so fall back to Resources. */}
         <button
-          onClick={() => setCurrentPage('resources-schools')}
+          onClick={() => (cameFromInsideSite ? navigate(-1) : navigate('/resources'))}
           className="flex items-center text-[#2D6AA3] hover:text-[#1e4d73] font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
-          Back to Schools &amp; Communities
+          Back
         </button>
 
         {/* Header */}

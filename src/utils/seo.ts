@@ -35,10 +35,40 @@ export const seoData: Record<string, SEOData> = {
     description: "Evidence-based interventions and programs designed to support youth mental health in the context of climate change, including digital platforms and group programs.",
     path: "/interventions"
   },
+  climateConnect: {
+    title: "Climate Connect Card Decks",
+    description: "Conversation card decks for classrooms, youth groups and community settings, across five themes: EXPLORE, CARE, CONNECT, BELONG and ACT.",
+    path: "/climate-connect"
+  },
   resources: {
     title: "Resources & Downloads",
     description: "Access guides, templates, training materials, measurement tools, and resources for researchers, clinicians, schools, and communities working in climate and mental health.",
     path: "/resources"
+  },
+  resourcesResearchers: {
+    title: "Resources for Researchers",
+    description: "Research protocols, measurement tools, data sharing guidelines and collaboration opportunities for climate and youth mental health studies.",
+    path: "/resources/researchers"
+  },
+  resourcesClinicians: {
+    title: "Resources for Clinicians",
+    description: "Clinical guidelines, intervention manuals, training materials and assessment tools for treating climate-related mental health issues.",
+    path: "/resources/clinicians"
+  },
+  resourcesSchools: {
+    title: "Resources for Schools & Communities",
+    description: "Implementation guides, educational materials and community-based intervention resources for schools and community organisations.",
+    path: "/resources/schools"
+  },
+  resourcesParticipants: {
+    title: "Resources for Participants",
+    description: "Information for young people interested in taking part in PRIME research or accessing support resources.",
+    path: "/resources/participants"
+  },
+  measurementTools: {
+    title: "Measurement Tools",
+    description: "Validated instruments for measuring climate-related mental health impacts in youth populations, including the CCAS, HEAS, ICE and CCWS.",
+    path: "/resources/measurement-tools"
   },
   publications: {
     title: "Publications & Reports",

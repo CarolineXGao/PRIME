@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Users, Stethoscope, School, UserCheck, ArrowRight } from 'lucide-react';
 
-interface ResourcesProps {
-  setCurrentPage: (page: string) => void;
-}
-
-const Resources = ({ setCurrentPage }: ResourcesProps) => {
+const Resources = () => {
   const audiences = [
     {
       icon: <Users className="w-8 h-8" />,
@@ -13,7 +10,7 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
       description: "Access research protocols, measurement tools, and collaboration opportunities for climate and mental health studies.",
       color: "#2D6AA3",
       resources: ["Research Protocols", "Measurement Tools", "Data Sharing Guidelines", "Collaboration Network"],
-      page: "resources-researchers"
+      path: "/resources/researchers"
     },
     {
       icon: <Stethoscope className="w-8 h-8" />,
@@ -21,7 +18,7 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
       description: "Evidence-based interventions, training materials, and clinical guidelines for treating climate-related mental health issues.",
       color: "#3A9C62",
       resources: ["Clinical Guidelines", "Intervention Manuals", "Training Videos", "Assessment Tools"],
-      page: "resources-clinicians"
+      path: "/resources/clinicians"
     },
     {
       icon: <School className="w-8 h-8" />,
@@ -29,7 +26,7 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
       description: "Implementation guides, educational materials, and community-based intervention resources.",
       color: "#F4B43D",
       resources: ["Implementation Guides", "Educational Materials", "Community Toolkits", "Workshop Resources"],
-      page: "resources-schools"
+      path: "/resources/schools"
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
@@ -37,7 +34,7 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
       description: "Information for young people interested in participating in research or accessing support resources.",
       color: "#2D6AA3",
       resources: ["Participation Info", "Support Resources", "FAQs", "Contact Information"],
-      page: "resources-participants"
+      path: "/resources/participants"
     }
   ];
 
@@ -81,14 +78,14 @@ const Resources = ({ setCurrentPage }: ResourcesProps) => {
               </p>
 
               {/* CTA Button */}
-              <button 
-                onClick={() => setCurrentPage(audience.page)}
+              <Link
+                to={audience.path}
                 className="w-full text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center hover:shadow-lg"
                 style={{ backgroundColor: audience.color }}
               >
                 Explore Resources
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
+              </Link>
             </div>
           ))}
         </div>
