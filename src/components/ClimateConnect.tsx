@@ -127,8 +127,10 @@ const DeckStack = ({
           <div
             key={depth}
             aria-hidden="true"
-            className="absolute inset-0 rounded-xl bg-gray-50 border border-gray-300 shadow-md"
-            style={{ transform: `translate(${depth * 9}px, ${depth * 9}px)` }}
+            className="absolute inset-0 rounded-xl bg-gray-50 border border-gray-300 shadow-sm"
+            // Offset mostly sideways: a deep vertical offset puts the lowest
+            // edge, and its shadow, right on top of the card's title.
+            style={{ transform: `translate(${depth * 10}px, ${depth * 5}px)` }}
           />
         );
       })}
@@ -833,7 +835,7 @@ const ClimateConnect = () => {
 
                     {/* Fronts are identical within a deck, so name the card. The
                         counter below carries the position, so this does not repeat it. */}
-                    <span className="block mt-3 lg:mt-5 text-sm lg:text-base font-medium text-gray-600">
+                    <span className="relative block mt-3 lg:mt-5 text-sm lg:text-base font-medium text-gray-600">
                       <span className="text-gray-400">{themeLabel(card.theme)}: </span>
                       {card.title}
                     </span>
