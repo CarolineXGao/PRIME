@@ -272,6 +272,17 @@ const ClimateConnect = () => {
   const goNext = useCallback(() => goToCard(currentIndex + 1), [goToCard, currentIndex]);
 
   /**
+   * Switching between the deck and the flat lay changes the page's length by a
+   * factor of twenty, so whatever you were scrolled to no longer exists. Jump to
+   * the top rather than leaving the visitor somewhere arbitrary — instantly,
+   * because smooth-scrolling 30,000px is not a nicety.
+   */
+  const showFlatLay = (open: boolean) => {
+    setFlatLay(open);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  };
+
+  /**
    * Picking a card out of the flat lay. It was the activity side that was on
    * show there, so the card opens on that same side rather than making the
    * visitor flip it again to get back to what they just chose.
@@ -284,7 +295,7 @@ const ClimateConnect = () => {
     setDrag(0);
     setCardIndex(index);
     setFlipped(new Set([chosen.id]));
-    setFlatLay(false);
+    showFlatLay(false);
   };
 
   /** For a visitor who does not know where to start: cut the deck at random. */
@@ -305,7 +316,7 @@ const ClimateConnect = () => {
       }
       // The flat lay has no current card, so there is nothing to step through.
       if (flatLay) {
-        if (event.key === 'Escape') setFlatLay(false);
+        if (event.key === 'Escape') showFlatLay(false);
         return;
       }
       if (event.key === 'ArrowLeft') goPrev();
@@ -645,15 +656,34 @@ const ClimateConnect = () => {
 
             {flatLay ? (
               <>
-                <p className="text-center text-sm text-gray-500 mb-5 flex items-center justify-center gap-2">
-                  <Layers className="w-4 h-4" aria-hidden="true" />
-                  The whole deck, face up — tap any card to open it
-                </p>
+                {/* The flat lay runs to 36 screens on a phone, so the way out has
+                    to travel with you. It sticks under the site header, and carries
+                    the count and the hint that used to sit above and below the grid,
+                    so it costs no height of its own. */}
+                <div className="sticky top-16 z-20 mb-6 bg-white border-y border-gray-200">
+                  <div className="flex items-center justify-between gap-4 py-3">
+                    <p className="flex items-center gap-2 min-w-0 text-sm text-gray-500">
+                      <Layers className="w-4 h-4 shrink-0" aria-hidden="true" />
+                      <span className="truncate">
+                        <span className="tabular-nums">{deck.length}</span> cards
+                        <span className="hidden sm:inline"> · tap any card to open it</span>
+                      </span>
+                    </p>
+
+                    <button
+                      onClick={() => showFlatLay(false)}
+                      className="shrink-0 flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-gray-200 text-sm font-semibold text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D]"
+                    >
+                      <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+                      Back to the deck
+                    </button>
+                  </div>
+                </div>
 
                 {/* One column on a phone, three at most anywhere: a tile much
                     smaller than the single-card view cannot be read, and an
                     unreadable flat lay is not worth laying out. */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mb-2">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
                   {deck.map((flat, index) => (
                     <li key={flat.id}>
                       <button
@@ -678,10 +708,6 @@ const ClimateConnect = () => {
                     </li>
                   ))}
                 </ul>
-
-                <p className="text-center text-sm text-gray-500 mb-6 tabular-nums">
-                  {deck.length} cards
-                </p>
               </>
             ) : (
               <>
@@ -867,13 +893,12 @@ const ClimateConnect = () => {
                   <ChevronRight className="w-6 h-6" />
                 </button>
               </div>
-              </>
-            )}
 
-            {/* Below the pager rather than in it: these are ways into the deck,
-                not more ways of stepping through it. */}
-            <div className="flex flex-wrap justify-center gap-3 mt-6">
-              {!flatLay && (
+              {/* Below the pager rather than in it: these are ways into the deck,
+                  not more ways of stepping through it. The way back out lives at
+                  the top of the flat lay instead, because that page is 36 screens
+                  long and this one is barely two. */}
+              <div className="flex flex-wrap justify-center gap-3 mt-6">
                 <button
                   onClick={shuffle}
                   disabled={deck.length < 2}
@@ -882,26 +907,18 @@ const ClimateConnect = () => {
                   <Shuffle className="w-4 h-4" aria-hidden="true" />
                   Shuffle
                 </button>
-              )}
 
-              <button
-                onClick={() => setFlatLay((open) => !open)}
-                aria-pressed={flatLay}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-gray-200 font-semibold text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D]"
-              >
-                {flatLay ? (
-                  <>
-                    <Layers className="w-4 h-4" aria-hidden="true" />
-                    Back to the deck
-                  </>
-                ) : (
-                  <>
-                    <Grid3x3 className="w-4 h-4" aria-hidden="true" />
-                    See all cards
-                  </>
-                )}
-              </button>
-            </div>
+                <button
+                  onClick={() => showFlatLay(true)}
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-gray-200 font-semibold text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D]"
+                >
+                  <Grid3x3 className="w-4 h-4" aria-hidden="true" />
+                  See all cards
+                </button>
+              </div>
+              </>
+            )}
+
           </>
         )}
       </div>
