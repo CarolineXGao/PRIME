@@ -10,7 +10,7 @@ const Interventions = () => {
 
   const interventions = [
     {
-      title: "My Climate Journey Badges",
+      title: "The Climate Change Feeling-Thinking-Behaviour Archetypes",
       description: "Digital communication tool that describes diverse archetypes of how young people feel, think, and act in response to climate change, helping foster reflection, inclusion, and understanding across youth audiences.",
       type: "Digital Tool",
       status: "Available",
