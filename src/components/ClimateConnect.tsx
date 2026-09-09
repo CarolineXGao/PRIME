@@ -8,6 +8,8 @@ import {
   Grid3x3,
   ImageIcon,
   Layers,
+  MessageSquare,
+  RotateCcw,
   RotateCw,
   Shuffle,
 } from 'lucide-react';
@@ -17,9 +19,20 @@ import {
   climateConnectCards,
   climateConnectCover,
   climateConnectNotes,
+  climateConnectSurvey,
+  cardLabel,
   getAltText,
-  themeLabel,
 } from '../data/climateConnectCards';
+import type {
+  ClimateConnectCard,
+  ClimateConnectNote,
+} from '../data/climateConnectCards';
+
+/**
+ * Once the deck is open the letter has been read or skipped, so only the
+ * acknowledgements follow the visitor to the foot of the page.
+ */
+const DECK_OPEN_NOTES = climateConnectNotes.filter((note) => note.id !== 'letter');
 
 /** A swipe must travel this far, and be more horizontal than vertical, to turn the page. */
 const SWIPE_THRESHOLD = 50;
@@ -39,10 +52,58 @@ const OVERSCROLL_DAMPING = 4;
  * and pager. It is larger on a phone, where the deck has to fit on one screen
  * together with its instructions, and smaller from `lg` up, where there is height
  * to spare.
+ *
+ * The `max(...)` floor is what governs on a short phone: below it the card would
+ * shrink past the point where its own body copy can be read, so it holds its
+ * width and lets the page scroll instead.
  */
 const CARD_BOX =
-  'max-w-[min(100%,max(15rem,calc((100svh-27rem)*312/510)))] ' +
-  'lg:max-w-[min(32rem,calc((100svh-17rem)*312/510))]';
+  'max-w-[min(100%,max(17rem,calc((100svh-25rem)*312/510)))] ' +
+  'lg:max-w-[min(34rem,calc((100svh-17rem)*312/510))]';
+
+/** The cards a theme selection shows, in the order the deck was printed in. */
+const cardsForThemes = (themes: Set<string>) =>
+  themes.size === 0
+    ? climateConnectCards
+    : climateConnectCards.filter((card) => themes.has(card.theme));
+
+/**
+ * Fisher-Yates over the activities alone. Every order is equally likely, and
+ * because it only swaps positions no card is lost or dealt twice.
+ *
+ * A card with no theme is an invitation, not an activity: it has a fixed seat
+ * at the head of the printed deck, and dealing it into a random position would
+ * be shuffling in a different kind of thing. So a shuffle leaves it out
+ * entirely — 45 cards while Shuffle is on, 46 again once it is switched off.
+ */
+const shuffleIds = (cards: ClimateConnectCard[]) => {
+  const ids = cards.filter((card) => card.theme).map((card) => card.id);
+  for (let i = ids.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [ids[i], ids[j]] = [ids[j], ids[i]];
+  }
+  return ids;
+};
+
+/**
+ * Shuffle, See all and Start over have to fit one phone row together, so they
+ * are sized down below `sm` and only reach their full padding on a wider screen.
+ */
+const DECK_ACTION =
+  'inline-flex items-center gap-1.5 px-2.5 py-2 text-sm rounded-lg border-2 font-semibold ' +
+  'transition-all duration-200 sm:gap-2 sm:px-5 sm:py-2.5 sm:text-base';
+
+/** Resting state for all three. */
+const DECK_ACTION_IDLE =
+  ' border-gray-200 text-gray-700 hover:border-[#F4B43D] hover:text-[#F4B43D]';
+
+/** Shuffle is a mode, so it lights up the way a selected theme chip does. */
+const DECK_ACTION_ON = ' bg-[#F4B43D] border-[#F4B43D] text-gray-900';
+
+/** Shuffle is also the only one of the three that can be unavailable. */
+const DECK_ACTION_DISABLED =
+  ' disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 ' +
+  'disabled:hover:text-gray-700';
 
 /** How far off the deck a card sits, as a fraction of its width. Matches the keyframes. */
 const OFF_DECK = 1.18;
@@ -158,6 +219,127 @@ const DeckStack = ({
   );
 };
 
+/**
+ * The deck's front matter, lifted out of the cards. Closed it costs one
+ * line, which is what keeps the card itself on screen on a phone.
+ *
+ * Which note is open is the caller's to hold: the notes move down the page
+ * when the deck opens, and that move has to close them.
+ */
+const FrontMatterNotes = ({
+  notes,
+  className,
+  openNote,
+  onToggle,
+}: {
+  notes: ClimateConnectNote[];
+  className: string;
+  openNote: string | null;
+  onToggle: (noteId: string | null) => void;
+}) => {
+  return (
+    <div className={`max-w-2xl mx-auto ${className}`}>
+      <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        {notes.map((note) => {
+          const open = openNote === note.id;
+
+          return (
+            <button
+              key={note.id}
+              onClick={() => onToggle(open ? null : note.id)}
+              aria-expanded={open}
+              aria-controls={`note-${note.id}`}
+              className="flex items-center gap-1.5 text-sm font-semibold text-[#2D6AA3] hover:text-[#1e4d73] transition-colors"
+            >
+              {note.title}
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 motion-reduce:transition-none ${
+                  open ? 'rotate-180' : ''
+                }`}
+                aria-hidden="true"
+              />
+            </button>
+          );
+        })}
+      </div>
+
+      {notes.map((note) => (
+        <div
+          key={note.id}
+          id={`note-${note.id}`}
+          hidden={openNote !== note.id}
+          className="mt-5 text-left text-gray-600 leading-relaxed space-y-4 border-t border-gray-200 pt-5"
+        >
+          {note.blocks.map((block, index) => {
+            if (block.kind === 'action') {
+              return (
+                <a
+                  key={index}
+                  href={block.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={DECK_ACTION + DECK_ACTION_IDLE}
+                >
+                  <MessageSquare className="w-4 h-4" aria-hidden="true" />
+                  {block.label}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              );
+            }
+
+            if (block.kind === 'list') {
+              return (
+                <ul key={index} className="list-disc pl-5 space-y-1.5">
+                  {block.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              );
+            }
+
+            // Production credits stay small and muted; a letter sign-off
+            // opts into running-text size so it reads as part of the letter.
+            if (block.kind === 'credits') {
+              const body = block.tone === 'body';
+
+              return (
+                <p key={index} className={body ? undefined : 'text-sm text-gray-500'}>
+                  {block.lines.map((line) => (
+                    <span
+                      key={line.text}
+                      className={`block ${
+                        line.strong ? `font-semibold ${body ? 'text-gray-800' : 'text-gray-700'}` : ''
+                      } ${line.italic ? 'italic' : ''}`}
+                    >
+                      {line.text}
+                    </span>
+                  ))}
+                </p>
+              );
+            }
+
+            // The printed pages set some runs bold; keep that emphasis rather
+            // than flattening the whole note to one weight.
+            return (
+              <p key={index}>
+                {block.runs.map((run, runIndex) =>
+                  typeof run === 'string' ? (
+                    <React.Fragment key={runIndex}>{run}</React.Fragment>
+                  ) : (
+                    <strong key={runIndex} className="font-semibold text-gray-800">
+                      {run.strong}
+                    </strong>
+                  )
+                )}
+              </p>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const ClimateConnect = () => {
   const navigate = useNavigate();
   // React Router stamps 'default' on the first entry in the history stack, so a
@@ -177,6 +359,10 @@ const ClimateConnect = () => {
 
   // Multi-select: an empty selection means every deck is showing.
   const [activeThemes, setActiveThemes] = useState<Set<string>>(new Set());
+
+  // Shuffle is a mode, not a jump: this holds the whole deck in its shuffled
+  // order, by card id. Null means the deck is in its printed order.
+  const [shuffledIds, setShuffledIds] = useState<string[] | null>(null);
   const [cardIndex, setCardIndex] = useState(0);
   const [flipped, setFlipped] = useState<Set<string>>(new Set());
   const [missingImages, setMissingImages] = useState<Set<string>>(new Set());
@@ -220,10 +406,15 @@ const ClimateConnect = () => {
     setMissingImages((current) => (current.has(src) ? current : new Set(current).add(src)));
   }, []);
 
-  const deck =
-    activeThemes.size === 0
-      ? climateConnectCards
-      : climateConnectCards.filter((card) => activeThemes.has(card.theme));
+  const ordered = cardsForThemes(activeThemes);
+
+  // Everything downstream — the arrows, a swipe, the counter, the flat lay —
+  // reads this one list, so reordering it here is all that shuffling takes.
+  const deck = shuffledIds
+    ? shuffledIds
+        .map((id) => ordered.find((card) => card.id === id))
+        .filter((card): card is ClimateConnectCard => card !== undefined)
+    : ordered;
 
   // Clamp rather than store: narrowing the themes can shrink the deck out from under us.
   const currentIndex = Math.min(cardIndex, Math.max(deck.length - 1, 0));
@@ -298,20 +489,73 @@ const ClimateConnect = () => {
     showFlatLay(false);
   };
 
-  /** For a visitor who does not know where to start: cut the deck at random. */
-  const shuffle = useCallback(() => {
-    if (deck.length < 2) return;
-    let next = currentIndex;
-    while (next === currentIndex) next = Math.floor(Math.random() * deck.length);
-    // Always dealt, never returned: a random cut has no direction to mirror.
-    goToCard(next, 0, 'deal');
-  }, [deck.length, currentIndex, goToCard]);
+  /**
+   * Shuffle as a mode rather than a jump, and deliberately asymmetric.
+   *
+   * Turning it on re-deals: the deck is shuffled and the visitor is put at the
+   * top of it, which is what the counter dropping back to 1 tells them. Turning
+   * it off keeps their place instead — the card they are looking at has an id,
+   * and that id is where it sits in the printed order, so they carry on from
+   * the same card rather than being sent back to the start.
+   *
+   * Only the re-deal turns the card face down, and only because it is a
+   * different card: the deck's fronts are deliberately identical, so dealing
+   * one already turned over would give away what is about to be read. Turning
+   * shuffle off leaves the card, and therefore the side it is showing, alone.
+   */
+  const toggleShuffle = () => {
+    if (ordered.length < 2) return;
+
+    if (shuffledIds) {
+      const staying = card?.id;
+      setShuffledIds(null);
+      setCardIndex(Math.max(staying ? ordered.findIndex((one) => one.id === staying) : 0, 0));
+      return;
+    }
+
+    setShuffledIds(shuffleIds(ordered));
+    setCardIndex(0);
+    setFlipped(new Set());
+  };
+
+  /**
+   * The only way into the deck. Opening it moves the front matter to the foot
+   * of the page, so whatever the visitor left open on the cover is closed here
+   * rather than reappearing somewhere else already expanded.
+   */
+  const openDeck = useCallback(() => {
+    setDeckOpen(true);
+    setOpenNote(null);
+  }, []);
+
+  /**
+   * The way back out, and the mirror of openDeck: everything the visitor did
+   * inside the deck is undone, so the cover they land on is the one they first
+   * arrived at. Timers are cleared first — a card in flight would otherwise
+   * land on a deck that is no longer open. The missing-image cache is the one
+   * thing kept, because a broken file does not un-break itself.
+   */
+  const startOver = useCallback(() => {
+    window.clearTimeout(moveTimer.current);
+    window.clearTimeout(settleTimer.current);
+    setMoving(null);
+    setSettling(false);
+    setDrag(0);
+    setFlipped(new Set());
+    setCardIndex(0);
+    setActiveThemes(new Set());
+    setShuffledIds(null);
+    setOpenNote(null);
+    setFlatLay(false);
+    setDeckOpen(false);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       // On the cover there is nowhere to page to — the right arrow opens the deck.
       if (!deckOpen) {
-        if (event.key === 'ArrowRight') setDeckOpen(true);
+        if (event.key === 'ArrowRight') openDeck();
         return;
       }
       // The flat lay has no current card, so there is nothing to step through.
@@ -325,24 +569,27 @@ const ClimateConnect = () => {
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [goPrev, goNext, deckOpen, flatLay]);
+  }, [goPrev, goNext, deckOpen, flatLay, openDeck]);
+
+  /**
+   * Changing the themes changes which cards are in the deck, so a shuffle made
+   * for the old selection no longer describes it — deal a fresh one.
+   */
+  const applyThemes = (next: Set<string>) => {
+    setActiveThemes(next);
+    if (shuffledIds) setShuffledIds(shuffleIds(cardsForThemes(next)));
+    setCardIndex(0);
+    setFlipped(new Set());
+  };
 
   const toggleTheme = (themeId: string) => {
-    setActiveThemes((current) => {
-      const next = new Set(current);
-      if (next.has(themeId)) next.delete(themeId);
-      else next.add(themeId);
-      return next;
-    });
-    setCardIndex(0);
-    setFlipped(new Set());
+    const next = new Set(activeThemes);
+    if (next.has(themeId)) next.delete(themeId);
+    else next.add(themeId);
+    applyThemes(next);
   };
 
-  const clearThemes = () => {
-    setActiveThemes(new Set());
-    setCardIndex(0);
-    setFlipped(new Set());
-  };
+  const clearThemes = () => applyThemes(new Set());
 
   const toggleFlip = (cardId: string) => {
     setFlipped((current) => {
@@ -473,7 +720,15 @@ const ClimateConnect = () => {
 
         {/* Header */}
         <div className="text-center mb-3 lg:mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-6">
+          {/* Once the deck is open the title is out of the way, but it stays in
+              the document as the page's only heading. */}
+          <h2
+            className={
+              deckOpen
+                ? 'sr-only'
+                : 'text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 lg:mb-6'
+            }
+          >
             Climate Connect
           </h2>
           {climateConnectIntro && (
@@ -483,92 +738,22 @@ const ClimateConnect = () => {
           )}
         </div>
 
-        {/* The deck's front matter, lifted out of the cards. Closed it costs one
-            line, which is what keeps the card itself on screen on a phone. */}
-        <div className="max-w-2xl mx-auto mb-3 lg:mb-8">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            {climateConnectNotes.map((note) => {
-              const open = openNote === note.id;
-
-              return (
-                <button
-                  key={note.id}
-                  onClick={() => setOpenNote(open ? null : note.id)}
-                  aria-expanded={open}
-                  aria-controls={`note-${note.id}`}
-                  className="flex items-center gap-1.5 text-sm font-semibold text-[#2D6AA3] hover:text-[#1e4d73] transition-colors"
-                >
-                  {note.title}
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 motion-reduce:transition-none ${
-                      open ? 'rotate-180' : ''
-                    }`}
-                    aria-hidden="true"
-                  />
-                </button>
-              );
-            })}
-          </div>
-
-          {climateConnectNotes.map((note) => (
-            <div
-              key={note.id}
-              id={`note-${note.id}`}
-              hidden={openNote !== note.id}
-              className="mt-5 text-left text-gray-600 leading-relaxed space-y-4 border-t border-gray-200 pt-5"
-            >
-              {note.blocks.map((block, index) => {
-                if (block.kind === 'list') {
-                  return (
-                    <ul key={index} className="list-disc pl-5 space-y-1.5">
-                      {block.items.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  );
-                }
-
-                if (block.kind === 'credits') {
-                  return (
-                    <p key={index} className="text-sm text-gray-500">
-                      {block.lines.map((line) => (
-                        <span
-                          key={line.text}
-                          className={`block ${line.strong ? 'font-semibold text-gray-700' : ''}`}
-                        >
-                          {line.text}
-                        </span>
-                      ))}
-                    </p>
-                  );
-                }
-
-                // The printed pages set some runs bold; keep that emphasis rather
-                // than flattening the whole note to one weight.
-                return (
-                  <p key={index}>
-                    {block.runs.map((run, runIndex) =>
-                      typeof run === 'string' ? (
-                        <React.Fragment key={runIndex}>{run}</React.Fragment>
-                      ) : (
-                        <strong key={runIndex} className="font-semibold text-gray-800">
-                          {run.strong}
-                        </strong>
-                      )
-                    )}
-                  </p>
-                );
-              })}
-            </div>
-          ))}
-        </div>
+        {/* Before the deck is opened both notes sit under the title. */}
+        {!deckOpen && (
+          <FrontMatterNotes
+            notes={climateConnectNotes}
+            className="mb-3 lg:mb-8"
+            openNote={openNote}
+            onToggle={setOpenNote}
+          />
+        )}
 
         {!deckOpen ? (
           /* Cover — the plain deck card the visitor lands on. Nothing else is on
              screen yet: no themes, no pager, just the deck waiting to be opened. */
           <div className={`mx-auto ${CARD_BOX}`}>
             <button
-              onClick={() => setDeckOpen(true)}
+              onClick={openDeck}
               aria-label="Open the Climate Connect deck"
               className="group w-full rounded-xl transition-transform duration-200 hover:-translate-y-1 focus:outline-none"
             >
@@ -587,15 +772,30 @@ const ClimateConnect = () => {
 
             <p className="text-center text-sm text-gray-500 mt-4 lg:mt-6 flex items-center justify-center gap-2">
               <Layers className="w-4 h-4" aria-hidden="true" />
-              Tap the deck to open it
+              Tap the deck to open
             </p>
+
+            {/* The survey also closes the acknowledgements, but a visitor who
+                never opens the deck would never reach it there. */}
+            <div className="mt-4 lg:mt-6 flex justify-center">
+              <a
+                href={climateConnectSurvey}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={DECK_ACTION + DECK_ACTION_IDLE}
+              >
+                <MessageSquare className="w-4 h-4" aria-hidden="true" />
+                Share your thoughts
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
           </div>
         ) : (
           <>
             {/* Deck selector — themes combine, so several decks can be shown at once */}
             <div className="mb-5 lg:mb-8">
               <div
-                className="flex gap-2 sm:gap-3 overflow-x-auto px-4 -mx-4 pb-1 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:mx-0 sm:pb-0"
+                className="flex flex-wrap justify-center gap-2 sm:gap-3"
                 role="group"
                 aria-label="Filter cards by theme. Themes combine, and All clears the filter."
               >
@@ -604,7 +804,7 @@ const ClimateConnect = () => {
                 <button
                   onClick={clearThemes}
                   aria-pressed={activeThemes.size === 0}
-                  className={`shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold tracking-wide border-2 transition-all duration-200 ${
+                  className={`shrink-0 px-3 py-1.5 text-sm sm:px-5 sm:py-2.5 sm:text-base rounded-lg font-semibold tracking-wide border-2 transition-all duration-200 ${
                     activeThemes.size === 0
                       ? 'bg-[#F4B43D] border-[#F4B43D] text-gray-900'
                       : 'bg-gray-50 border-gray-200 text-gray-700 hover:border-[#F4B43D]'
@@ -621,7 +821,7 @@ const ClimateConnect = () => {
                       key={theme.id}
                       onClick={() => toggleTheme(theme.id)}
                       aria-pressed={selected}
-                      className={`shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold tracking-wide border-2 transition-all duration-200 ${
+                      className={`shrink-0 px-3 py-1.5 text-sm sm:px-5 sm:py-2.5 sm:text-base rounded-lg font-semibold tracking-wide border-2 transition-all duration-200 ${
                         selected
                           ? 'bg-[#F4B43D] border-[#F4B43D] text-gray-900'
                           : 'bg-gray-50 border-gray-200 text-gray-700 hover:border-[#F4B43D]'
@@ -637,7 +837,7 @@ const ClimateConnect = () => {
                   line stays out of the way — which is also the room item 10 needs. */}
               {activeThemes.size > 0 && (
                 <p className="text-center text-sm text-gray-500 mt-3">
-                  Themes combine — showing {activeThemes.size} of {climateConnectThemes.length} decks
+                  Showing {activeThemes.size} of {climateConnectThemes.length} themes
                 </p>
               )}
 
@@ -680,15 +880,16 @@ const ClimateConnect = () => {
                   </div>
                 </div>
 
-                {/* One column on a phone, three at most anywhere: a tile much
-                    smaller than the single-card view cannot be read, and an
-                    unreadable flat lay is not worth laying out. */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+                {/* A gallery, so the point is seeing cards together: two across
+                    even on a phone. The tiles keep the card's own 312x510 shape
+                    rather than being cropped square — a card is recognised by its
+                    proportions as much as its picture. */}
+                <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
                   {deck.map((flat, index) => (
                     <li key={flat.id}>
                       <button
                         onClick={() => openFromFlatLay(index)}
-                        aria-label={`Open ${themeLabel(flat.theme)}: ${flat.title}`}
+                        aria-label={`Open ${cardLabel(flat)}`}
                         className="group w-full text-left focus:outline-none"
                       >
                         <div className="w-full aspect-[312/510] rounded-xl shadow-md transition-transform duration-200 group-hover:-translate-y-1 motion-reduce:transition-none group-focus-visible:ring-2 group-focus-visible:ring-[#F4B43D] group-focus-visible:ring-offset-2">
@@ -700,10 +901,6 @@ const ClimateConnect = () => {
                             onMissing={markMissing}
                           />
                         </div>
-                        <p className="mt-3 text-sm font-medium text-gray-600 leading-snug">
-                          <span className="text-gray-400">{themeLabel(flat.theme)}: </span>
-                          {flat.title}
-                        </p>
                       </button>
                     </li>
                   ))}
@@ -713,11 +910,18 @@ const ClimateConnect = () => {
               <>
               {/* How to use the deck, above the card — it is an instruction to read
                   before touching anything, not a caption on what just happened. */}
-              <p className="text-center text-sm text-gray-500 mb-3 lg:mb-5 flex items-center justify-center gap-2">
-                <RotateCw className="w-4 h-4" aria-hidden="true" />
-                Tap a card to flip it
-                <span className="hidden sm:inline">· swipe or use the arrows to move through the deck</span>
-                <span className="sm:hidden">· swipe to move through the deck</span>
+              {/* Deliberately not a flex row: as flex items the icon and the two
+                  spans wrap independently, which on a phone splits one sentence
+                  into two narrow columns. Inline keeps it a single sentence that
+                  breaks wherever it runs out of room. */}
+              <p className="text-center text-xs text-gray-500 mb-3 lg:mb-5">
+                <RotateCw
+                  className="inline-block align-[-0.2em] w-3.5 h-3.5 mr-1.5"
+                  aria-hidden="true"
+                />
+                Tap to flip
+                <span className="hidden sm:inline"> · Swipe or use the arrows for next</span>
+                <span className="sm:hidden"> · Swipe for next</span>
               </p>
 
               {/* Card — one at a time, tap to flip, swipe to move through the deck */}
@@ -808,7 +1012,7 @@ const ClimateConnect = () => {
                     key={card.id}
                     onClick={() => onCardClick(card.id)}
                     aria-pressed={flipped.has(card.id)}
-                    aria-label={`${themeLabel(card.theme)}: ${card.title} — showing the ${
+                    aria-label={`${cardLabel(card)} — showing the ${
                       flipped.has(card.id) ? 'activity' : 'illustration'
                     }. Activate to flip.`}
                     className="group w-full [perspective:1200px] focus:outline-none rounded-xl"
@@ -849,7 +1053,7 @@ const ClimateConnect = () => {
                             src={card.back}
                             alt={getAltText(
                               `${card.id}-back`,
-                              `${themeLabel(card.theme)}: ${card.title} — the activity on the back of the card`
+                              `${cardLabel(card)} — the activity on the back of the card`
                             )}
                             label={`${card.id}-back.webp`}
                             missing={missingImages.has(card.back)}
@@ -859,25 +1063,19 @@ const ClimateConnect = () => {
                       </div>
                     </DeckStack>
 
-                    {/* Fronts are identical within a deck, so name the card. The
-                        counter below carries the position, so this does not repeat it. */}
-                    <span className="relative block mt-3 lg:mt-5 text-sm lg:text-base font-medium text-gray-600">
-                      <span className="text-gray-400">{themeLabel(card.theme)}: </span>
-                      {card.title}
-                    </span>
                   </button>
                 )}
               </div>
 
               {/* Deck Controls */}
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex items-center justify-center gap-4 sm:gap-6">
                 <button
                   onClick={goPrev}
                   disabled={atStart}
                   aria-label="Previous card"
-                  className="w-12 h-12 rounded-lg border-2 border-gray-200 flex items-center justify-center text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-700"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-gray-200 flex items-center justify-center text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-700"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
 
                 <p className="text-gray-600 font-medium tabular-nums" aria-live="polite">
@@ -888,9 +1086,9 @@ const ClimateConnect = () => {
                   onClick={goNext}
                   disabled={atEnd}
                   aria-label="Next card"
-                  className="w-12 h-12 rounded-lg border-2 border-gray-200 flex items-center justify-center text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-700"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-gray-200 flex items-center justify-center text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-700"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
 
@@ -898,11 +1096,16 @@ const ClimateConnect = () => {
                   not more ways of stepping through it. The way back out lives at
                   the top of the flat lay instead, because that page is 36 screens
                   long and this one is barely two. */}
-              <div className="flex flex-wrap justify-center gap-3 mt-6">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6">
                 <button
-                  onClick={shuffle}
+                  onClick={toggleShuffle}
                   disabled={deck.length < 2}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-gray-200 font-semibold text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D] disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:text-gray-700"
+                  aria-pressed={shuffledIds !== null}
+                  className={
+                    DECK_ACTION +
+                    (shuffledIds ? DECK_ACTION_ON : DECK_ACTION_IDLE) +
+                    DECK_ACTION_DISABLED
+                  }
                 >
                   <Shuffle className="w-4 h-4" aria-hidden="true" />
                   Shuffle
@@ -910,16 +1113,35 @@ const ClimateConnect = () => {
 
                 <button
                   onClick={() => showFlatLay(true)}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-gray-200 font-semibold text-gray-700 transition-all duration-200 hover:border-[#F4B43D] hover:text-[#F4B43D]"
+                  className={DECK_ACTION + DECK_ACTION_IDLE}
                 >
                   <Grid3x3 className="w-4 h-4" aria-hidden="true" />
-                  See all cards
+                  See all
+                </button>
+
+                <button
+                  onClick={startOver}
+                  className={DECK_ACTION + DECK_ACTION_IDLE}
+                >
+                  <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                  Start over
                 </button>
               </div>
               </>
             )}
 
           </>
+        )}
+
+        {/* An opened deck sends the acknowledgements to the foot of the page,
+            out of the way of the cards but still reachable. */}
+        {deckOpen && (
+          <FrontMatterNotes
+            notes={DECK_OPEN_NOTES}
+            className="mt-8 lg:mt-12"
+            openNote={openNote}
+            onToggle={setOpenNote}
+          />
         )}
       </div>
     </section>

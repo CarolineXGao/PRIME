@@ -75,6 +75,7 @@ export interface ClimateConnectTheme {
 export interface ClimateConnectCard {
   /** e.g. 'ACT-01' */
   id: string;
+  /** The chip that shows this card. Empty for a card that belongs to no theme. */
   theme: string;
   /** 1-based position within its deck. */
   number: number;
@@ -87,6 +88,13 @@ export interface ClimateConnectCard {
 }
 
 const IMAGE_DIR = '/Images/ClimateConnect';
+
+/**
+ * The deck's feedback survey. Sam sent this through Orygen's mail gateway, so
+ * the link she pasted was a per-recipient mimecastprotect.com wrapper — that
+ * one expires and tracks the recipient. This is the address it resolves to.
+ */
+export const climateConnectSurvey = 'https://forms.cloud.microsoft/r/Wd9stNyUUH';
 
 /** Page intro. Left empty until real copy arrives — nothing renders while it is blank. */
 export const climateConnectIntro = '';
@@ -183,6 +191,10 @@ export const climateConnectThemes: ClimateConnectTheme[] = [
 export const themeLabel = (themeId: string): string =>
   themeId.charAt(0) + themeId.slice(1).toLowerCase();
 
+/** 'Explore: Mapping My Influences', or just the title for a card with no theme. */
+export const cardLabel = (card: ClimateConnectCard): string =>
+  card.theme ? `${themeLabel(card.theme)}: ${card.title}` : card.title;
+
 /** Real alt text, keyed by image id (e.g. 'ACT-01-front'). Empty until supplied. */
 export const altText: Record<string, string> = {};
 
@@ -208,8 +220,32 @@ const buildDeck = (theme: ClimateConnectTheme): ClimateConnectCard[] =>
     };
   });
 
-export const climateConnectCards: ClimateConnectCard[] =
-  climateConnectThemes.flatMap(buildDeck);
+/**
+ * An invitation rather than an activity, so it belongs to no theme. An empty
+ * `theme` is what keeps it out of every chip: a filtered deck matches cards by
+ * theme id and this one can never match, so it surfaces only under All.
+ *
+ * It has no illustrated front of its own — it borrows the deck cover, so face
+ * down it is indistinguishable from any other card, which is the point.
+ *
+ * It leads the deck rather than closing it, so an unfiltered deck opens on the
+ * invitation to make your own, and it sits out a shuffle rather than being
+ * dealt into a random position. Both are Harry's calls, still to be confirmed
+ * with Sam: her note asked only that the card exist and be limited to All.
+ */
+export const buildYourOwnCard: ClimateConnectCard = {
+  id: 'BUILD-YOUR-OWN',
+  theme: '',
+  number: 1,
+  title: 'Build Your Own Activity',
+  front: climateConnectCover,
+  back: `${IMAGE_DIR}/_extras/build-your-own-activity.webp`,
+};
+
+export const climateConnectCards: ClimateConnectCard[] = [
+  buildYourOwnCard,
+  ...climateConnectThemes.flatMap(buildDeck),
+];
 
 /* ───────────────────────────────────────────────────────────────────────────
  * FRONT MATTER
@@ -232,8 +268,17 @@ export type NoteRun = string | { strong: string };
 export type NoteBlock =
   | { kind: 'paragraph'; runs: NoteRun[] }
   | { kind: 'list'; items: string[] }
-  /** Name-per-line credits, set tighter than running text. */
-  | { kind: 'credits'; lines: { text: string; strong?: boolean }[] };
+  /** A call to action closing a note, rendered as a button-shaped link. */
+  | { kind: 'action'; href: string; label: string }
+  /**
+   * Name-per-line block. Defaults to the small, muted setting the production
+   * credits want; `tone: 'body'` keeps a letter sign-off at running-text size.
+   */
+  | {
+      kind: 'credits';
+      tone?: 'body' | 'meta';
+      lines: { text: string; strong?: boolean; italic?: boolean }[];
+    };
 
 export interface ClimateConnectNote {
   id: string;
@@ -251,59 +296,48 @@ export const climateConnectNotes: ClimateConnectNote[] = [
         runs: [
           {
             strong:
-              'Whether you’re feeling worried about climate change, supporting someone else, or simply curious to learn more, welcome.',
+              'Whether you’re feeling worried about climate change, supporting someone else, or simply curious, welcome.',
           },
         ],
       },
       {
         kind: 'paragraph',
         runs: [
-          'Climate Connect is here to help you explore the many thoughts and feelings that climate change can bring, from distress and frustration to curiosity and hope.',
+          'Climate change can bring many thoughts and feelings, from distress and frustration to curiosity and hope. That’s why young people with different identities, backgrounds and experiences came together to create Climate Connect, a space to:',
         ],
       },
-      {
-        kind: 'paragraph',
-        runs: [
-          'These feelings are more common than you might think: we feel them too! That’s why we came together to create something supportive, practical, and a little different. Climate Connect was co-designed by young people from a range of backgrounds, cultures, genders, and lived experiences to create a space that is reflective, non-judgemental, and engaging.',
-        ],
-      },
-      {
-        kind: 'paragraph',
-        runs: [
-          'Instead of another workbook, we chose playing cards. They offer a fun, flexible way to learn, reflect, and connect, whether you’re on your own or with friends, family, or a community group.',
-        ],
-      },
-      { kind: 'paragraph', runs: ['The deck is organised into five themes:'] },
       {
         kind: 'list',
         items: [
           'Explore: Discover your values, strengths, and what matters most to you',
-          'Care: Build emotional awareness, coping skills, and wellbeing.',
-          'Connect: Strengthen communication, empathy, and supporting others.',
-          'Belong: Deepen your connection with nature and the world around you.',
-          'Act: Turn your values and ideas into meaningful action.',
+          'Care: Build emotional awareness, coping skills, and wellbeing',
+          'Connect: Strengthen communication, empathy, and supporting others',
+          'Belong: Deepen your connection with nature and the world around you',
+          'Act: Turn your values and ideas into meaningful action',
         ],
       },
       {
         kind: 'paragraph',
         runs: [
-          'There is no right way to use these cards. Pick the activities that speak to you, take your time, and return whenever you need them. Think of it as a choose-your-own-adventure!',
+          'There’s no right way to use these cards. Choose what feels useful, skip what doesn’t, use them on your own or with others, and come back whenever you like.',
         ],
       },
       {
         kind: 'paragraph',
         runs: [
-          'We hope they help you better understand yourself, connect with others and nature, and discover meaningful ways to respond to climate change — ',
+          'We hope they help you connect with yourself, others, and the world around you — and find meaningful ways to respond to climate change, ',
           { strong: 'one card at a time.' },
         ],
       },
       {
         kind: 'credits',
+        tone: 'body',
         lines: [
           { text: 'Sincerely,' },
-          { text: 'PRIME and the Codesign Team', strong: true },
+          { text: 'PRIME and the Co-design Team', strong: true },
           {
-            text: 'Platform for Research and Interventions in Youth Mental health and the Environment',
+            text: 'Platform for Research and Interventions in Youth Mental Health and the Environment',
+            italic: true,
           },
         ],
       },
@@ -320,33 +354,39 @@ export const climateConnectNotes: ClimateConnectNote[] = [
             strong:
               'PRIME (Platform for Research and Intervention in Youth Mental Health) is an initiative that supports young people’s mental health and wellbeing in a changing climate.',
           },
+          ' It is led by A/Prof Caroline Gao and A/Prof Rebecca Patrick from the University of Melbourne and Orygen, Australia.',
         ],
       },
       {
         kind: 'paragraph',
         runs: [
-          'It is led by A/Prof Caroline Gao and A/Prof Rebecca Patrick from the University of Melbourne and Orygen Australia. PRIME is funded by the Australian Government through the National Health and Medical Research Council (NHMRC, Grant No. 2039730).',
+          'Climate Connect is part of the PRIME Climate & Wellbeing Hub, led by Samantha Julia L. Eala. We thank Dr Hasini Gunasiri, Dr Jana Menssink, Sunny Nguyen, and the wider PRIME team for their support.',
         ],
       },
       {
         kind: 'paragraph',
         runs: [
-          'Climate Connect is part of the PRIME Climate & Wellbeing Hub, directed by Samantha Julia L. Eala and Dr Hasini Gunasiri. We also thank Dr Jana Menssink, Sunny Nguyen, Neerja Singh, and the wider PRIME team for their support.',
-        ],
-      },
-      {
-        kind: 'paragraph',
-        runs: [
-          'Importantly, we thank our youth co-designers, whose ideas, experiences, and creativity shaped Climate Connect: Elly Lau, Nimisha Kulkarni, Skylar Klease, Chris Hatano, Ashana Mcgregor, Neerja Singh, Ezra Burnett, Janeeta Molla, Chloe Boric, Mannuo Zhu, and Fiona Jiang.',
+          'This deck was co-designed with young people, whose ideas, experiences, and creativity shaped Climate Connect: Elly Lau, Nimisha Kulkarni, Skylar Klease, Chris Hatano, Ashana Mcgregor, Neerja Singh, Ezra Burnett, Janeeta Molla, Chloe Boric, Mannuo Zhu, and Fiona Jiang.',
         ],
       },
       {
         kind: 'credits',
         lines: [
-          { text: 'Illustrations: Paola Santos' },
           { text: 'Design, layout, and editing: Samantha Julia L. Eala' },
           { text: 'Web design and development: Harry He' },
+          { text: 'Illustrations: Paola Santos' },
         ],
+      },
+      {
+        kind: 'paragraph',
+        runs: [
+          'PRIME is funded by the Australian Government through the National Health and Medical Research Council (NHMRC, Grant No. 2039730).',
+        ],
+      },
+      {
+        kind: 'action',
+        href: climateConnectSurvey,
+        label: 'Share your thoughts',
       },
     ],
   },

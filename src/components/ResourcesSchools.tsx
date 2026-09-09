@@ -53,7 +53,7 @@ const ResourcesSchools = () => {
     {
       icon: <Layers className="w-6 h-6" />,
       title: "Climate Connect",
-      description: "Card decks for classrooms and youth groups, across five themes: EXPLORE, CARE, CONNECT, BELONG and ACT.",
+      description: "A co-designed card deck to help young people explore climate feelings, connect with what matters, and find ways to support their wellbeing.",
       buttonText: "Explore Card Decks",
       internalLink: "/climate-connect"
     }
